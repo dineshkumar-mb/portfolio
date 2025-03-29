@@ -12,8 +12,8 @@ const Home = () => {
       >
         {/* Profile Image */}
         <motion.img
-          src="/profile.jpg"
-          alt="John Doe"
+          src="/profile.jpeg"
+          alt="DineshKumar"
           className="w-32 h-32 rounded-full border-4 border-blue-500 shadow-lg"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -25,7 +25,7 @@ const Home = () => {
           Hi, I'm{" "}
           <span className="text-white">
             <Typewriter
-              words={["John Doe", "a Developer", "a Coder", "a Tech Enthusiast"]}
+              words={["Dinesh Kumar M B", "a Developer", "a Coder", "a Tech Enthusiast"]}
               loop={0} // Infinite loop
               cursor
               cursorStyle="|"
@@ -38,7 +38,7 @@ const Home = () => {
 
         {/* Subtitle */}
         <p className="text-lg text-gray-400 mt-2">
-          Full-Stack Developer | React & Tailwind
+          Full-Stack Developer | React developer| Tech Enthusiast
         </p>
 
         {/* Contact Button */}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Image from "../assets/image.jpg"; // Make sure the path is correct
+import Image from "../assets/image.jpg"; // Ensure the path is correct
 
 const About = () => {
   return (
@@ -38,8 +38,8 @@ const About = () => {
 
           {/* Resume Download Button */}
           <motion.a
-            href="/resume.pdf"
-            download="JohnDoe_Resume.pdf"
+            href="/Dineshfullstackresume.pdf" // Public folder path
+            download="Dineshfullstackresume.pdf"
             className="mt-6 inline-block px-6 py-2 bg-blue-500 rounded-full text-white text-lg font-semibold shadow-md hover:bg-blue-600 transition duration-300"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}

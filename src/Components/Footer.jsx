@@ -1,4 +1,5 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -13,14 +14,14 @@ const Footer = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+          <a href="https://github.com/dineshkumar-mb" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
             <FaGithub size={24} />
           </a>
-          <a href="https://linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+          <a href="https://www.linkedin.com/in/dinesh-kumar-mannibrundha13393/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
             <FaLinkedin size={24} />
           </a>
-          <a href="https://twitter.com/johndoe" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
-            <FaTwitter size={24} />
+          <a href="dineshkumarmannibrundha@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+            <FiMail size={24} />
           </a>
         </motion.div>
 
@@ -31,7 +32,7 @@ const Footer = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          © {new Date().getFullYear()} John Doe. All rights reserved.
+          © {new Date().getFullYear()} Dinesh kumar. All rights reserved.
         </motion.p>
       </div>
     </footer>

@@ -2,29 +2,38 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Portfolio Website",
-    tech: "React, Tailwind CSS",
-    image: "https://source.unsplash.com/400x300/?technology,laptop",
-    link: "https://yourportfolio.com",
+    title: "Zoomcar clone",
+    tech: "React, Ant, Stripe,express js,node js , mongoDb ,Bootstrap vercel ,postman",
+    image: "https://github.com/user-attachments/assets/dd5c4669-f7dc-483f-8f2a-af8e8d4b5b37",
+    link: "https://capstonezoomcarclone-frnd.vercel.app/",
     description:
-      "A sleek, responsive portfolio website showcasing projects, skills, and experience with interactive animations.",
+      "A sleek, responsive Zoomcar clone website showcasing projects, skills, and experience with Role based functionalities.",
   },
   {
-    title: "E-commerce App",
-    tech: "Next.js, Firebase",
-    image: "https://source.unsplash.com/400x300/?shopping,ecommerce",
-    link: "https://yourstore.com",
+    title: "Gemini 2.0 clone",
+    tech: "React.js, Tailwind css",
+    image: "https://github.com/user-attachments/assets/a578e8e6-cbad-4d8b-a0bd-25c0fc36e04c",
+    link: "https://gemini-clone-jet-eight.vercel.app/",
     description:
-      "A modern e-commerce platform with real-time database, authentication, and secure checkout system.",
+      "A powerful conversational AI web application built with **ReactJS**, **Tailwind CSS**, and **Google Generative AI**. This project aims to replicate the sleek and intuitive experience of Google's Gemini AI, delivering smart, contextual responses in real-time",
+
   },
   {
-    title: "Blog Platform",
-    tech: "Node.js, MongoDB, Express",
-    image: "https://source.unsplash.com/400x300/?blog,writing",
-    link: "https://yourblog.com",
+    title: "Food ordering App",
+    tech: "Node.js, MongoDB, Express ,stripe ,tailwind css",
+    image: "https://github.com/user-attachments/assets/b36c6549-14ae-4361-96d5-9c96a3839081",
+    link: "https://tomatofooddeleveryapp.netlify.app/",
     description:
-      "A full-stack blog platform allowing users to write, edit, and share articles with rich text support.",
+      "This is a Food Delivery App built using the MERN (MongoDB, Express, React, Node.js) stack. It allows users to browse food-items, add food items to their cart, place orders, and track deliveries.",
   },
+//   {
+//     title: "Movie app",
+//     tech: "Node.js, MongoDB, Express ,stripe ,tailwind css",
+//     image: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes/mvc_express.png",
+//     link: "https://movie-uaal.onrender.com",
+//     description:
+//       "This is a movie app built using(Express, Node.js) . It allows users to browse movie list, add movie ,delete movies etc.",
+//   },
 ];
 
 const Project = () => {
