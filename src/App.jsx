@@ -1,11 +1,11 @@
-import About from "./Components/About";
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import Project from "./components/Project";
-import SplashCursor from "./components/SplashCursor";
+import About from "./Components/About.jsx";
+import Contact from "./Components/Contact.jsx";
+import Experience from "./Components/Experience.jsx";
+import Footer from "./Components/Footer.jsx";
+import Header from "./Components/Header.jsx";
+import Home from "./Components/Home.jsx";
+import Project from "./Components/Project.jsx";
+import SplashCursor from "./Components/SplashCursor.jsx";
 const App = () => {
   return (
     <div className="bg-gray-900 text-white">
