@@ -7,7 +7,7 @@ const projects = [
     image: "https://github.com/user-attachments/assets/dd5c4669-f7dc-483f-8f2a-af8e8d4b5b37",
     link: "https://capstonezoomcarclone-frnd.vercel.app/",
     description:
-      "A sleek, responsive Zoomcar clone website showcasing projects, skills, and experience with Role based functionalities.",
+      "A sleek,responsive Zoomcar clone website showcasing projects,skills,and experience with Rolebased-functionalities.",
   },
   {
     title: "Gemini 2.0 clone",
@@ -24,7 +24,7 @@ const projects = [
     image: "https://github.com/user-attachments/assets/b36c6549-14ae-4361-96d5-9c96a3839081",
     link: "https://tomatofooddeleveryapp.netlify.app/",
     description:
-      "This is a Food Delivery App built using the MERN (MongoDB, Express, React, Node.js) stack. It allows users to browse food-items, add food items to their cart, place orders, and track deliveries.",
+      "This is a Food Delivery App built using the MERN(MongoDB, Express, React, Node.js)stack.It allows users to browse food-items,add food items to their cart,place orders,and track-orders.",
   },
   {
     title: "shareprice tracker app",
