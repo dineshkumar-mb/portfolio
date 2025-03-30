@@ -30,7 +30,7 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6">
-          {["Home", "About","skills","Experience", "Projects", "Contact"].map((item) => (
+          {["Home", "About","Experience","skills", "Projects", "Contact"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
@@ -51,7 +51,7 @@ const Header = () => {
         <motion.div
           className={`fixed top-0 right-0 h-full w-2/3 bg-gray-900 shadow-lg p-8 flex flex-col gap-6 transform ${menuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300`}
         >
-          {["Home", "About","skills", "Experience", "Projects", "Contact"].map((item) => (
+          {["Home", "About","Experience","skills" , "Projects", "Contact"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
