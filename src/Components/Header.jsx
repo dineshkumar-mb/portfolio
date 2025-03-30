@@ -30,7 +30,7 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6">
-          {["Home", "About", "Experience", "Projects", "Contact"].map((item) => (
+          {["Home", "About","skills","Experience", "Projects", "Contact"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
