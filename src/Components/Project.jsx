@@ -93,13 +93,13 @@ const Project = () => {
 
                 {/* Live Demo Button */}
                 <a
-                  href={proj.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 px-4 py-2 bg-blue-500 rounded-full text-white text-sm font-semibold shadow-md hover:bg-blue-600 transition duration-300"
-                >
-                  Live Demo
-                </a>
+  href={proj.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-4 px-6 py-3 md:px-4 md:py-2 bg-blue-500 rounded-full text-white text-sm md:text-xs font-semibold shadow-md hover:bg-blue-600 transition duration-300"
+>
+  Live Demo
+</a>
               </motion.div>
             </motion.div>
           ))}
