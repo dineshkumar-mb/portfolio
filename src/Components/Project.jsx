@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Zoomcar clone",
+    title: "Zoomcarclone",
     tech: "React, Ant, Stripe,express js,node js , mongoDb ,Bootstrap vercel ,postman",
     image: "https://github.com/user-attachments/assets/dd5c4669-f7dc-483f-8f2a-af8e8d4b5b37",
     link: "https://capstonezoomcarclone-frnd.vercel.app/",
@@ -33,7 +33,7 @@ const projects = [
     image: "https://github.com/user-attachments/assets/553b0eba-0d9c-4540-ae84-4d7657403e22",
     link: "https://sharepricetracker.netlify.app/",
     description:
-      "This is a shareprice tracker app built using(Express, Node.js,mongoDB,reactjs) . It allows users to browseshare price accordingly.",
+      "This is a shareprice tracker app built using(Express, Node.js,mongoDB,reactjs).It allows users to browseshare price intraday,daily,weekly,monthly.",
   },
 ];
 
