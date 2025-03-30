@@ -6,6 +6,7 @@ import Header from "./Components/Header.jsx";
 import Home from "./Components/Home.jsx";
 import Project from "./Components/Project.jsx";
 import SplashCursor from "./Components/SplashCursor.jsx";
+import Skills from "./Components/Skills.jsx";
 const App = () => {
   return (
     <div className="bg-gray-900 text-white">
@@ -13,6 +14,7 @@ const App = () => {
       <Header />
       <Home />
       <About />
+      <Skills />
       <Experience />
       <Project />
       <Contact />

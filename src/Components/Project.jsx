@@ -26,14 +26,15 @@ const projects = [
     description:
       "This is a Food Delivery App built using the MERN (MongoDB, Express, React, Node.js) stack. It allows users to browse food-items, add food items to their cart, place orders, and track deliveries.",
   },
-//   {
-//     title: "Movie app",
-//     tech: "Node.js, MongoDB, Express ,stripe ,tailwind css",
-//     image: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes/mvc_express.png",
-//     link: "https://movie-uaal.onrender.com",
-//     description:
-//       "This is a movie app built using(Express, Node.js) . It allows users to browse movie list, add movie ,delete movies etc.",
-//   },
+  {
+    title: "shareprice tracker app",
+    tech: "Node.js, MongoDB, Express ,tailwind css,reactjs",
+    image: "https://github.com/user-attachments/assets/fbe0e3ba-1679-4029-93fd-d79c2ca3dd80",
+    image: "https://github.com/user-attachments/assets/553b0eba-0d9c-4540-ae84-4d7657403e22",
+    link: "https://sharepricetracker.netlify.app/",
+    description:
+      "This is a shareprice tracker app built using(Express, Node.js,mongoDB,reactjs) . It allows users to browseshare price accordingly.",
+  },
 ];
 
 const Project = () => {
