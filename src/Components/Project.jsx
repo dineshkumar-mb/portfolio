@@ -35,6 +35,14 @@ const projects = [
     description:
       "This is a shareprice tracker app built using(Express, Node.js,mongoDB,reactjs).It allows users to browseshare price intraday,daily,weekly,monthly.",
   },
+  {
+    title: "Code Reviewer app",
+    tech: "Node.js,Express js ,css,reactjs",
+    image: "https://github.com/user-attachments/assets/fc2f026f-deae-45c6-8313-e9671c790168",
+    link: "https://codereviewer2.netlify.app/",
+    description:
+      "This is a code reviewer app built using(Express, Node.js,google gemini-Api,reactjs).It allows users to review their code.",
+  },
 ];
 
 const Project = () => {
