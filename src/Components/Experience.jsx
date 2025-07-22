@@ -3,7 +3,8 @@ import { FaBriefcase } from "react-icons/fa"; // Importing an icon
 
 const Experience = () => {
   const experiences = [
-    { role: "Frontend Developer", company: "Neelan oxysoft", duration: "2022 - Present" },
+    { role: "UI Developer", company: "Innotrat Labs", duration: "june-2025 - Present" },
+    { role: "Frontend Developer", company: "Neelan oxysoft", duration: "2022 - Jan-2025" },
     { role: "carrier Transition", company: "Live wire", duration: "Dec-2021 - May-2022" },
     { role: "Senior sales accountant", company: "Pasuth", duration: "2018 - 2021" },
     { role: "Carrier Break", company: "Care-giver", duration: "Dec-2016 - Dec-2017" },
