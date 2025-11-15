@@ -18,7 +18,7 @@ const Contact = () => {
     setError("");
 
     try {
-      const response = await axios.post("https://portfolio-backend-18d5.onrender.com/send", formData);
+      const response = await axios.post("https://portfolio-backend-n0zk.onrender.com/send", formData);
       if (response.data.success) {
         setIsSent(true);
         setFormData({ name: "", email: "", message: "" });
