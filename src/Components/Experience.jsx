@@ -44,15 +44,16 @@ const Experience = () => {
                 visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
               }}
             >
-              {/* Animated Icon */}
-              <motion.div
-                className="absolute left-[-30px] top-2 w-8 h-8 flex items-center justify-center bg-blue-500 text-white rounded-full"
-                whileHover={{ scale: 1.2 }}
-                animate={{ y: [0, -5, 0] }} // Bounce Effect
-                transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
-              >
-                <FaBriefcase />
-              </motion.div>
+              
+<motion.div
+  className="absolute left-0 top-2 -translate-x-1/2 w-8 h-8 flex items-center justify-center bg-blue-500 text-white rounded-full"
+  whileHover={{ scale: 1.2 }}
+  animate={{ y: [0, -5, 0] }}
+  transition={{ duration: 1.5, repeat: Infinity, repeatType: 'reverse' }}
+>
+  <FaBriefcase />
+</motion.div>
+
 
               {/* Job Details */}
               <h3 className="text-xl font-semibold">{exp.role}</h3>
