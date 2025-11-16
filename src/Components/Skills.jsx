@@ -12,7 +12,8 @@ const Skills = () => {
       "Redux toolkit",
       "Express.js",
       "HTML5",
-      "Framer Motion"
+      "Framer Motion",
+      "Gsap"
       
     ];
   
