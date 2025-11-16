@@ -18,14 +18,21 @@ const Contact = () => {
     setError("");
 
     try {
-      const response = await axios.post("https://portfolio-backend-n0zk.onrender.com/send", formData, { timeout: 10000 });
-      if (response.data && response.data.success) {
+      // use a timeout and optional chaining to avoid errors when response.data is undefined
+      const response = await axios.post(
+        "https://portfolio-backend-n0zk.onrender.com/send",
+        formData,
+        { timeout: 10000 }
+      );
+
+      if (response.data?.success) {
         setIsSent(true);
         setFormData({ name: "", email: "", message: "" });
       } else {
         setError("Failed to send email. Try again later.");
       }
     } catch (err) {
+      console.error("Contact form send error:", err);
       setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
