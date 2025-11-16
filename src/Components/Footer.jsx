@@ -1,5 +1,4 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FiMail } from "react-icons/fi";
+import { FaGithub, FaLinkedin,FaEnvelope  } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -18,11 +17,17 @@ const Footer = () => {
             <FaGithub size={24} />
           </a>
           <a href="https://www.linkedin.com/in/dinesh-kumar-mannibrundha13393/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
-            <FaLinkedin size={24} />
-          </a>
-          <a href="dineshkumarmannibrundha@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
-            <FiMail size={24} />
-          </a>
+            <FaLinkedin size={24} /> </a>
+<a
+ href="mailto:dineshkumarmannibrundha@gmail.com"
+ onClick={() => console.log("Mailto clicked")}
+ aria-label="email"
+ >
+ <FaEnvelope />
+</a>
+
+
+
         </motion.div>
 
         {/* Footer Text */}
