@@ -18,9 +18,10 @@ const Contact = () => {
     setError("");
 
     try {
-      // use a timeout and optional chaining to avoid errors when response.data is undefined
+      // Use the environment variable for the backend URL
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://portfolio-backend-n0zk.onrender.com";
       const response = await axios.post(
-        "https://portfolio-backend-n0zk.onrender.com/send",
+        `${backendUrl}/send`,
         formData,
         { timeout: 10000 }
       );
