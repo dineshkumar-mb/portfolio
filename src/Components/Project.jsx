@@ -48,7 +48,7 @@ const projects = [
   {
     title: "AI Mock-interview app",
     tech: "Node.js, Express js, Tailwind CSS, ReactJS, Google Gemini API, Stripe, Clerk",
-    image: "/src/assets/ai_mock_interview.png",
+    image: "/ai_mock_interview.png",
     link: "https://ai-mock-interview-app-f.vercel.app/",
     description:
       "A comprehensive AI-driven mock interview platform that provides real-time feedback and role-specific questions to help users sharpen their interview skills.",
