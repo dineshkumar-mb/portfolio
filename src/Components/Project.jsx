@@ -45,62 +45,124 @@ const projects = [
     description:
       "This is a code reviewer app built using Express, Node.js, google gemini-Api, reactjs. It allows users to review their code.",
   },
+  {
+    title: "AI Mock-interview app",
+    tech: "Node.js, Express js, Tailwind CSS, ReactJS, Google Gemini API, Stripe, Clerk",
+    image: "/src/assets/ai_mock_interview.png",
+    link: "https://ai-mock-interview-app-f.vercel.app/",
+    description:
+      "A comprehensive AI-driven mock interview platform that provides real-time feedback and role-specific questions to help users sharpen their interview skills.",
+  },
 ];
 
 const Project = () => {
   return (
-    <section id="projects" className="py-20 bg-gray-900 text-white">
-      <div className="container mx-auto px-6 md:px-20">
-        <motion.h2
-          className="text-4xl font-bold text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-        >
-          Projects
-        </motion.h2>
+    <section id="projects" className="py-24 bg-[#050816] text-white relative overflow-hidden">
+      {/* Background Ambient Glows */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] -z-10" />
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] -z-10" />
+
+      <div className="container mx-auto px-6 lg:px-16 relative">
+        <div className="flex flex-col items-center mb-16">
+          <motion.p
+            className="text-[#aaa6c3] uppercase tracking-wider text-sm mb-2"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            My work
+          </motion.p>
+          <motion.h2
+            className="text-5xl md:text-6xl font-black text-center bg-gradient-to-r from-white via-blue-400 to-purple-500 text-transparent bg-clip-text"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            Projects.
+          </motion.h2>
+          <motion.div
+            className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mt-4"
+            initial={{ width: 0 }}
+            animate={{ width: 96 }}
+            transition={{ delay: 0.5, duration: 1 }}
+          />
+        </div>
+
         <motion.div
-          className="mt-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
           variants={{
             hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { staggerChildren: 0.25 } },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.2 },
+            },
           }}
         >
           {projects.map((proj, index) => (
             <motion.div
               key={index}
-              className="relative group rounded-xl shadow-2xl backdrop-blur-xl bg-gradient-to-br from-gray-800 via-gray-900 to-black hover:shadow-blue-600 overflow-hidden transition-all duration-700"
               variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: "easeOut" } },
               }}
-              whileHover={{ scale: 1.04, boxShadow: "0 8px 40px -8px #3b82f6" }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={{ y: -10 }}
+              className="bg-gray-900/40 backdrop-blur-md border border-white/10 p-5 rounded-3xl flex flex-col h-full group transition-all duration-500 hover:border-blue-500/50 hover:shadow-[0_20px_50px_rgba(59,130,246,0.15)]"
             >
-              {/* Project Image */}
-              <motion.img
-                src={proj.image}
-                alt={proj.title}
-                className="w-full h-56 object-cover transition group-hover:scale-105 duration-500"
-                whileHover={{ scale: 1.08 }}
-              />
-              {/* Overlay: Only visible on hover, Button centered */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center
-                bg-black bg-opacity-85 text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <h3 className="text-2xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text drop-shadow-lg mb-2">{proj.title}</h3>
-                <p className="text-blue-300 font-medium mb-4">{proj.tech}</p>
-                {/* Live Demo Button Centered Vertically */}
-                <a
-                  href={proj.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="my-6 px-6 py-3 bg-blue-500 hover:bg-blue-700 rounded-full font-bold text-white shadow-xl transition-all duration-300"
-                >
-                  Live Demo
-                </a>
-                <p className="text-gray-200 font-light text-base">{proj.description}</p>
+              {/* Image Container with Floating Link */}
+              <div className="relative w-full h-[230px] overflow-hidden rounded-2xl mb-6">
+                <img
+                  src={proj.image}
+                  alt={proj.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+
+                <div className="absolute inset-0 flex justify-end m-3">
+                  <motion.button
+                    onClick={() => window.open(proj.link, "_blank")}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer bg-black/60 backdrop-blur-sm border border-white/20 hover:bg-blue-600 transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-white"
+                    >
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </motion.button>
+                </div>
+              </div>
+
+              {/* Project Info */}
+              <div className="flex-1">
+                <h3 className="text-white font-bold text-[24px] mb-2 group-hover:text-blue-400 transition-colors">{proj.title}</h3>
+                <p className="text-[#aaa6c3] text-[15px] leading-relaxed line-clamp-3 mb-4">{proj.description}</p>
+              </div>
+
+              {/* Technologies */}
+              <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-white/5">
+                {proj.tech.split(",").map((t, i) => (
+                  <span
+                    key={i}
+                    className={`text-[14px] font-medium ${i % 3 === 0 ? "text-blue-400" : i % 3 === 1 ? "text-purple-400" : "text-pink-400"
+                      }`}
+                  >
+                    #{t.trim()}
+                  </span>
+                ))}
               </div>
             </motion.div>
           ))}
