@@ -53,6 +53,14 @@ const projects = [
     description:
       "A comprehensive AI-driven mock interview platform that provides real-time feedback and role-specific questions to help users sharpen their interview skills.",
   },
+  {
+    title: "HRMS Application",
+    tech: "React, Node.js, MongoDB, Face API, Google Auth",
+    image: "/hrms_portal.png",
+    link: "https://hrms-ecru-three.vercel.app/",
+    description:
+      "A smart HRMS application featuring face recognition for attendance, secure Google Authentication, and employee management capabilities using Face API.",
+  },
 ];
 
 const Project = () => {
