@@ -56,7 +56,7 @@ const projects = [
   {
     title: "HRMS Application",
     tech: "React, Node.js, MongoDB, Face API, Google Auth",
-    image: "/hrms_portal.png",
+    image: "https://github.com/dineshkumar-mb/portfolio/commit/ebb75e45fa1a4d552ffa590349b8eb05337b159d",
     link: "https://hrms-ecru-three.vercel.app/",
     description:
       "A smart HRMS application featuring face recognition for attendance, secure Google Authentication, and employee management capabilities using Face API.",
