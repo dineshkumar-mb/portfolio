@@ -23,7 +23,7 @@ const Contact = () => {
       const response = await axios.post(
         `${backendUrl}/send`,
         formData,
-        { timeout: 10000 }
+        { timeout: 60000 }
       );
 
       if (response.data?.success) {
