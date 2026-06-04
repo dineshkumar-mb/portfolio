@@ -61,6 +61,14 @@ const projects = [
     description:
       "A smart HRMS application featuring face recognition for attendance, secure Google Authentication, and employee management capabilities using Face API.",
   },
+  {
+    title: "Inno-ide",
+    tech: "React, Node.js, MongoDB, Google Auth",
+    image: "/IDE.png",
+    link: "https://ide.innotrat.in/",
+    description:
+      "A smart ide application that allows users to write and run code , simulate , make block diagram , flowchart,postman,dyte video calling feature  .",
+  },
 ];
 
 const Project = () => {
