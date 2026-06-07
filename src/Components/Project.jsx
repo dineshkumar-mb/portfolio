@@ -30,14 +30,6 @@ const projects = [
       "This is a Food Delivery App built using the MERN(MongoDB, Express, React, Node.js)stack. It allows users to browse food items, add food items to their cart, place orders, and track orders.",
   },
   {
-    title: "shareprice tracker app",
-    tech: "Node.js, MongoDB, Express ,tailwind css,reactjs",
-    image: "https://github.com/user-attachments/assets/553b0eba-0d9c-4540-ae84-4d7657403e22",
-    link: "https://sharepricetracker.netlify.app/",
-    description:
-      "This is a shareprice tracker app built using Express, Node.js, mongoDB, reactjs. It allows users to browse share price intraday, daily, weekly, monthly.",
-  },
-  {
     title: "Code Reviewer app",
     tech: "Node.js,Express js ,css,reactjs",
     image: "https://github.com/user-attachments/assets/fc2f026f-deae-45c6-8313-e9671c790168",
