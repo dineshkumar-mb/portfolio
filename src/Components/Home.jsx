@@ -60,12 +60,43 @@
 
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { 
+  FaGithub, 
+  FaLinkedin, 
+  FaEnvelope, 
+  FaReact, 
+  FaNodeJs, 
+  FaJsSquare, 
+  FaHtml5, 
+  FaCss3Alt,
+  FaGitAlt,
+  FaLaptopCode,
+  FaLightbulb
+} from "react-icons/fa";
+import { 
+  SiTailwindcss, 
+  SiMongodb, 
+  SiRedux,
+  SiExpress,
+  SiVite
+} from "react-icons/si";
 
 const socialLinks = [
-  { icon: <FaGithub />, url: "https://github.com/dineshkumar-mb" },
-  { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/dinesh-kumar-mannibrundha13393/" },
-  { icon: <FaEnvelope />, url: "dineshkumarmannibrundha@gmail.com" }
+  { 
+    icon: <FaGithub />, 
+    url: "https://github.com/dineshkumar-mb",
+    hoverClass: "hover:bg-slate-700 hover:text-white hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
+  },
+  { 
+    icon: <FaLinkedin />, 
+    url: "https://www.linkedin.com/in/dinesh-kumar-mannibrundha13393/",
+    hoverClass: "hover:bg-blue-600 hover:text-white hover:shadow-[0_0_20px_rgba(37,99,235,0.6)]"
+  },
+  { 
+    icon: <FaEnvelope />, 
+    url: "mailto:dineshkumarmannibrundha@gmail.com",
+    hoverClass: "hover:bg-rose-600 hover:text-white hover:shadow-[0_0_20px_rgba(225,29,72,0.6)]"
+  }
 ];
 
 const Home = () => (
@@ -73,51 +104,205 @@ const Home = () => (
     id="home"
     className="relative h-screen flex items-center justify-center bg-gradient-to-br from-[#292752] via-gray-900 to-[#292752] overflow-hidden"
   >
+    {/* Ambient Background Glows */}
     <motion.div
-      className="pointer-events-none absolute -top-[12vw] -left-[8vw] w-[40vw] h-[40vw] rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-400 opacity-30 blur-2xl"
+      className="pointer-events-none absolute -top-[12vw] -left-[8vw] w-[45vw] h-[45vw] rounded-full bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 opacity-25 blur-[120px]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
     />
     <motion.div
-      className="pointer-events-none absolute bottom-[-10vw] right-[-8vw] w-[40vw] h-[40vw] rounded-full bg-gradient-to-tl from-indigo-300 via-blue-400 to-purple-500 opacity-20 blur-2xl"
+      className="pointer-events-none absolute bottom-[-10vw] right-[-8vw] w-[45vw] h-[45vw] rounded-full bg-gradient-to-tl from-indigo-400 via-blue-500 to-purple-600 opacity-20 blur-[120px]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2, delay: 0.4 }}
     />
 
+    {/* Floating Tech Badges around the Hero (Watermark style, responsive size, visible on all viewports) */}
+    {/* Row 1: React, Redux, JS, Git */}
+    <motion.div
+      className="absolute top-[15%] left-[6%] md:left-[12%] text-4xl sm:text-5xl lg:text-6xl text-blue-400 opacity-15 md:opacity-30 pointer-events-none block"
+      animate={{
+        y: [0, -15, 0],
+        rotate: [0, 360],
+      }}
+      transition={{
+        y: { duration: 5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
+        rotate: { duration: 25, repeat: Infinity, ease: "linear" }
+      }}
+    >
+      <FaReact />
+    </motion.div>
+
+    <motion.div
+      className="absolute top-[8%] left-[45%] md:left-[35%] lg:left-[28%] text-3xl sm:text-4xl lg:text-5xl text-purple-500 opacity-15 md:opacity-25 pointer-events-none block"
+      animate={{
+        y: [0, 10, 0],
+        rotate: [0, 360],
+      }}
+      transition={{
+        y: { duration: 4.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
+        rotate: { duration: 20, repeat: Infinity, ease: "linear" }
+      }}
+    >
+      <SiRedux />
+    </motion.div>
+
+    <motion.div
+      className="absolute top-[8%] right-[45%] md:right-[35%] lg:right-[28%] text-3xl sm:text-4xl lg:text-5xl text-red-500 opacity-15 md:opacity-25 pointer-events-none block"
+      animate={{
+        y: [0, -10, 0],
+        scale: [1, 1.08, 1],
+      }}
+      transition={{
+        y: { duration: 4.8, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
+        scale: { duration: 4.8, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }
+      }}
+    >
+      <FaGitAlt />
+    </motion.div>
+
+    <motion.div
+      className="absolute top-[15%] right-[6%] md:right-[12%] text-4xl sm:text-5xl lg:text-6xl text-yellow-400 opacity-15 md:opacity-30 pointer-events-none block"
+      animate={{
+        y: [0, 15, 0],
+        rotate: [0, -360],
+      }}
+      transition={{
+        y: { duration: 5.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
+        rotate: { duration: 22, repeat: Infinity, ease: "linear" }
+      }}
+    >
+      <FaJsSquare />
+    </motion.div>
+
+    {/* Row 2: HTML5, CSS3 */}
+    <motion.div
+      className="absolute top-[42%] left-[4%] md:left-[8%] text-3xl sm:text-4xl lg:text-5xl text-orange-500 opacity-15 md:opacity-25 pointer-events-none block"
+      animate={{
+        x: [0, 10, 0],
+        y: [0, -10, 0],
+      }}
+      transition={{
+        duration: 4.8,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut"
+      }}
+    >
+      <FaHtml5 />
+    </motion.div>
+
+    <motion.div
+      className="absolute top-[42%] right-[4%] md:right-[8%] text-3xl sm:text-4xl lg:text-5xl text-blue-500 opacity-15 md:opacity-25 pointer-events-none block"
+      animate={{
+        x: [0, -10, 0],
+        y: [0, 10, 0],
+      }}
+      transition={{
+        duration: 5.2,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut"
+      }}
+    >
+      <FaCss3Alt />
+    </motion.div>
+
+    {/* Row 3: Express, Vite */}
+    <motion.div
+      className="absolute top-[65%] left-[4%] md:left-[8%] text-3xl sm:text-4xl lg:text-5xl text-gray-400 opacity-15 md:opacity-25 pointer-events-none block"
+      animate={{
+        y: [0, 12, 0],
+        rotate: [0, -360],
+      }}
+      transition={{
+        y: { duration: 5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
+        rotate: { duration: 24, repeat: Infinity, ease: "linear" }
+      }}
+    >
+      <SiExpress />
+    </motion.div>
+
+    <motion.div
+      className="absolute top-[65%] right-[4%] md:right-[8%] text-3xl sm:text-4xl lg:text-5xl text-purple-400 opacity-15 md:opacity-25 pointer-events-none block"
+      animate={{
+        y: [0, -12, 0],
+        rotate: [0, 360],
+      }}
+      transition={{
+        y: { duration: 5.3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
+        rotate: { duration: 23, repeat: Infinity, ease: "linear" }
+      }}
+    >
+      <SiVite />
+    </motion.div>
+
+    {/* Row 4: Node.js, MongoDB, Tailwind */}
+    <motion.div
+      className="absolute bottom-[15%] left-[6%] md:left-[12%] text-4xl sm:text-5xl lg:text-6xl text-green-500 opacity-15 md:opacity-30 pointer-events-none block"
+      animate={{
+        y: [0, -12, 0],
+        scale: [1, 1.1, 1],
+      }}
+      transition={{
+        y: { duration: 6, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
+        scale: { duration: 6, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }
+      }}
+    >
+      <FaNodeJs />
+    </motion.div>
+
+    <motion.div
+      className="absolute bottom-[8%] left-[45%] md:left-[35%] lg:left-[28%] text-3xl sm:text-4xl lg:text-5xl text-emerald-500 opacity-15 md:opacity-25 pointer-events-none block"
+      animate={{
+        y: [0, 15, 0],
+        scale: [1, 0.95, 1],
+      }}
+      transition={{
+        y: { duration: 5.4, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
+        scale: { duration: 5.4, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }
+      }}
+    >
+      <SiMongodb />
+    </motion.div>
+
+    <motion.div
+      className="absolute bottom-[15%] right-[6%] md:right-[12%] text-4xl sm:text-5xl lg:text-6xl text-sky-400 opacity-15 md:opacity-30 pointer-events-none block"
+      animate={{
+        y: [0, 12, 0],
+        scale: [1, 0.9, 1],
+      }}
+      transition={{
+        y: { duration: 5.8, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
+        scale: { duration: 5.8, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }
+      }}
+    >
+      <SiTailwindcss />
+    </motion.div>
+
     <motion.div
       initial={{ opacity: 0, y: 60 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="z-10 flex flex-col items-center"
+      className="z-10 flex flex-col items-center px-4"
     >
-      {/* Floating Profile Image */}
-      <motion.div
-        className="p-[7px] bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-400 rounded-full shadow-2xl mb-7"
-        initial={{ scale: 0.8, y: 30 }}
-        animate={{ scale: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 70 }}
-        whileHover={{ scale: 1.06, rotate: [0, 3, -3, 0] }}
-      >
-        <motion.img
-          src="/profile.jpeg"
-          alt="DineshKumar"
-          className="w-36 h-36 md:w-48 md:h-48 rounded-full object-cover border-4 border-gray-900 shadow-2xl"
-        />
-      </motion.div>
+
 
       {/* Glassmorphic Card */}
       <motion.div
-        className="relative bg-white/5 backdrop-blur-md w-full max-w-xl px-10 py-10 rounded-3xl border border-blue-400/20 shadow-2xl flex flex-col items-center"
+        className="relative bg-transparent backdrop-blur-lg w-full max-w-xl px-8 py-10 md:px-12 rounded-3xl shadow-2xl hover:shadow-[0_20px_50px_rgba(139,92,246,0.15)] flex flex-col items-center transition-all duration-500 group"
         initial={{ opacity: 0, scale: 0.97 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.6, duration: 0.8 }}
       >
+        {/* Soft backglow inside the card */}
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/0 via-transparent to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-all duration-500 pointer-events-none" />
+
         {/* Typewriter Name Heading with Animated Underline */}
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-3 text-center bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
+        <h1 className="text-3xl md:text-5xl font-extrabold mb-3 text-center bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text leading-tight">
           Hi, I'm{" "}
-          <span className="block text-white drop-shadow-md">
+          <span className="block text-white drop-shadow-md font-black tracking-tight mt-1 h-[2.5rem] md:h-[3.2rem]">
             <Typewriter
               words={[
                 "Dinesh Kumar M B",
@@ -134,22 +319,51 @@ const Home = () => (
             />
           </span>
         </h1>
-        <span className="block h-1 w-24 mt-2 mb-7 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-400 rounded-full animate-pulse"></span>
+        <span className="block h-1 w-24 mt-4 mb-7 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-400 rounded-full animate-pulse"></span>
 
-        {/* Subtitle */}
-        <p className="text-lg text-blue-200 font-medium mb-4">
-          Full-Stack Developer &bull; React Specialist &bull; UI Innovator
-        </p>
+        {/* Subtitle Badges */}
+        <div className="flex flex-wrap justify-center gap-3 mb-8 relative z-10">
+          <span className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20 text-xs md:text-sm font-semibold tracking-wide hover:bg-blue-500/20 hover:border-blue-400/50 transition-all duration-300 cursor-default shadow-sm group/badge">
+            <motion.span
+              animate={{ y: [0, -3, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-block"
+            >
+              <FaLaptopCode className="text-blue-400 text-sm group-hover/badge:scale-110 transition-transform duration-300" />
+            </motion.span>
+            Full-Stack Developer
+          </span>
+          <span className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 text-xs md:text-sm font-semibold tracking-wide hover:bg-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 cursor-default shadow-sm group/badge">
+            <motion.span
+              animate={{ rotate: 360 }}
+              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              className="inline-block"
+            >
+              <FaReact className="text-cyan-400 text-sm group-hover/badge:scale-110 transition-transform duration-300" />
+            </motion.span>
+            React Specialist
+          </span>
+          <span className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20 text-xs md:text-sm font-semibold tracking-wide hover:bg-purple-500/20 hover:border-purple-400/50 transition-all duration-300 cursor-default shadow-sm group/badge">
+            <motion.span
+              animate={{ scale: [1, 1.15, 1], opacity: [0.7, 1, 0.7] }}
+              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-block"
+            >
+              <FaLightbulb className="text-purple-400 text-sm group-hover/badge:scale-110 transition-transform duration-300" />
+            </motion.span>
+            UI Innovator
+          </span>
+        </div>
 
         {/* Social Media Icons */}
-        <div className="flex gap-5 mb-7">
+        <div className="flex gap-5 mb-8">
           {socialLinks.map((item, idx) => (
             <a
               key={idx}
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl text-blue-400 hover:text-pink-400 bg-gray-800 rounded-full p-3 shadow hover:scale-110 transition-all"
+              className={`text-2xl text-blue-400 bg-gray-900 border border-white/5 rounded-full p-3.5 shadow-md transition-all duration-300 hover:scale-115 hover:-translate-y-1 ${item.hoverClass}`}
               aria-label="social-link"
             >
               {item.icon}
@@ -160,8 +374,8 @@ const Home = () => (
         {/* Contact Button */}
         <motion.a
           href="#contact"
-          className="mt-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-bold text-white text-lg shadow-lg ring-2 ring-blue-300/20 hover:scale-105 hover:shadow-xl transition-all duration-300"
-          whileHover={{ scale: 1.06 }}
+          className="mt-2 px-10 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-bold text-white text-lg shadow-lg shadow-blue-500/20 hover:shadow-purple-500/30 border border-white/10 hover:scale-105 hover:border-white/25 transition-all duration-300"
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
         >
           Contact Me
@@ -172,4 +386,3 @@ const Home = () => (
 );
 
 export default Home;
-
