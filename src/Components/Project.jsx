@@ -25,7 +25,7 @@ const projects = [
     title: "Food ordering App",
     tech: "Node.js, MongoDB, Express ,stripe ,tailwind css",
     image: "https://github.com/user-attachments/assets/b36c6549-14ae-4361-96d5-9c96a3839081",
-    link: "https://tomatofooddeleveryapp.netlify.app/",
+    link: "https://tomatofooddeleveryapp.netlify.app/ ||https://fooddelbackend-red.vercel.app",
     description:
       "This is a Food Delivery App built using the MERN(MongoDB, Express, React, Node.js)stack. It allows users to browse food items, add food items to their cart, place orders, and track orders.",
   },
@@ -127,30 +127,34 @@ const Project = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
-                <div className="absolute inset-0 flex justify-end m-3">
-                  <motion.button
-                    onClick={() => window.open(proj.link, "_blank")}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer bg-black/60 backdrop-blur-sm border border-white/20 hover:bg-blue-600 transition-colors"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-white"
+                <div className="absolute inset-0 flex justify-end m-3 gap-2">
+                  {proj.link.split("||").map((link, idx) => (
+                    <motion.button
+                      key={idx}
+                      onClick={() => window.open(link.trim(), "_blank")}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      title={`Visit ${link.trim()}`}
+                      className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer bg-black/60 backdrop-blur-sm border border-white/20 hover:bg-blue-600 transition-colors"
                     >
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
-                  </motion.button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-white"
+                      >
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                      </svg>
+                    </motion.button>
+                  ))}
                 </div>
               </div>
 
