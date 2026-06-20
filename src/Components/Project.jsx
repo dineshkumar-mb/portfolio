@@ -25,7 +25,7 @@ const projects = [
     title: "Food ordering App",
     tech: "Node.js, MongoDB, Express ,stripe ,tailwind css",
     image: "https://github.com/user-attachments/assets/b36c6549-14ae-4361-96d5-9c96a3839081",
-    link: "https://tomatofooddeleveryapp.netlify.app/ ||https://fooddelbackend-red.vercel.app",
+    link: "https://food-del-frontend-bqm2.vercel.app",
     description:
       "This is a Food Delivery App built using the MERN(MongoDB, Express, React, Node.js)stack. It allows users to browse food items, add food items to their cart, place orders, and track orders.",
   },
