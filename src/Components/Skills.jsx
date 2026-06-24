@@ -145,7 +145,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="py-24 bg-[#080b11] text-white relative overflow-hidden"
+      className="py-24 bg-transparent text-slate-800 dark:text-white relative overflow-hidden"
     >
       {/* Background Ambient Glows */}
       <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
@@ -154,7 +154,7 @@ const Skills = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center mb-16">
           <motion.p
-            className="text-[#aaa6c3] uppercase tracking-wider text-sm mb-2"
+            className="text-slate-500 dark:text-[#aaa6c3] uppercase tracking-wider text-sm mb-2"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -163,7 +163,7 @@ const Skills = () => {
             My Abilities
           </motion.p>
           <motion.h2
-            className="text-5xl md:text-6xl font-black text-center bg-gradient-to-r from-white via-blue-400 to-purple-500 text-transparent bg-clip-text"
+            className="text-5xl md:text-6xl font-black text-center bg-gradient-to-r from-slate-900 via-blue-600 to-purple-600 dark:from-white dark:via-blue-400 dark:to-purple-500 text-transparent bg-clip-text"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -181,7 +181,7 @@ const Skills = () => {
         </div>
 
         <motion.p
-          className="text-[#aaa6c3] max-w-3xl mx-auto mb-12 text-center text-lg leading-relaxed"
+          className="text-slate-600 dark:text-[#aaa6c3] max-w-3xl mx-auto mb-12 text-center text-lg leading-relaxed"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -208,7 +208,7 @@ const Skills = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.1 * idx, duration: 0.5 }}
               whileHover={{ scale: 1.05, backgroundColor: "rgba(59, 130, 246, 0.15)" }}
-              className="px-5 py-2.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm font-semibold cursor-default transition-all duration-300 shadow-sm"
+              className="px-5 py-2.5 rounded-full bg-blue-50/70 dark:bg-blue-500/10 border border-blue-100 dark:border-blue-500/30 text-blue-600 dark:text-blue-300 text-sm font-semibold cursor-default transition-all duration-300 shadow-sm"
             >
               {item}
             </motion.span>
@@ -228,7 +228,7 @@ const Skills = () => {
               key={categoryIndex}
               variants={cardVariants}
               whileHover={{ y: -8, borderColor: "rgba(59,130,246,0.4)" }}
-              className="bg-gray-900/40 backdrop-blur-md border border-white/10 rounded-3xl p-6 flex flex-col transition-all duration-500 hover:shadow-[0_20px_50px_rgba(59,130,246,0.12)] group relative overflow-hidden"
+              className="bg-white/70 dark:bg-gray-900/40 backdrop-blur-md border border-slate-200/60 dark:border-white/10 rounded-3xl p-6 flex flex-col transition-all duration-500 hover:shadow-md dark:hover:shadow-[0_20px_50px_rgba(59,130,246,0.12)] hover:border-slate-350 dark:hover:border-blue-500/40 group relative overflow-hidden"
             >
               {/* Subtle inner hover glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-transparent to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-all duration-500" />
@@ -237,7 +237,7 @@ const Skills = () => {
                 <div className={`p-3 rounded-2xl ${category.themeClass.bg} ${category.themeClass.text} group-hover:scale-110 transition-transform duration-300`}>
                   <category.icon className="text-2xl" />
                 </div>
-                <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                   {category.title}
                 </h3>
               </div>
@@ -247,7 +247,7 @@ const Skills = () => {
                   <motion.div
                     key={index}
                     whileHover={{ scale: 1.05 }}
-                    className={`flex items-center gap-2 px-3.5 py-2 bg-white/5 border border-white/10 rounded-xl text-gray-300 text-sm font-medium hover:text-white ${category.themeClass.pillBg} transition-all duration-300 cursor-default`}
+                    className={`flex items-center gap-2 px-3.5 py-2 bg-slate-100/70 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl text-slate-700 dark:text-gray-300 text-sm font-medium hover:text-slate-900 dark:hover:text-white ${category.themeClass.pillBg} transition-all duration-305 cursor-default`}
                   >
                     <FaCheckCircle className={`${category.themeClass.text} text-xs flex-shrink-0`} />
                     <span>{skill}</span>

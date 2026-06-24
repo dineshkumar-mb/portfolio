@@ -47,41 +47,45 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-900 text-white min-h-screen">
-      <div className="container mx-auto px-6 md:px-20 flex flex-col items-center">
+    <section id="contact" className="py-24 bg-transparent text-slate-800 dark:text-white relative overflow-hidden min-h-screen">
+      {/* Background Ambient Glows */}
+      <div className="absolute top-10 right-1/3 w-[350px] h-[350px] bg-purple-500/5 dark:bg-purple-500/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
+      <div className="absolute bottom-10 left-1/3 w-[350px] h-[350px] bg-pink-500/3 dark:bg-pink-500/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
+
+      <div className="container mx-auto px-6 md:px-20 flex flex-col items-center relative z-10">
         <motion.div
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
           className="flex flex-col items-center justify-center mb-8"
         >
-          <div className="bg-gradient-to-r from-blue-400 to-purple-400 rounded-full p-3 mb-4">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-650 dark:from-blue-400 dark:to-purple-400 rounded-full p-3 mb-4">
             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="2"
               viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round"
                 d="M3 8l7.89 5.26a3 3 0 003.22 0L22 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </div>
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text mb-2 text-center">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-650 dark:from-blue-400 dark:to-purple-500 text-transparent bg-clip-text mb-2 text-center">
             Contact Me
           </h2>
-          <p className="text-gray-400 text-center max-w-xl">
+          <p className="text-slate-500 dark:text-gray-400 text-center max-w-xl">
             Have a question, proposal, or just want to say hello? Fill out the form below and I’ll get back to you soon!
           </p>
         </motion.div>
 
         <motion.div
-          className="mt-4 bg-gray-800 p-8 rounded-2xl shadow-xl max-w-md w-full"
+          className="mt-4 bg-white/70 dark:bg-gray-900/30 backdrop-blur-md p-8 rounded-3xl border border-slate-200/60 dark:border-white/10 shadow-lg dark:shadow-2xl max-w-md w-full relative overflow-hidden group hover:border-purple-600/30 dark:hover:border-purple-500/30 transition-all duration-500"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           {isSent ? (
             <div className="flex flex-col items-center">
-              <span className="text-green-400 text-2xl mb-3">✅</span>
-              <p className="text-green-400 text-center">Your message has been sent! 🎉</p>
+              <span className="text-green-550 dark:text-green-400 text-2xl mb-3">✅</span>
+              <p className="text-green-650 dark:text-green-400 text-center font-semibold">Your message has been sent! 🎉</p>
               <button
-                className="mt-6 px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 transition"
+                className="mt-6 px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-600 hover:from-blue-700 hover:to-purple-700 transition font-bold text-white shadow-md"
                 onClick={() => setIsSent(false)}
               >
                 Send Another
@@ -96,7 +100,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400 text-white transition"
+                className="w-full p-3.5 rounded-xl bg-slate-100/50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-purple-500/50 dark:focus:ring-purple-400/50 text-slate-800 dark:text-white transition-all duration-300 hover:border-slate-300 dark:hover:border-white/20 placeholder:text-slate-400 dark:placeholder:text-gray-500"
               />
               <input
                 type="email"
@@ -105,7 +109,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400 text-white transition"
+                className="w-full p-3.5 rounded-xl bg-slate-100/50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-purple-500/50 dark:focus:ring-purple-400/50 text-slate-800 dark:text-white transition-all duration-300 hover:border-slate-300 dark:hover:border-white/20 placeholder:text-slate-400 dark:placeholder:text-gray-500"
               />
               <textarea
                 name="message"
@@ -113,17 +117,17 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400 text-white transition"
+                className="w-full p-3.5 rounded-xl bg-slate-100/50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-purple-500/50 dark:focus:ring-purple-400/50 text-slate-800 dark:text-white transition-all duration-300 hover:border-slate-300 dark:hover:border-white/20 placeholder:text-slate-400 dark:placeholder:text-gray-500"
                 rows="5"
               ></textarea>
-              {error && <p className="text-red-400 text-center">{error}</p>}
+              {error && <p className="text-red-500 dark:text-red-400 text-center font-medium">{error}</p>}
               <motion.button
                 type="submit"
-                className={`w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-bold text-white shadow-xl transition duration-300 flex items-center justify-center gap-2 ${
+                className={`w-full px-6 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-xl font-bold text-white shadow-md dark:shadow-xl transition duration-300 flex items-center justify-center gap-2 ${
                   loading ? "opacity-50 cursor-not-allowed" : ""
                 }`}
-                whileHover={{ scale: loading ? 1 : 1.05 }}
-                whileTap={{ scale: loading ? 1 : 0.96 }}
+                whileHover={{ scale: loading ? 1 : 1.03 }}
+                whileTap={{ scale: loading ? 1 : 0.97 }}
                 disabled={loading}
               >
                 {loading && (
