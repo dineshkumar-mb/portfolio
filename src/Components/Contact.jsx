@@ -23,7 +23,7 @@ const Contact = () => {
       const response = await axios.post(
         `${backendUrl}/send`,
         formData,
-        { timeout: 60000 }
+        { timeout: 90000 }
       );
 
       if (response.data?.success) {
@@ -34,7 +34,13 @@ const Contact = () => {
       }
     } catch (err) {
       console.error("Contact form send error:", err);
-      setError("Something went wrong. Please try again.");
+      let errorMessage = "Something went wrong. Please try again.";
+      if (err.code === "ECONNABORTED" || err.message?.includes("timeout")) {
+        errorMessage = "Request timed out. The server may be waking up. Please try sending again in a few seconds.";
+      } else if (err.response?.data?.error) {
+        errorMessage = err.response.data.error;
+      }
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
