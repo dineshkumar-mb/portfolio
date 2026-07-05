@@ -4,7 +4,7 @@ import { FaBriefcase, FaCalendarAlt } from "react-icons/fa";
 const Experience = () => {
   const experiences = [
     {
-      role: "UI Developer",
+      role: "FullStack Developer",
       company: "Innotrat Labs",
       duration: "June 2025 - Present",
       points: [
@@ -73,7 +73,7 @@ const Experience = () => {
       <div className="absolute bottom-1/4 left-1/4 w-[450px] h-[450px] bg-indigo-500/10 rounded-full blur-[140px] -z-10 pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-20 relative z-10">
-        
+
         {/* Section Title with Accent Underline */}
         <div className="flex flex-col items-center mb-16">
           <motion.p
@@ -105,7 +105,7 @@ const Experience = () => {
 
         {/* Timeline Container */}
         <div className="relative max-w-5xl mx-auto mt-20">
-          
+
           {/* Vertical Center Line (Desktop) / Left Line (Mobile) */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-cyan-500 via-indigo-500 to-purple-500/20 dark:from-cyan-500 dark:via-indigo-500 dark:to-purple-500/10 -translate-x-1/2" />
 
@@ -113,11 +113,10 @@ const Experience = () => {
             const isLeft = index % 2 === 0;
 
             return (
-              <div 
-                key={index} 
-                className={`relative flex flex-col md:flex-row items-stretch mb-12 w-full ${
-                  isLeft ? "md:justify-start" : "md:justify-end"
-                }`}
+              <div
+                key={index}
+                className={`relative flex flex-col md:flex-row items-stretch mb-12 w-full ${isLeft ? "md:justify-start" : "md:justify-end"
+                  }`}
               >
                 {/* Timeline Icon Node */}
                 <div className="absolute left-4 md:left-1/2 top-6 -translate-x-1/2 z-10">

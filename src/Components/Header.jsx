@@ -31,7 +31,7 @@ const Header = ({ theme, toggleTheme }) => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
           <ul className="flex gap-6">
-            {["Home", "About","Experience","Skills", "Projects", "Contact"].map((item) => (
+            {["Home", "About","Experience","Skills", "Projects", "Certifications", "Contact"].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}
@@ -69,7 +69,7 @@ const Header = ({ theme, toggleTheme }) => {
         <motion.div
           className={`fixed top-0 right-0 h-full w-2/3 bg-white/95 dark:bg-[#030014]/95 backdrop-blur-lg border-l border-slate-200 dark:border-white/10 shadow-2xl p-8 flex flex-col gap-6 transform ${menuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300`}
         >
-          {["Home", "About","Experience","Skills" , "Projects", "Contact"].map((item) => (
+          {["Home", "About","Experience","Skills", "Projects", "Certifications", "Contact"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}

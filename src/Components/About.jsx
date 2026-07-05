@@ -75,7 +75,7 @@ const About = () => {
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
             {/* View Resume Button */}
             <motion.a
-              href="/resumeone.pdf"
+              href="/new_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 rounded-full text-slate-800 dark:text-white text-base font-bold transition-all duration-300 border border-slate-200 dark:border-white/15 hover:border-slate-350 dark:hover:border-white/30 shadow-sm dark:shadow-none"
@@ -88,7 +88,7 @@ const About = () => {
 
             {/* Download Resume Button */}
             <motion.a
-              href="/resumeone.pdf"
+              href="/new_resume.pdf"
               download="Dineshfullstackresume.pdf"
               className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-fuchsia-600 to-rose-600 rounded-full text-white text-base font-bold shadow-md dark:shadow-lg shadow-fuchsia-500/10 dark:shadow-fuchsia-500/20 hover:shadow-rose-500/20 dark:hover:shadow-rose-500/30 transition-all duration-300 border border-fuchsia-500/20 dark:border-white/10 hover:border-fuchsia-600/30 dark:hover:border-white/20"
               whileHover={{ scale: 1.05 }}

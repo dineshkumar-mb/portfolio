@@ -4,6 +4,9 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import StreamifyImg from "../assets/Streamify.png";
+import TaskflowImg from "../assets/Taskflow.png";
+import EmiPlatformImg from "../assets/emi-platform.png";
 
 const projects = [
   {
@@ -69,11 +72,38 @@ const projects = [
     description:
       "A smart IDE application that allows users to write and run code, simulate, construct flowcharts, and collaborate via WebSockets and video calls.",
   },
+  {
+    title: "AI-Powered EMI Management & Loan Intelligence Platform (RAG Enabled)",
+    category: "RAG",
+    tech: "React.js, Node.js, MongoDB, Gemini AI",
+    image: EmiPlatformImg,
+    link: "https://emi-frontend-platform.vercel.app/",
+    description:
+      "Designed a retrieval pipeline that indexes loan and EMI policy documents and feeds the most relevant chunks into Gemini AI. Built the core EMI/interest calculation engine in Node.js and connected it to a React.js interface.",
+  },
+  {
+    title: "TaskFlow - AI-Powered Sprint Management SaaS",
+    category: "Full Stack",
+    tech: "React.js, Node.js, MongoDB, OpenAI, Cashfree",
+    image: TaskflowImg,
+    link: "https://taskflow-frontend-self.vercel.app/login || https://github.com/dineshkumar-mb/taskflow-frontend.git",
+    description:
+      "Architected a Jira-inspired sprint management SaaS with role-based access control, subscription tiers, and Cashfree-based recurring billing. Implemented an OpenAI-driven chatbot that interprets natural-language commands and maps them to backend actions.",
+  },
+  {
+    title: "Streamify",
+    category: "Full Stack",
+    tech: "React.js, Node.js, MongoDB, WebRTC",
+    image: StreamifyImg,
+    link: "https://streamify-inky-one.vercel.app/login",
+    description:
+      "A MERN stack application capable of real-time video and voice chat with end-to-end encryption.",
+  },
 ];
 
 const Project = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const categories = ["All", "Full Stack", "Frontend", "AI & Tools"];
+  const categories = ["All", "Full Stack", "Frontend", "AI & Tools", "RAG"];
 
   const filteredProjects = activeCategory === "All"
     ? projects
@@ -86,7 +116,7 @@ const Project = () => {
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/5 dark:bg-purple-600/10 rounded-full blur-[150px] -z-10" />
 
       <div className="container mx-auto px-6 lg:px-16 relative z-10">
-        
+
         {/* Section Header */}
         <div className="flex flex-col items-center mb-12">
           <motion.p
@@ -119,11 +149,10 @@ const Project = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-2.5 rounded-full text-sm font-bold tracking-wide transition-all duration-300 border ${
-                activeCategory === cat
+              className={`px-6 py-2.5 rounded-full text-sm font-bold tracking-wide transition-all duration-300 border ${activeCategory === cat
                   ? "bg-gradient-to-r from-blue-650 to-purple-650 dark:from-blue-500 dark:to-purple-600 text-white border-transparent shadow-md dark:shadow-lg dark:shadow-blue-500/25 scale-105"
                   : "bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-gray-400 border-slate-200 dark:border-white/5 hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-905 dark:hover:text-white hover:border-slate-350 dark:hover:border-white/10"
-              }`}
+                }`}
             >
               {cat}
             </button>

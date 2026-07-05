@@ -8,6 +8,7 @@ import Home from "./Components/Home.jsx";
 import Project from "./Components/Project.jsx";
 import SplashCursor from "./Components/SplashCursor.jsx";
 import Skills from "./Components/Skills.jsx";
+import Certifications from "./Components/Certifications.jsx";
 
 const App = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
@@ -37,6 +38,7 @@ const App = () => {
       <Skills />
       <Experience />
       <Project />
+      <Certifications />
       <Contact />
       <Footer />
     </div>
