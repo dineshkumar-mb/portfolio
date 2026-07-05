@@ -74,6 +74,11 @@ const skillCategories = [
       pillBg: "hover:bg-pink-500/10 hover:border-pink-500/30",
     },
     skills: [
+      "RAG",
+      "Gemini API",
+      "OpenAI API",
+      "n8n",
+      "OCR",
       "AI Integrations",
       "Workflow Automation",
       "WhatsApp API",
@@ -92,6 +97,10 @@ const skillCategories = [
     skills: [
       "Git",
       "GitHub",
+      "GitHub Actions",
+      "Docker",
+      "AWS EC2",
+      "CI/CD",
       "Postman",
       "Vite",
       "NPM",
@@ -107,6 +116,8 @@ const skillCategories = [
       pillBg: "hover:bg-violet-500/10 hover:border-violet-500/30",
     },
     skills: [
+      "System Design",
+      "DSA",
       "React Flow",
       "Diagram Builder",
       "HRMS Development",

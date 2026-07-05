@@ -17,8 +17,8 @@ const Experience = () => {
     },
     {
       role: "Frontend Developer",
-      company: "Neelan Oxysoft",
-      duration: "2022 - Jan 2025",
+      company: "Neelan Oxysoft Pvt Ltd",
+      duration: "Jul 2022 - Jun 2025",
       points: [
         "Built responsive, dynamic web interfaces using React.js and Redux Toolkit.",
         "Integrated Express/Node.js backend APIs and structured JWT auth logic.",
@@ -31,15 +31,15 @@ const Experience = () => {
       company: "Livewire",
       duration: "Dec 2021 - May 2022",
       points: [
-        "Acquired full-stack engineering skills, covering JavaScript algorithms, DOM manipulation, and Node.js.",
+        "Acquired web designing skills, covering JavaScript basics",
         "Built responsive interfaces using HTML5, CSS3, and Bootstrap, developing 10+ projects."
       ],
-      tech: ["JavaScript", "HTML5", "CSS3", "Bootstrap", "Git"]
+      tech: ["JavaScript", "HTML5", "CSS3", "Bootstrap"]
     },
     {
-      role: "Senior Sales Accountant",
-      company: "Pasuth",
-      duration: "2018 - 2021",
+      role: "Senior Accountant",
+      company: "Sri Renuka Devi Silks",
+      duration: "Jan 2018 - Nov 2021",
       points: [
         "Managed financial records, inventory data, and client billing statements.",
         "Collaborated with developers to streamline Excel-based ledger workflows into automated software templates."
@@ -57,7 +57,7 @@ const Experience = () => {
     },
     {
       role: "Production Trainee",
-      company: "Sungwoo Hitech India",
+      company: "Sungwoo Hitech",
       duration: "May 2015 - Nov 2016",
       points: [
         "Monitored automotive assembly lines and verified mechanical tolerances for metal press systems."

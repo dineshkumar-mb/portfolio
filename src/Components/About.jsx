@@ -50,8 +50,8 @@ const About = () => {
           </h2>
           <span className="block h-1 w-16 mt-2 mb-6 bg-gradient-to-r from-fuchsia-500 to-rose-500 rounded-full"></span>
           
-          <p className="text-slate-650 dark:text-gray-300 leading-relaxed text-lg max-w-xl">
-            I'm a passionate full-stack developer specializing in front-end technologies. I love creating modern, responsive, and performant web applications with sleek designs and highly interactive experiences.
+          <p className="text-slate-650 dark:text-gray-300 leading-relaxed text-lg max-w-xl text-justify">
+            Frontend Developer with 3+ years of professional experience in React.js and the MERN stack, plus independently built full stack projects spanning AI-powered SaaS platforms, workflow automation, and fintech solutions. Transitioned into software engineering after experience in manufacturing, family caregiving, accounting, and business operations, bringing strong analytical and problem-solving skills.
           </p>
 
           {/* Stats Grid */}
