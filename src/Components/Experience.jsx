@@ -4,65 +4,76 @@ import { FaBriefcase, FaCalendarAlt } from "react-icons/fa";
 const Experience = () => {
   const experiences = [
     {
-      role: "FullStack Developer",
+      role: "Full-Stack Developer",
       company: "Innotrat Labs",
       duration: "June 2025 - Present",
-      points: [
-        "Developing interactive flowcharts, block diagrams, and nodes using React Flow.",
-        "Integrating real-time video calling features utilizing the Dyte SDK.",
-        "Creating custom IDE integrations, postman-style API testers, and frontend workflows.",
-        "Collaborating with designers to build premium glassmorphic UI components with framer-motion."
-      ],
-      tech: ["React.js", "React Flow", "Dyte SDK", "Tailwind CSS", "Framer Motion"]
+      sections: {
+        Responsibilities: "Leading the development of complex frontend architectures and custom IDE integrations. Collaborating with cross-functional teams to build premium glassmorphic UI components.",
+        Achievements: "Successfully integrated real-time video calling features utilizing the Dyte SDK, enabling seamless collaboration.",
+        "Engineering Contributions": "Developed interactive flowcharts, block diagrams, and advanced node-based systems using React Flow. Built custom Postman-style API testers.",
+        "Business Impact": "Enhanced user engagement and platform capabilities, positioning the product as a competitive solution in the low-code space."
+      },
+      tech: ["React.js", "Node.js", "React Flow", "Dyte SDK", "Tailwind CSS", "Framer Motion"]
     },
     {
       role: "Frontend Developer",
       company: "Neelan Oxysoft Pvt Ltd",
       duration: "Jul 2022 - Jun 2025",
-      points: [
-        "Built responsive, dynamic web interfaces using React.js and Redux Toolkit.",
-        "Integrated Express/Node.js backend APIs and structured JWT auth logic.",
-        "Refined legacy CSS components into modular Tailwind CSS styles, improving loading speed by 20%."
-      ],
-      tech: ["React.js", "Redux", "Tailwind CSS", "REST APIs", "Node.js"]
+      sections: {
+        Responsibilities: "Architected and built responsive, dynamic web interfaces. Integrated complex Node.js/Express backend APIs and structured secure JWT authentication flows.",
+        Achievements: "Successfully migrated legacy CSS components into modular Tailwind CSS architectures.",
+        "Engineering Contributions": "Implemented state management using Redux Toolkit, drastically reducing unnecessary re-renders across the application.",
+        "Business Impact": "Improved overall application loading speed by 20% and significantly elevated the user experience."
+      },
+      tech: ["React.js", "Redux Toolkit", "Tailwind CSS", "REST APIs", "Node.js"]
     },
     {
-      role: "Career Transition",
+      role: "Web Development Training",
       company: "Livewire",
       duration: "Dec 2021 - May 2022",
-      points: [
-        "Acquired web designing skills, covering JavaScript basics",
-        "Built responsive interfaces using HTML5, CSS3, and Bootstrap, developing 10+ projects."
-      ],
+      sections: {
+        Responsibilities: "Engaged in an intensive full-stack development curriculum, focusing on modern web standards.",
+        Achievements: "Developed over 10 independent projects spanning diverse use cases.",
+        "Engineering Contributions": "Built responsive interfaces using HTML5, CSS3, and JavaScript, establishing a strong foundation for React development.",
+        "Business Impact": "Accelerated transition into professional software engineering through rigorous hands-on project delivery."
+      },
       tech: ["JavaScript", "HTML5", "CSS3", "Bootstrap"]
     },
     {
       role: "Senior Accountant",
-      company: "Sri Renuka Devi Silks",
+      company: "Sri Renuka Devi Silks[pasuth]",
       duration: "Jan 2018 - Nov 2021",
-      points: [
-        "Managed financial records, inventory data, and client billing statements.",
-        "Collaborated with developers to streamline Excel-based ledger workflows into automated software templates."
-      ],
-      tech: ["Accounts Management", "Financial Reports", "Excel Automation"]
+      sections: {
+        Responsibilities: "Managed financial reporting, regulatory compliance, account reconciliation, and day-to-day business operations.",
+        Achievements: "Streamlined financial reporting processes, improving overall accuracy and efficiency.",
+        "Engineering Contributions": "Automated repetitive spreadsheet workflows using advanced Excel functions.",
+        "Business Impact": "Provided accurate financial insights that guided strategic business decisions."
+      },
+      tech: ["Financial Reporting", "Data Analysis", "Account Reconciliation"]
     },
     {
-      role: "Career Break",
-      company: "Care-giver",
+      role: "Family Caregiving Sabbatical",
+      company: "Career Break",
       duration: "Dec 2016 - Dec 2017",
-      points: [
-        "Dedicated a year to family caregiving, mastering time-management, organization, and problem-solving."
-      ],
-      tech: ["Time Management", "Organization"]
+      sections: {
+        Responsibilities: "Provided full-time family caregiving support while concurrently pursuing self-learning.",
+        Achievements: "Maintained a disciplined self-study schedule in web technologies.",
+        "Engineering Contributions": "Studied software development fundamentals, focusing on web architecture.",
+        "Business Impact": "Successfully managed personal responsibilities while preparing for a career pivot."
+      },
+      tech: ["Time Management", "Self-Learning", "Adaptability"]
     },
     {
       role: "Production Trainee",
       company: "Sungwoo Hitech",
       duration: "May 2015 - Nov 2016",
-      points: [
-        "Monitored automotive assembly lines and verified mechanical tolerances for metal press systems."
-      ],
-      tech: ["Quality Control", "Production Systems"]
+      sections: {
+        Responsibilities: "Supported production planning, quality assurance, process documentation, and manufacturing operations in an automotive component environment.",
+        Achievements: "Optimized workflow efficiency on the production floor by implementing lean methodologies.",
+        "Engineering Contributions": "Assisted in the troubleshooting and maintenance of production machinery.",
+        "Business Impact": "Maintained high operational uptime and reduced defect rates during the shift."
+      },
+      tech: ["Process Optimization", "Quality Assurance", "Operations"]
     }
   ];
 
@@ -165,14 +176,15 @@ const Experience = () => {
                       </div>
                     </div>
 
-                    {/* Achievement Bullet Points */}
-                    <ul className="space-y-2 mb-6 flex-1 text-slate-650 dark:text-gray-300 text-sm leading-relaxed list-disc pl-4">
-                      {exp.points.map((point, pIdx) => (
-                        <li key={pIdx}>
-                          <span>{point}</span>
-                        </li>
+                    {/* Experience Details */}
+                    <div className="space-y-4 mb-6 flex-1 text-slate-650 dark:text-gray-300 text-sm leading-relaxed">
+                      {Object.entries(exp.sections).map(([title, content], sIdx) => (
+                        <div key={sIdx}>
+                          <span className="font-bold text-slate-800 dark:text-white mr-1 block sm:inline">{title}:</span>
+                          <span>{content}</span>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
 
                     {/* Tech Badges */}
                     <div className="flex flex-wrap gap-1.5 pt-3 border-t border-slate-200 dark:border-white/5 justify-start">

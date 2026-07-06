@@ -50,8 +50,11 @@ const About = () => {
           </h2>
           <span className="block h-1 w-16 mt-2 mb-6 bg-gradient-to-r from-fuchsia-500 to-rose-500 rounded-full"></span>
           
+          <p className="text-slate-650 dark:text-gray-300 leading-relaxed text-lg max-w-xl text-justify mb-4">
+            I am a Full-Stack MERN Developer and AI Application Builder with 3+ years of specialized experience in React.js and Node.js. My engineering focus lies in architecting scalable SaaS platforms, robust enterprise systems, and workflow automation tools that drive tangible business value.
+          </p>
           <p className="text-slate-650 dark:text-gray-300 leading-relaxed text-lg max-w-xl text-justify">
-            Frontend Developer with 3+ years of professional experience in React.js and the MERN stack, plus independently built full stack projects spanning AI-powered SaaS platforms, workflow automation, and fintech solutions. Transitioned into software engineering after experience in manufacturing, family caregiving, accounting, and business operations, bringing strong analytical and problem-solving skills.
+            Recently, I have been deeply focused on building AI-powered products, integrating Large Language Models (LLMs) via LangChain, and developing Retrieval-Augmented Generation (RAG) pipelines. I am a strong advocate for continuous learning, constantly exploring emerging technologies to solve complex architectural challenges and deliver premium, high-performance web applications.
           </p>
 
           {/* Stats Grid */}

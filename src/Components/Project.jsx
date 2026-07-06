@@ -3,6 +3,7 @@
 
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import StreamifyImg from "../assets/Streamify.png";
 import TaskflowImg from "../assets/Taskflow.png";
@@ -10,76 +11,13 @@ import EmiPlatformImg from "../assets/emi-platform.png";
 
 const projects = [
   {
-    title: "Zoomcarclone",
-    category: "Full Stack",
-    tech: "React, Ant Design, Stripe, Express, Node.js, MongoDB, Bootstrap",
-    image: "https://github.com/user-attachments/assets/dd5c4669-f7dc-483f-8f2a-af8e8d4b5b37",
-    link: "https://capstonezoomcarclone-frnd.vercel.app/",
-    description:
-      "A sleek, responsive Zoomcar clone website showcasing projects, skills, and experience with Role-based functionalities.",
-  },
-  {
-    title: "Gemini 2.0 clone",
-    category: "Frontend",
-    tech: "React.js, Tailwind CSS, Google Gemini API",
-    image: "https://github.com/user-attachments/assets/a578e8e6-cbad-4d8b-a0bd-25c0fc36e04c",
-    link: "https://gemini-clone-jet-eight.vercel.app/",
-    description:
-      "A powerful conversational AI web application built with ReactJS, Tailwind CSS, and Google Generative AI, replicating the smart Gemini assistant interface.",
-  },
-  {
-    title: "Food ordering App",
-    category: "Full Stack",
-    tech: "Node.js, MongoDB, Express, Stripe, Tailwind CSS",
-    image: "https://github.com/user-attachments/assets/b36c6549-14ae-4361-96d5-9c96a3839081",
-    link: "https://food-del-frontend-bqm2.vercel.app",
-    description:
-      "This is a Food Delivery App built using the MERN stack. It allows users to browse food items, manage carts, make payments via Stripe, and track orders.",
-  },
-  {
-    title: "Code Reviewer app",
-    category: "AI & Tools",
-    tech: "Node.js, Express.js, CSS, React.js, Google Gemini API",
-    image: "/codereviewer.png",
-    link: "https://codereviewer2.netlify.app/",
-    description:
-      "This is a code reviewer app built using Express, Node.js, google gemini-Api, reactjs. It allows users to review their code.",
-  },
-  {
-    title: "AI Mock-interview app",
-    category: "AI & Tools",
-    tech: "Node.js, Express, Tailwind CSS, ReactJS, Google Gemini API, Stripe, Clerk",
-    image: "/ai_mock_interview.png",
-    link: "https://ai-mock-interview-app-f.vercel.app/",
-    description:
-      "A comprehensive AI-driven mock interview platform that provides real-time feedback and role-specific questions to help users sharpen their interview skills.",
-  },
-  {
-    title: "HRMS Application",
-    category: "Full Stack",
-    tech: "React, Node.js, MongoDB, Face API, Google Auth",
-    image: "/HRMS-App.png",
-    link: "https://hrms-ecru-three.vercel.app/",
-    description:
-      "A smart HRMS application featuring face recognition for attendance, secure Google Authentication, and employee management capabilities using Face API.",
-  },
-  {
-    title: "Inno-ide",
-    category: "Full Stack",
-    tech: "React, Node.js, MongoDB, Google Auth, Dyte SDK, WebSockets",
-    image: "/IDE.png",
-    link: "https://ide.innotrat.in/",
-    description:
-      "A smart IDE application that allows users to write and run code, simulate, construct flowcharts, and collaborate via WebSockets and video calls.",
-  },
-  {
-    title: "AI-Powered EMI Management & Loan Intelligence Platform (RAG Enabled)",
+    title: "AI-Powered EMI Management & Loan Intelligence Platform",
     category: "RAG",
     tech: "React.js, Node.js, MongoDB, Gemini AI",
     image: EmiPlatformImg,
     link: "https://emi-frontend-platform.vercel.app/",
-    description:
-      "Designed a retrieval pipeline that indexes loan and EMI policy documents and feeds the most relevant chunks into Gemini AI. Built the core EMI/interest calculation engine in Node.js and connected it to a React.js interface.",
+    caseStudyRoute: "/projects/emi-loan-intelligence",
+    description: "Designed a retrieval pipeline that indexes loan and EMI policy documents and feeds the most relevant chunks into Gemini AI. Built the core EMI/interest calculation engine in Node.js and connected it to a React.js interface.",
   },
   {
     title: "TaskFlow - AI-Powered Sprint Management SaaS",
@@ -87,8 +25,35 @@ const projects = [
     tech: "React.js, Node.js, MongoDB, OpenAI, Cashfree",
     image: TaskflowImg,
     link: "https://taskflow-frontend-self.vercel.app/login || https://github.com/dineshkumar-mb/taskflow-frontend.git",
-    description:
-      "Architected a Jira-inspired sprint management SaaS with role-based access control, subscription tiers, and Cashfree-based recurring billing. Implemented an OpenAI-driven chatbot that interprets natural-language commands and maps them to backend actions.",
+    caseStudyRoute: "/projects/taskflow-ai",
+    description: "Architected a Jira-inspired sprint management SaaS with role-based access control, subscription tiers, and Cashfree-based recurring billing. Implemented an OpenAI-driven chatbot.",
+  },
+  {
+    title: "Inno-ide",
+    category: "Full Stack",
+    tech: "React, Node.js, MongoDB, Google Auth, Dyte SDK, WebSockets",
+    image: "/IDE.png",
+    link: "https://ide.innotrat.in/",
+    caseStudyRoute: "/projects/innoide",
+    description: "A smart IDE application that allows users to write and run code, simulate, construct flowcharts, and collaborate via WebSockets and video calls.",
+  },
+  {
+    title: "AI Mock-interview app",
+    category: "AI & Tools",
+    tech: "Node.js, Express, Tailwind CSS, ReactJS, Google Gemini API, Stripe, Clerk",
+    image: "/ai_mock_interview.png",
+    link: "https://ai-mock-interview-app-f.vercel.app/",
+    caseStudyRoute: "/projects/ai-mock-interview",
+    description: "A comprehensive AI-driven mock interview platform that provides real-time feedback and role-specific questions to help users sharpen their interview skills.",
+  },
+  {
+    title: "HRMS Application",
+    category: "Full Stack",
+    tech: "React, Node.js, MongoDB, Face API, Google Auth",
+    image: "/HRMS-App.png",
+    link: "https://hrms-ecru-three.vercel.app/",
+    caseStudyRoute: "/projects/hrms-application",
+    description: "A smart HRMS application featuring face recognition for attendance, secure Google Authentication, and employee management capabilities using Face API.",
   },
   {
     title: "Streamify",
@@ -96,9 +61,45 @@ const projects = [
     tech: "React.js, Node.js, MongoDB, WebRTC",
     image: StreamifyImg,
     link: "https://streamify-inky-one.vercel.app/login",
-    description:
-      "A MERN stack application capable of real-time video and voice chat with end-to-end encryption.",
+    caseStudyRoute: "/projects/streamify",
+    description: "A MERN stack application capable of real-time video and voice chat with end-to-end encryption.",
   },
+  {
+    title: "Code Reviewer app",
+    category: "AI & Tools",
+    tech: "Node.js, Express.js, CSS, React.js, Google Gemini API",
+    image: "/codereviewer.png",
+    link: "https://codereviewer2.netlify.app/",
+    caseStudyRoute: "/projects/code-reviewer",
+    description: "This is a code reviewer app built using Express, Node.js, google gemini-Api, reactjs. It allows users to review their code.",
+  },
+  {
+    title: "Zoomcarclone",
+    category: "Full Stack",
+    tech: "React, Node.js, MongoDB, Express",
+    image: "https://github.com/user-attachments/assets/dd5c4669-f7dc-483f-8f2a-af8e8d4b5b37",
+    link: "https://capstonezoomcarclone-frnd.vercel.app/",
+    caseStudyRoute: "/projects/zoomcar-clone",
+    description: "A sleek, responsive Zoomcar clone website showcasing projects, skills, and experience with Role-based functionalities.",
+  },
+  {
+    title: "Food ordering App",
+    category: "Full Stack",
+    tech: "Node.js, MongoDB, Express, Stripe, Tailwind CSS",
+    image: "https://github.com/user-attachments/assets/b36c6549-14ae-4361-96d5-9c96a3839081",
+    link: "https://food-del-frontend-bqm2.vercel.app",
+    caseStudyRoute: "/projects/food-ordering-app",
+    description: "This is a Food Delivery App built using the MERN stack. It allows users to browse food items, manage carts, make payments via Stripe, and track orders.",
+  },
+  {
+    title: "Gemini 2.0 clone",
+    category: "Frontend",
+    tech: "React.js, Tailwind CSS, Google Gemini API",
+    image: "https://github.com/user-attachments/assets/a578e8e6-cbad-4d8b-a0bd-25c0fc36e04c",
+    link: "https://gemini-clone-jet-eight.vercel.app/",
+    caseStudyRoute: "/projects/gemini-clone",
+    description: "A powerful conversational AI web application built with ReactJS, Tailwind CSS, and Google Generative AI, replicating the smart Gemini assistant interface.",
+  }
 ];
 
 const Project = () => {
@@ -150,8 +151,8 @@ const Project = () => {
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`px-6 py-2.5 rounded-full text-sm font-bold tracking-wide transition-all duration-300 border ${activeCategory === cat
-                  ? "bg-gradient-to-r from-blue-650 to-purple-650 dark:from-blue-500 dark:to-purple-600 text-white border-transparent shadow-md dark:shadow-lg dark:shadow-blue-500/25 scale-105"
-                  : "bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-gray-400 border-slate-200 dark:border-white/5 hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-905 dark:hover:text-white hover:border-slate-350 dark:hover:border-white/10"
+                ? "bg-gradient-to-r from-blue-650 to-purple-650 dark:from-blue-500 dark:to-purple-600 text-white border-transparent shadow-md dark:shadow-lg dark:shadow-blue-500/25 scale-105"
+                : "bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-gray-400 border-slate-200 dark:border-white/5 hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-905 dark:hover:text-white hover:border-slate-350 dark:hover:border-white/10"
                 }`}
             >
               {cat}
@@ -237,23 +238,37 @@ const Project = () => {
                     </p>
                   </div>
 
-                  {/* Technologies & Bottom Demo Link */}
-                  <div className="mt-4 pt-4 border-t border-slate-200 dark:border-white/5 flex items-center justify-between">
-                    <div className="flex flex-wrap gap-1.5 flex-1 mr-2 text-left">
+                  {/* Technologies & Bottom Links */}
+                  <div className="mt-4 pt-4 border-t border-slate-200 dark:border-white/5 flex flex-col gap-3">
+                    <div className="flex flex-wrap gap-1.5 text-left">
                       {proj.tech.split(",").slice(0, 3).map((t, i) => (
                         <span key={i} className="text-xs font-semibold text-slate-550 dark:text-gray-405">
                           #{t.trim()}
                         </span>
                       ))}
                     </div>
-                    <a
-                      href={mainLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-black text-blue-600 dark:text-blue-400 hover:text-purple-600 dark:hover:text-purple-400 flex items-center gap-1 transition-colors duration-300 flex-shrink-0"
-                    >
-                      LIVE DEMO <span className="text-[10px]">→</span>
-                    </a>
+
+                    <div className="flex justify-between items-center w-full mt-2">
+                      {proj.caseStudyRoute ? (
+                        <Link
+                          to={proj.caseStudyRoute}
+                          className="px-4 py-1.5 rounded-lg bg-blue-600/10 text-blue-600 dark:text-blue-400 font-bold text-xs hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                        >
+                          View Case Study
+                        </Link>
+                      ) : (
+                        <div></div>
+                      )}
+
+                      <a
+                        href={mainLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-black text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 flex items-center gap-1 transition-colors duration-300"
+                      >
+                        LIVE DEMO <span className="text-[10px]">→</span>
+                      </a>
+                    </div>
                   </div>
                 </motion.div>
               );

@@ -11,7 +11,7 @@ import {
 
 const skillCategories = [
   {
-    title: "Frontend Development",
+    title: "Frontend",
     icon: FaLaptopCode,
     color: "from-blue-400 to-sky-400",
     themeClass: {
@@ -20,19 +20,16 @@ const skillCategories = [
       pillBg: "hover:bg-blue-500/10 hover:border-blue-500/30",
     },
     skills: [
-      "React.js",
-      "JavaScript",
-      "Redux Toolkit",
-      "React Router",
-      "Tailwind CSS",
-      "Framer Motion",
-      "GSAP",
-      "HTML5",
-      "CSS3",
+      { name: "React", note: "Core library" },
+      { name: "TypeScript", note: "Type safety" },
+      { name: "Redux Toolkit", note: "State mgmt" },
+      { name: "Zustand", note: "State mgmt" },
+      { name: "Tailwind CSS", note: "Styling" },
+      { name: "Framer Motion", note: "Animations" }
     ],
   },
   {
-    title: "Backend Development",
+    title: "Backend",
     icon: FaServer,
     color: "from-emerald-400 to-teal-400",
     themeClass: {
@@ -41,12 +38,10 @@ const skillCategories = [
       pillBg: "hover:bg-emerald-500/10 hover:border-emerald-500/30",
     },
     skills: [
-      "Node.js",
-      "Express.js",
-      "REST APIs",
-      "JWT Authentication",
-      "Role-Based Access Control",
-      "API Integration",
+      { name: "Node.js", note: "Server runtime" },
+      { name: "Express.js", note: "API framework" },
+      { name: "REST APIs", note: "Architecture" },
+      { name: "JWT Authentication", note: "Security" }
     ],
   },
   {
@@ -59,13 +54,12 @@ const skillCategories = [
       pillBg: "hover:bg-amber-500/10 hover:border-amber-500/30",
     },
     skills: [
-      "MongoDB",
-      "MySQL",
-      "Mongoose",
+      { name: "MongoDB", note: "NoSQL DB" },
+      { name: "Mongoose", note: "ODM library" }
     ],
   },
   {
-    title: "AI & Automation",
+    title: "AI Engineering",
     icon: FaBrain,
     color: "from-pink-400 to-rose-400",
     themeClass: {
@@ -74,40 +68,15 @@ const skillCategories = [
       pillBg: "hover:bg-pink-500/10 hover:border-pink-500/30",
     },
     skills: [
-      "RAG",
-      "Gemini API",
-      "OpenAI API",
-      "n8n",
-      "OCR",
-      "AI Integrations",
-      "Workflow Automation",
-      "WhatsApp API",
-      "Face API Integration",
+      { name: "LangChain", note: "EMI Platform" },
+      { name: "Gemini", note: "AI Mock Interview" },
+      { name: "RAG", note: "EMI Platform" },
+      { name: "ChromaDB", note: "Vector DB" },
+      { name: "Prompt Engineering", note: "Taskflow" }
     ],
   },
   {
-    title: "Tools & Version Control",
-    icon: FaGitAlt,
-    color: "from-indigo-400 to-purple-400",
-    themeClass: {
-      bg: "bg-indigo-500/10",
-      text: "text-indigo-400",
-      pillBg: "hover:bg-indigo-500/10 hover:border-indigo-500/30",
-    },
-    skills: [
-      "Git",
-      "GitHub",
-      "GitHub Actions",
-      "Docker",
-      "AWS EC2",
-      "CI/CD",
-      "Postman",
-      "Vite",
-      "NPM",
-    ],
-  },
-  {
-    title: "Specialized Development",
+    title: "Real-Time Systems",
     icon: FaRocket,
     color: "from-violet-400 to-fuchsia-400",
     themeClass: {
@@ -116,13 +85,24 @@ const skillCategories = [
       pillBg: "hover:bg-violet-500/10 hover:border-violet-500/30",
     },
     skills: [
-      "System Design",
-      "DSA",
-      "React Flow",
-      "Diagram Builder",
-      "HRMS Development",
-      "Performance Optimization",
-      "Responsive Design",
+      { name: "Socket.IO", note: "InnoIDE" },
+      { name: "Stream SDK", note: "Streamify" },
+      { name: "WebRTC", note: "Streamify" }
+    ],
+  },
+  {
+    title: "DevOps",
+    icon: FaGitAlt,
+    color: "from-indigo-400 to-purple-400",
+    themeClass: {
+      bg: "bg-indigo-500/10",
+      text: "text-indigo-400",
+      pillBg: "hover:bg-indigo-500/10 hover:border-indigo-500/30",
+    },
+    skills: [
+      { name: "GitHub Actions", note: "CI/CD" },
+      { name: "Docker", note: "Containerization" },
+      { name: "Vercel", note: "Deployment" }
     ],
   },
 ];
@@ -258,10 +238,15 @@ const Skills = () => {
                   <motion.div
                     key={index}
                     whileHover={{ scale: 1.05 }}
-                    className={`flex items-center gap-2 px-3.5 py-2 bg-slate-100/70 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl text-slate-700 dark:text-gray-300 text-sm font-medium hover:text-slate-900 dark:hover:text-white ${category.themeClass.pillBg} transition-all duration-305 cursor-default`}
+                    className={`flex flex-col gap-0.5 px-3.5 py-2 bg-slate-100/70 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl text-slate-700 dark:text-gray-300 text-sm font-medium hover:text-slate-900 dark:hover:text-white ${category.themeClass.pillBg} transition-all duration-305 cursor-default`}
                   >
-                    <FaCheckCircle className={`${category.themeClass.text} text-xs flex-shrink-0`} />
-                    <span>{skill}</span>
+                    <div className="flex items-center gap-2">
+                      <FaCheckCircle className={`${category.themeClass.text} text-xs flex-shrink-0`} />
+                      <span>{skill.name}</span>
+                    </div>
+                    <span className="text-[10px] text-slate-500 dark:text-gray-500 italic pl-5">
+                      {skill.note}
+                    </span>
                   </motion.div>
                 ))}
               </div>

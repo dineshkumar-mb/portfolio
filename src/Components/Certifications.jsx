@@ -108,6 +108,44 @@ const Certifications = () => {
           ))}
         </div>
 
+        {/* Currently Learning Section */}
+        <div className="flex flex-col items-center mt-24 mb-10">
+          <motion.h2
+            className="text-4xl md:text-5xl font-black text-center bg-gradient-to-r from-slate-900 via-amber-600 to-orange-600 dark:from-white dark:via-amber-400 dark:to-orange-500 text-transparent bg-clip-text"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            Currently Learning
+          </motion.h2>
+          <motion.div
+            className="w-16 h-1.5 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full mt-4 mb-10"
+            initial={{ width: 0 }}
+            whileInView={{ width: 64 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          />
+          
+          <motion.div 
+            className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            {["TypeScript", "System Design", "Docker", "CI/CD", "Advanced AI Engineering"].map((skill, index) => (
+              <div 
+                key={index}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-50/70 dark:bg-amber-500/10 border border-amber-200/50 dark:border-amber-500/20 text-amber-700 dark:text-amber-300 font-bold shadow-sm hover:scale-105 hover:bg-amber-100 dark:hover:bg-amber-500/20 transition-all duration-300 cursor-default"
+              >
+                <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></div>
+                {skill}
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
       </div>
     </section>
   );

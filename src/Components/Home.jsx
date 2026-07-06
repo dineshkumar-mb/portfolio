@@ -296,9 +296,8 @@ const Home = () => (
             <Typewriter
               words={[
                 "Dinesh Kumar M B",
-                "a Developer",
-                "a Coder",
-                "a Tech Enthusiast"
+                "Full-Stack MERN Developer",
+                "AI Application Builder"
               ]}
               loop={0}
               cursor
@@ -311,38 +310,29 @@ const Home = () => (
         </h1>
         <span className="block h-1 w-24 mt-4 mb-7 bg-gradient-to-r from-blue-550 via-purple-550 to-pink-550 dark:from-blue-400 dark:via-purple-500 dark:to-pink-400 rounded-full animate-pulse"></span>
 
-        {/* Subtitle Badges */}
-        <div className="flex flex-wrap sm:flex-nowrap justify-center gap-2 sm:gap-3 mb-8 relative z-10 w-full">
-          <span className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50/70 dark:bg-blue-500/10 text-blue-600 dark:text-blue-300 border border-blue-100 dark:border-blue-500/20 text-[11px] sm:text-xs md:text-sm font-semibold tracking-wide hover:bg-blue-100/50 dark:hover:bg-blue-500/20 hover:border-blue-300 dark:hover:border-blue-400/50 transition-all duration-300 cursor-default shadow-sm group/badge whitespace-nowrap">
-            <motion.span
-              animate={{ y: [0, -3, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="inline-block"
-            >
-              <FaLaptopCode className="text-blue-550 dark:text-blue-400 text-sm group-hover/badge:scale-110 transition-transform duration-300" />
-            </motion.span>
-            Full-Stack Developer
+        {/* Subtitle Badges & Metrics */}
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 relative z-10 w-full max-w-lg">
+          {/* Availability Badge */}
+          <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-50/80 dark:bg-green-500/15 text-green-700 dark:text-green-300 border border-green-200 dark:border-green-500/30 text-xs sm:text-sm font-bold tracking-wide shadow-sm w-full sm:w-auto justify-center mb-2">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            </span>
+            Open to Full-Stack Opportunities
           </span>
-          <span className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-50/70 dark:bg-cyan-500/10 text-cyan-600 dark:text-cyan-300 border border-cyan-100 dark:border-cyan-500/20 text-[11px] sm:text-xs md:text-sm font-semibold tracking-wide hover:bg-cyan-100/50 dark:hover:bg-cyan-500/20 hover:border-cyan-300 dark:hover:border-cyan-400/50 transition-all duration-300 cursor-default shadow-sm group/badge whitespace-nowrap">
-            <motion.span
-              animate={{ rotate: 360 }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-              className="inline-block"
-            >
-              <FaReact className="text-cyan-550 dark:text-cyan-400 text-sm group-hover/badge:scale-110 transition-transform duration-300" />
-            </motion.span>
-            React Specialist
-          </span>
-          <span className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-50/70 dark:bg-purple-500/10 text-purple-600 dark:text-purple-300 border border-purple-100 dark:border-purple-500/20 text-[11px] sm:text-xs md:text-sm font-semibold tracking-wide hover:bg-purple-100/50 dark:hover:bg-purple-500/20 hover:border-purple-300 dark:hover:border-purple-400/50 transition-all duration-300 cursor-default shadow-sm group/badge whitespace-nowrap">
-            <motion.span
-              animate={{ scale: [1, 1.15, 1], opacity: [0.7, 1, 0.7] }}
-              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-              className="inline-block"
-            >
-              <FaLightbulb className="text-purple-550 dark:text-purple-400 text-sm group-hover/badge:scale-110 transition-transform duration-300" />
-            </motion.span>
-            UI Innovator
-          </span>
+        </div>
+        
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 relative z-10 w-full">
+          {[
+            "3+ Years Experience",
+            "10+ Projects Built",
+            "MERN Stack Developer",
+            "AI Application Builder"
+          ].map((badge, i) => (
+            <span key={i} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100/70 dark:bg-white/5 text-slate-700 dark:text-gray-300 border border-slate-200 dark:border-white/10 text-[11px] sm:text-xs font-semibold tracking-wide hover:bg-blue-50 dark:hover:bg-blue-500/10 hover:text-blue-600 dark:hover:text-blue-300 hover:border-blue-200 dark:hover:border-blue-500/20 transition-all duration-300 cursor-default shadow-sm">
+              {badge}
+            </span>
+          ))}
         </div>
 
         {/* Social Media Icons */}
@@ -361,15 +351,36 @@ const Home = () => (
           ))}
         </div>
 
-        {/* Contact Button */}
-        <motion.a
-          href="#contact"
-          className="mt-2 px-10 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-bold text-white text-lg shadow-md dark:shadow-lg shadow-blue-500/10 dark:shadow-blue-500/20 hover:shadow-purple-500/20 dark:hover:shadow-purple-500/30 border border-slate-200/20 dark:border-white/10 hover:scale-105 hover:border-slate-300/40 dark:hover:border-white/25 transition-all duration-300"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.97 }}
-        >
-          Contact Me
-        </motion.a>
+        {/* CTA Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mt-2">
+          <motion.a
+            href="#projects"
+            className="px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-bold text-white text-sm sm:text-base shadow-md dark:shadow-lg shadow-blue-500/10 dark:shadow-blue-500/20 hover:shadow-purple-500/20 dark:hover:shadow-purple-500/30 border border-slate-200/20 dark:border-white/10 transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            View Projects
+          </motion.a>
+          
+          <motion.a
+            href="/new_resume.pdf"
+            download="Dineshfullstackresume.pdf"
+            className="px-6 sm:px-8 py-3 bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 rounded-full font-bold text-slate-800 dark:text-white text-sm sm:text-base shadow-sm border border-slate-200 dark:border-white/15 transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            Download Resume
+          </motion.a>
+          
+          <motion.a
+            href="#contact"
+            className="px-6 sm:px-8 py-3 bg-transparent hover:bg-slate-50 dark:hover:bg-white/5 rounded-full font-bold text-blue-600 dark:text-blue-400 text-sm sm:text-base border border-blue-600 dark:border-blue-500/50 transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            Contact Me
+          </motion.a>
+        </div>
       </motion.div>
     </motion.div>
   </section>
