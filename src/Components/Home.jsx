@@ -102,7 +102,7 @@ const socialLinks = [
 const Home = () => (
   <section
     id="home"
-    className="relative h-screen flex items-center justify-center bg-transparent overflow-hidden"
+    className="relative min-h-screen pt-24 pb-12 flex items-center justify-center bg-transparent overflow-hidden"
   >
     {/* Background Ambient Glows */}
     <div className="absolute top-10 left-1/4 w-[400px] h-[400px] bg-indigo-500/5 dark:bg-indigo-500/10 rounded-full blur-[130px] -z-10 pointer-events-none" />
@@ -111,7 +111,7 @@ const Home = () => (
     {/* Floating Tech Badges around the Hero (Watermark style, responsive size, visible on all viewports) */}
     {/* Row 1: React, Redux, JS, Git */}
     <motion.div
-      className="absolute top-[15%] left-[6%] md:left-[12%] text-4xl sm:text-5xl lg:text-6xl text-blue-500 dark:text-blue-400 opacity-15 md:opacity-30 pointer-events-none block"
+      className="absolute top-[22%] left-[6%] md:left-[12%] text-4xl sm:text-5xl lg:text-6xl text-blue-500 dark:text-blue-400 opacity-15 md:opacity-30 pointer-events-none block"
       animate={{
         y: [0, -15, 0],
         rotate: [0, 360],
@@ -125,7 +125,7 @@ const Home = () => (
     </motion.div>
 
     <motion.div
-      className="absolute top-[8%] left-[45%] md:left-[35%] lg:left-[28%] text-3xl sm:text-4xl lg:text-5xl text-purple-650 dark:text-purple-500 opacity-15 md:opacity-25 pointer-events-none block"
+      className="absolute top-[15%] left-[45%] md:left-[35%] lg:left-[28%] text-3xl sm:text-4xl lg:text-5xl text-purple-650 dark:text-purple-500 opacity-15 md:opacity-25 pointer-events-none block"
       animate={{
         y: [0, 10, 0],
         rotate: [0, 360],
@@ -139,7 +139,7 @@ const Home = () => (
     </motion.div>
 
     <motion.div
-      className="absolute top-[8%] right-[45%] md:right-[35%] lg:right-[28%] text-3xl sm:text-4xl lg:text-5xl text-red-500 opacity-15 md:opacity-25 pointer-events-none block"
+      className="absolute top-[15%] right-[45%] md:right-[35%] lg:right-[28%] text-3xl sm:text-4xl lg:text-5xl text-red-500 opacity-15 md:opacity-25 pointer-events-none block"
       animate={{
         y: [0, -10, 0],
         scale: [1, 1.08, 1],
@@ -153,7 +153,7 @@ const Home = () => (
     </motion.div>
 
     <motion.div
-      className="absolute top-[15%] right-[6%] md:right-[12%] text-4xl sm:text-5xl lg:text-6xl text-yellow-600 dark:text-yellow-400 opacity-15 md:opacity-30 pointer-events-none block"
+      className="absolute top-[22%] right-[6%] md:right-[12%] text-4xl sm:text-5xl lg:text-6xl text-yellow-600 dark:text-yellow-400 opacity-15 md:opacity-30 pointer-events-none block"
       animate={{
         y: [0, 15, 0],
         rotate: [0, -360],

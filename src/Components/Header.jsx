@@ -1,10 +1,50 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaSun, FaMoon } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = ({ theme, toggleTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.pathname === "/" && location.hash) {
+      setTimeout(() => {
+        const id = location.hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [location]);
+
+  const handleNavClick = (e, item) => {
+    e.preventDefault();
+    setMenuOpen(false);
+    const targetId = item.toLowerCase();
+    
+    if (location.pathname !== "/") {
+      navigate(`/#${targetId}`);
+    } else {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      } else {
+        navigate(`/#${targetId}`);
+      }
+    }
+  };
+
+  const handleLogoClick = () => {
+    if (location.pathname !== "/") {
+      navigate("/");
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +64,7 @@ const Header = ({ theme, toggleTheme }) => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
+          onClick={handleLogoClick}
         >
           My Portfolio
         </motion.h1>
@@ -34,7 +75,8 @@ const Header = ({ theme, toggleTheme }) => {
             {["Home", "About","Experience","Skills", "Projects", "Certifications", "Contact"].map((item) => (
               <li key={item}>
                 <a
-                  href={`#${item.toLowerCase()}`}
+                  href={`/#${item.toLowerCase()}`}
+                  onClick={(e) => handleNavClick(e, item)}
                   className="text-slate-700 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 font-medium transition duration-300"
                 >
                   {item}
@@ -72,9 +114,9 @@ const Header = ({ theme, toggleTheme }) => {
           {["Home", "About","Experience","Skills", "Projects", "Certifications", "Contact"].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={`/#${item.toLowerCase()}`}
               className="text-slate-800 dark:text-white text-lg font-semibold hover:text-blue-600 dark:hover:text-blue-400"
-              onClick={() => setMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, item)}
             >
               {item}
             </a>
