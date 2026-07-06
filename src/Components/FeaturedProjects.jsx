@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import emiPlatformImg from "../assets/emi-platform.png";
+import taskflowImg from "../assets/Taskflow.png";
 
 const featured = [
   {
@@ -12,7 +14,7 @@ const featured = [
     github: "https://github.com/dineshkumar-mb",
     live: "https://emi-frontend-platform.vercel.app/",
     route: "/projects/emi-loan-intelligence",
-    image: "/src/assets/emi-platform.png"
+    image: emiPlatformImg
   },
   {
     title: "TaskFlow - AI-Powered Sprint Management SaaS",
@@ -23,7 +25,7 @@ const featured = [
     github: "https://github.com/dineshkumar-mb/taskflow-frontend.git",
     live: "https://taskflow-frontend-self.vercel.app/login",
     route: "/projects/taskflow-ai",
-    image: "/src/assets/Taskflow.png"
+    image: taskflowImg
   },
   {
     title: "InnoIDE",

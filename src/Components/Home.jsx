@@ -1,99 +1,41 @@
-// import { motion } from "framer-motion";
-// import { Typewriter } from "react-simple-typewriter";
-
-// const Home = () => {
-//   return (
-//     <section id="home" className="h-screen flex items-center justify-center text-center bg-gray-900 text-white">
-//       <motion.div
-//         initial={{ opacity: 0, y: 50 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 1 }}
-//         className="flex flex-col items-center"
-//       >
-//         {/* Profile Image */}
-//         <motion.img
-//           src="/profile.jpeg"
-//           alt="DineshKumar"
-//           className="w-32 h-32 rounded-full border-4 border-blue-500 shadow-lg"
-//           initial={{ scale: 0 }}
-//           animate={{ scale: 1 }}
-//           transition={{ duration: 1, delay: 0.3 }}
-//         />
-
-//         {/* Title with Typewriter Effect */}
-//         <h1 className="text-5xl font-bold mt-4 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-//           Hi, I'm{" "}
-//           <span className="text-white">
-//             <Typewriter
-//               words={["Dinesh Kumar M B", "a Developer", "a Coder", "a Tech Enthusiast"]}
-//               loop={0} // Infinite loop
-//               cursor
-//               cursorStyle="|"
-//               typeSpeed={100}
-//               deleteSpeed={60}
-//               delaySpeed={1200}
-//             />
-//           </span>
-//         </h1>
-
-//         {/* Subtitle */}
-//         <p className="text-lg text-gray-400 mt-2">
-//           Full-Stack Developer | React developer| Tech Enthusiast
-//         </p>
-
-//         {/* Contact Button */}
-//         <motion.a
-//           href="#contact"
-//           className="mt-6 px-6 py-2 bg-blue-500 rounded-full text-white text-lg font-semibold shadow-md hover:bg-blue-600 transition duration-300"
-//           whileHover={{ scale: 1.1 }}
-//           whileTap={{ scale: 0.9 }}
-//         >
-//           Contact Me
-//         </motion.a>
-//       </motion.div>
-//     </section>
-//   );
-// };
-
-// export default Home;
 
 
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { 
-  FaGithub, 
-  FaLinkedin, 
-  FaEnvelope, 
-  FaReact, 
-  FaNodeJs, 
-  FaJsSquare, 
-  FaHtml5, 
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaReact,
+  FaNodeJs,
+  FaJsSquare,
+  FaHtml5,
   FaCss3Alt,
   FaGitAlt,
   FaLaptopCode,
   FaLightbulb
 } from "react-icons/fa";
-import { 
-  SiTailwindcss, 
-  SiMongodb, 
+import {
+  SiTailwindcss,
+  SiMongodb,
   SiRedux,
   SiExpress,
   SiVite
 } from "react-icons/si";
 
 const socialLinks = [
-  { 
-    icon: <FaGithub />, 
+  {
+    icon: <FaGithub />,
     url: "https://github.com/dineshkumar-mb",
     hoverClass: "hover:bg-slate-700 hover:text-white hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
   },
-  { 
-    icon: <FaLinkedin />, 
+  {
+    icon: <FaLinkedin />,
     url: "https://www.linkedin.com/in/dinesh-kumar-mannibrundha13393/",
     hoverClass: "hover:bg-blue-600 hover:text-white hover:shadow-[0_0_20px_rgba(37,99,235,0.6)]"
   },
-  { 
-    icon: <FaEnvelope />, 
+  {
+    icon: <FaEnvelope />,
     url: "mailto:dineshkumarmannibrundha@gmail.com",
     hoverClass: "hover:bg-rose-600 hover:text-white hover:shadow-[0_0_20px_rgba(225,29,72,0.6)]"
   }
@@ -281,13 +223,13 @@ const Home = () => (
 
       {/* Glassmorphic Card */}
       <motion.div
-        className="relative bg-white/70 dark:bg-gray-900/30 backdrop-blur-md border border-slate-200/50 dark:border-white/10 w-full max-w-xl px-8 py-10 md:px-12 rounded-3xl shadow-lg dark:shadow-2xl hover:shadow-xl dark:hover:shadow-[0_20px_50px_rgba(139,92,246,0.15)] hover:border-slate-300 dark:hover:border-purple-500/30 flex flex-col items-center transition-all duration-500 group"
+        className="relative bg-white/70 dark:bg-gray-900/30 hover:bg-white/90 dark:hover:bg-white/5 backdrop-blur-md border border-slate-200/50 dark:border-white/10 w-full max-w-xl px-8 py-10 md:px-12 rounded-3xl shadow-lg dark:shadow-2xl hover:shadow-xl dark:hover:shadow-[0_20px_50px_rgba(167,139,250,0.2)] hover:border-slate-300 dark:hover:border-purple-400/50 flex flex-col items-center transition-all duration-500 group"
         initial={{ opacity: 0, scale: 0.97 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.6, duration: 0.8 }}
       >
         {/* Soft backglow inside the card */}
-        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/0 via-transparent to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-all duration-500 pointer-events-none" />
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/0 via-transparent to-purple-500/0 group-hover:from-blue-400/10 group-hover:to-purple-400/10 transition-all duration-500 pointer-events-none" />
 
         {/* Typewriter Name Heading with Animated Underline */}
         <h1 className="text-3xl md:text-5xl font-extrabold mb-3 text-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 text-transparent bg-clip-text leading-tight">
@@ -308,7 +250,7 @@ const Home = () => (
             />
           </span>
         </h1>
-        <span className="block h-1 w-24 mt-4 mb-7 bg-gradient-to-r from-blue-550 via-purple-550 to-pink-550 dark:from-blue-400 dark:via-purple-500 dark:to-pink-400 rounded-full animate-pulse"></span>
+        <span className="block h-1 w-24 mt-8 mb-5 bg-gradient-to-r from-blue-550 via-purple-550 to-pink-550 dark:from-blue-400 dark:via-purple-500 dark:to-pink-400 rounded-full animate-pulse"></span>
 
         {/* Subtitle Badges & Metrics */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 relative z-10 w-full max-w-lg">
@@ -321,7 +263,7 @@ const Home = () => (
             Open to Full-Stack Opportunities
           </span>
         </div>
-        
+
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 relative z-10 w-full">
           {[
             "3+ Years Experience",
@@ -361,7 +303,7 @@ const Home = () => (
           >
             View Projects
           </motion.a>
-          
+
           <motion.a
             href="/new_resume.pdf"
             download="Dineshfullstackresume.pdf"
@@ -371,7 +313,7 @@ const Home = () => (
           >
             Download Resume
           </motion.a>
-          
+
           <motion.a
             href="#contact"
             className="px-6 sm:px-8 py-3 bg-transparent hover:bg-slate-50 dark:hover:bg-white/5 rounded-full font-bold text-blue-600 dark:text-blue-400 text-sm sm:text-base border border-blue-600 dark:border-blue-500/50 transition-all duration-300"
