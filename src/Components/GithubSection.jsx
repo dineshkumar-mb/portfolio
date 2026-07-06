@@ -52,12 +52,12 @@ const GithubSection = () => {
             transition={{ duration: 0.8 }}
           >
             <img 
-              src={`https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&theme=transparent&hide_border=true&title_color=3b82f6&icon_color=8b5cf6&text_color=475569&bg_color=00000000`}
+              src={`https://github-readme-stats-eight-theta.vercel.app/api?username=${githubUsername}&show_icons=true&theme=transparent&hide_border=true&title_color=3b82f6&icon_color=8b5cf6&text_color=475569&bg_color=00000000`}
               alt="GitHub Stats" 
               className="w-full h-auto dark:hidden"
             />
             <img 
-              src={`https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&theme=transparent&hide_border=true&title_color=60a5fa&icon_color=a78bfa&text_color=cbd5e1&bg_color=00000000`}
+              src={`https://github-readme-stats-eight-theta.vercel.app/api?username=${githubUsername}&show_icons=true&theme=transparent&hide_border=true&title_color=60a5fa&icon_color=a78bfa&text_color=cbd5e1&bg_color=00000000`}
               alt="GitHub Stats Dark" 
               className="w-full h-auto hidden dark:block"
             />
@@ -72,12 +72,12 @@ const GithubSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <img 
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${githubUsername}&layout=compact&theme=transparent&hide_border=true&title_color=3b82f6&text_color=475569&bg_color=00000000`}
+              src={`https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=${githubUsername}&layout=compact&theme=transparent&hide_border=true&title_color=3b82f6&text_color=475569&bg_color=00000000`}
               alt="Top Languages" 
               className="w-full h-auto dark:hidden"
             />
             <img 
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${githubUsername}&layout=compact&theme=transparent&hide_border=true&title_color=60a5fa&text_color=cbd5e1&bg_color=00000000`}
+              src={`https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=${githubUsername}&layout=compact&theme=transparent&hide_border=true&title_color=60a5fa&text_color=cbd5e1&bg_color=00000000`}
               alt="Top Languages Dark" 
               className="w-full h-auto hidden dark:block"
             />
