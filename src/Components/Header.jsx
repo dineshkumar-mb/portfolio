@@ -103,7 +103,7 @@ const Header = ({ theme, toggleTheme }) => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden text-2xl cursor-pointer text-slate-800 dark:text-white" onClick={() => setMenuOpen(!menuOpen)}>
+        <div className="md:hidden text-2xl cursor-pointer text-slate-800 dark:text-white relative z-50" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
 
