@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { FaLinkedin, FaGithub, FaEnvelope, FaFileAlt, FaGlobe } from "react-icons/fa";
 
@@ -8,6 +8,13 @@ const Contact = () => {
   const [isSent, setIsSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+
+  // Ping the backend to wake it up if it's sleeping (useful for Render free tier)
+  useEffect(() => {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://portfolio-backend-n0zk.onrender.com";
+    axios.get(backendUrl).catch(() => {});
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
