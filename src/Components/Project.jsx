@@ -151,8 +151,8 @@ const Project = () => {
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`px-6 py-2.5 rounded-full text-sm font-bold tracking-wide transition-all duration-300 border ${activeCategory === cat
-                ? "bg-gradient-to-r from-blue-650 to-purple-650 dark:from-blue-500 dark:to-purple-600 text-white border-transparent shadow-md dark:shadow-lg dark:shadow-blue-500/25 scale-105"
-                : "bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-gray-400 border-slate-200 dark:border-white/5 hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-905 dark:hover:text-white hover:border-slate-350 dark:hover:border-white/10"
+                ? "bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-600 text-white border-transparent shadow-md dark:shadow-lg dark:shadow-blue-500/25 scale-105"
+                : "bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-gray-400 border-slate-200 dark:border-white/5 hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-white/10"
                 }`}
             >
               {cat}
@@ -254,7 +254,7 @@ const Project = () => {
                           to={proj.caseStudyRoute}
                           className="px-4 py-1.5 rounded-lg bg-blue-600/10 text-blue-600 dark:text-blue-400 font-bold text-xs hover:bg-blue-600 hover:text-white transition-all shadow-sm"
                         >
-                          View Case Study
+                          Read Case Study
                         </Link>
                       ) : (
                         <div></div>

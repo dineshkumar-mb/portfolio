@@ -5,6 +5,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Header from "./Components/Header.jsx";
 import Footer from "./Components/Footer.jsx";
 import SplashCursor from "./Components/SplashCursor.jsx";
+import ScrollToTop from "./Components/ScrollToTop.jsx";
 
 // Lazy load components for performance optimization
 const SEO = lazy(() => import("./Components/SEO.jsx"));
@@ -31,7 +32,6 @@ const MainLanding = () => (
   <>
     <Home />
     <WhyHireMe />
-    <FeaturedProjects />
     <Expertise />
     <About />
     <Skills />
@@ -74,7 +74,15 @@ const App = () => {
     <HelmetProvider>
       <Router>
         <div className="bg-slate-50 dark:bg-[#030014] text-slate-800 dark:text-white bg-grid-pattern relative min-h-screen overflow-x-hidden transition-colors duration-500">
-          {!isMobile && <SplashCursor />}
+          {!isMobile && (
+            <SplashCursor 
+              DENSITY_DISSIPATION={15} 
+              VELOCITY_DISSIPATION={6} 
+              SPLAT_RADIUS={0.03} 
+              SPLAT_FORCE={1000} 
+              COLOR_UPDATE_SPEED={3}
+            />
+          )}
           <Header theme={theme} toggleTheme={toggleTheme} />
           
           <Suspense fallback={<Loader />}>
@@ -89,6 +97,7 @@ const App = () => {
           </Suspense>
 
           <Footer />
+          <ScrollToTop />
         </div>
       </Router>
     </HelmetProvider>

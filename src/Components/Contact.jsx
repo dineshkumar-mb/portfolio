@@ -121,7 +121,9 @@ const Contact = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-gray-800/50 backdrop-blur-md rounded-2xl border border-slate-200/50 dark:border-white/5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group"
+                  className={`flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-gray-800/50 backdrop-blur-md rounded-2xl border border-slate-200/50 dark:border-white/5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group ${
+                    idx === 4 ? "col-span-2" : ""
+                  }`}
                 >
                   <span className={`text-3xl mb-2 group-hover:scale-110 transition-transform ${link.color}`}>{link.icon}</span>
                   <span className="text-sm font-semibold text-slate-700 dark:text-gray-300">{link.label}</span>

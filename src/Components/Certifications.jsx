@@ -134,7 +134,7 @@ const Certifications = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {["TypeScript", "System Design", "Docker", "CI/CD", "Advanced AI Engineering"].map((skill, index) => (
+            {["TypeScript", "System Design", "CI/CD", "Advanced AI Engineering", "LLM Fine-Tuning", "Agentic Workflows", "Vector Databases"].map((skill, index) => (
               <div 
                 key={index}
                 className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-50/70 dark:bg-amber-500/10 border border-amber-200/50 dark:border-amber-500/20 text-amber-700 dark:text-amber-300 font-bold shadow-sm hover:scale-105 hover:bg-amber-100 dark:hover:bg-amber-500/20 transition-all duration-300 cursor-default"

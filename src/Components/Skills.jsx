@@ -55,7 +55,8 @@ const skillCategories = [
     },
     skills: [
       { name: "MongoDB", note: "NoSQL DB" },
-      { name: "Mongoose", note: "ODM library" }
+      { name: "Mongoose", note: "ODM library" },
+      { name: "MySQL", note: "RDBMS" }
     ],
   },
   {
@@ -70,6 +71,7 @@ const skillCategories = [
     skills: [
       { name: "LangChain", note: "EMI Platform" },
       { name: "Gemini", note: "AI Mock Interview" },
+      { name: "OpenAI", note: "TaskFlow" },
       { name: "RAG", note: "EMI Platform" },
       { name: "ChromaDB", note: "Vector DB" },
       { name: "Prompt Engineering", note: "Taskflow" }
@@ -102,7 +104,11 @@ const skillCategories = [
     skills: [
       { name: "GitHub Actions", note: "CI/CD" },
       { name: "Docker", note: "Containerization" },
-      { name: "Vercel", note: "Deployment" }
+      { name: "AWS EC2", note: "Compute" },
+      { name: "AWS S3", note: "Storage" },
+      { name: "AWS Lambda", note: "Serverless" },
+      { name: "Vercel", note: "Deployment" },
+      { name: "Netlify", note: "Hosting" }
     ],
   },
 ];
