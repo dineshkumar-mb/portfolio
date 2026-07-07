@@ -1,28 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dineshkumar-mb.netlify.app/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://portfolio-five-chi-11.vercel.app/</loc>
+    <lastmod>2026-07-07</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dineshkumar-mb.netlify.app/projects/emi-loan-intelligence</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://portfolio-five-chi-11.vercel.app/projects/emi-loan-intelligence</loc>
+    <lastmod>2026-07-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dineshkumar-mb.netlify.app/projects/taskflow-ai</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://portfolio-five-chi-11.vercel.app/projects/taskflow-ai</loc>
+    <lastmod>2026-07-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dineshkumar-mb.netlify.app/projects/innoide</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://portfolio-five-chi-11.vercel.app/projects/innoide</loc>
+    <lastmod>2026-07-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dineshkumar-mb.netlify.app/projects/ai-mock-interview</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://portfolio-five-chi-11.vercel.app/projects/ai-mock-interview</loc>
+    <lastmod>2026-07-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-five-chi-11.vercel.app/projects/hrms-application</loc>
+    <lastmod>2026-07-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-five-chi-11.vercel.app/projects/streamify</loc>
+    <lastmod>2026-07-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-five-chi-11.vercel.app/projects/code-reviewer</loc>
+    <lastmod>2026-07-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-five-chi-11.vercel.app/projects/zoomcar-clone</loc>
+    <lastmod>2026-07-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-five-chi-11.vercel.app/projects/food-ordering-app</loc>
+    <lastmod>2026-07-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-five-chi-11.vercel.app/projects/gemini-clone</loc>
+    <lastmod>2026-07-07</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>

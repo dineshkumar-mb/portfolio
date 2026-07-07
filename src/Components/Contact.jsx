@@ -114,7 +114,7 @@ const Contact = () => {
                 { icon: <FaGithub />, label: "GitHub", url: "https://github.com/dineshkumar-mb", color: "text-slate-800 dark:text-white" },
                 { icon: <FaEnvelope />, label: "Email", url: "mailto:dineshkumarmannibrundha@gmail.com", color: "text-rose-500" },
                 { icon: <FaFileAlt />, label: "Resume", url: "/new_resume.pdf", color: "text-amber-500" },
-                { icon: <FaGlobe />, label: "Portfolio", url: "https://dineshkumar-mb.netlify.app", color: "text-indigo-500" }
+                { icon: <FaGlobe />, label: "Portfolio", url: "https://portfolio-five-chi-11.vercel.app/", color: "text-indigo-500" }
               ].map((link, idx) => (
                 <a
                   key={idx}

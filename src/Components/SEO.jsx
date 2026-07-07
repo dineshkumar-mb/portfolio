@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-const SEO = ({ title, description, name = 'Dinesh Kumar M B', type = 'website', image = 'https://dineshkumar-mb.netlify.app/profile.jpeg', url = 'https://dineshkumar-mb.netlify.app' }) => {
+const SEO = ({ title, description, name = 'Dinesh Kumar M B', type = 'website', image = 'https://portfolio-five-chi-11.vercel.app/profile.jpeg', url = 'https://portfolio-five-chi-11.vercel.app' }) => {
   return (
     <Helmet>
       {/* Standard metadata tags */}
