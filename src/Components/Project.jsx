@@ -24,7 +24,7 @@ const projects = [
     category: "Full Stack",
     tech: "React.js, Node.js, MongoDB, OpenAI, Cashfree",
     image: TaskflowImg,
-    link: "https://taskflow-frontend-self.vercel.app/login || https://github.com/dineshkumar-mb/taskflow-frontend.git",
+    link: "https://taskflow-frontend-self.vercel.app/login",
     caseStudyRoute: "/projects/taskflow-ai",
     description: "Architected a Jira-inspired sprint management SaaS with role-based access control, subscription tiers, and Cashfree-based recurring billing. Implemented an OpenAI-driven chatbot.",
   },
