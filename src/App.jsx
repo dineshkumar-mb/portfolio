@@ -9,6 +9,7 @@ import SplashCursor from "./Components/SplashCursor.jsx";
 // Lazy load components for performance optimization
 const SEO = lazy(() => import("./Components/SEO.jsx"));
 const Home = lazy(() => import("./Components/Home.jsx"));
+const WhyHireMe = lazy(() => import("./Components/WhyHireMe.jsx"));
 const FeaturedProjects = lazy(() => import("./Components/FeaturedProjects.jsx"));
 const About = lazy(() => import("./Components/About.jsx"));
 const Expertise = lazy(() => import("./Components/Expertise.jsx"));
@@ -29,6 +30,7 @@ const Loader = () => (
 const MainLanding = () => (
   <>
     <Home />
+    <WhyHireMe />
     <FeaturedProjects />
     <Expertise />
     <About />
@@ -43,6 +45,14 @@ const MainLanding = () => (
 
 const App = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -64,7 +74,7 @@ const App = () => {
     <HelmetProvider>
       <Router>
         <div className="bg-slate-50 dark:bg-[#030014] text-slate-800 dark:text-white bg-grid-pattern relative min-h-screen overflow-hidden transition-colors duration-500">
-          <SplashCursor />
+          {!isMobile && <SplashCursor />}
           <Header theme={theme} toggleTheme={toggleTheme} />
           
           <Suspense fallback={<Loader />}>

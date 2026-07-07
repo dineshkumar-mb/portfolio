@@ -38,15 +38,6 @@ const projects = [
     description: "A smart IDE application that allows users to write and run code, simulate, construct flowcharts, and collaborate via WebSockets and video calls.",
   },
   {
-    title: "AI Mock-interview app",
-    category: "AI & Tools",
-    tech: "Node.js, Express, Tailwind CSS, ReactJS, Google Gemini API, Stripe, Clerk",
-    image: "/ai_mock_interview.png",
-    link: "https://ai-mock-interview-app-f.vercel.app/",
-    caseStudyRoute: "/projects/ai-mock-interview",
-    description: "A comprehensive AI-driven mock interview platform that provides real-time feedback and role-specific questions to help users sharpen their interview skills.",
-  },
-  {
     title: "HRMS Application",
     category: "Full Stack",
     tech: "React, Node.js, MongoDB, Face API, Google Auth",
@@ -65,6 +56,15 @@ const projects = [
     description: "A MERN stack application capable of real-time video and voice chat with end-to-end encryption.",
   },
   {
+    title: "AI Mock-interview app",
+    category: "AI & Tools",
+    tech: "Node.js, Express, Tailwind CSS, ReactJS, Google Gemini API, Stripe, Clerk",
+    image: "/ai_mock_interview.png",
+    link: "https://ai-mock-interview-app-f.vercel.app/",
+    caseStudyRoute: "/projects/ai-mock-interview",
+    description: "A comprehensive AI-driven mock interview platform that provides real-time feedback and role-specific questions to help users sharpen their interview skills.",
+  },
+  {
     title: "Code Reviewer app",
     category: "AI & Tools",
     tech: "Node.js, Express.js, CSS, React.js, Google Gemini API",
@@ -74,13 +74,13 @@ const projects = [
     description: "This is a code reviewer app built using Express, Node.js, google gemini-Api, reactjs. It allows users to review their code.",
   },
   {
-    title: "Zoomcarclone",
-    category: "Full Stack",
-    tech: "React, Node.js, MongoDB, Express",
-    image: "https://github.com/user-attachments/assets/dd5c4669-f7dc-483f-8f2a-af8e8d4b5b37",
-    link: "https://capstonezoomcarclone-frnd.vercel.app/",
-    caseStudyRoute: "/projects/zoomcar-clone",
-    description: "A sleek, responsive Zoomcar clone website showcasing projects, skills, and experience with Role-based functionalities.",
+    title: "Gemini 2.0 clone",
+    category: "Frontend",
+    tech: "React.js, Tailwind CSS, Google Gemini API",
+    image: "https://github.com/user-attachments/assets/a578e8e6-cbad-4d8b-a0bd-25c0fc36e04c",
+    link: "https://gemini-clone-jet-eight.vercel.app/",
+    caseStudyRoute: "/projects/gemini-clone",
+    description: "A powerful conversational AI web application built with ReactJS, Tailwind CSS, and Google Generative AI, replicating the smart Gemini assistant interface.",
   },
   {
     title: "Food ordering App",
@@ -92,13 +92,13 @@ const projects = [
     description: "This is a Food Delivery App built using the MERN stack. It allows users to browse food items, manage carts, make payments via Stripe, and track orders.",
   },
   {
-    title: "Gemini 2.0 clone",
-    category: "Frontend",
-    tech: "React.js, Tailwind CSS, Google Gemini API",
-    image: "https://github.com/user-attachments/assets/a578e8e6-cbad-4d8b-a0bd-25c0fc36e04c",
-    link: "https://gemini-clone-jet-eight.vercel.app/",
-    caseStudyRoute: "/projects/gemini-clone",
-    description: "A powerful conversational AI web application built with ReactJS, Tailwind CSS, and Google Generative AI, replicating the smart Gemini assistant interface.",
+    title: "Zoomcarclone",
+    category: "Full Stack",
+    tech: "React, Node.js, MongoDB, Express",
+    image: "https://github.com/user-attachments/assets/dd5c4669-f7dc-483f-8f2a-af8e8d4b5b37",
+    link: "https://capstonezoomcarclone-frnd.vercel.app/",
+    caseStudyRoute: "/projects/zoomcar-clone",
+    description: "A sleek, responsive Zoomcar clone website showcasing projects, skills, and experience with Role-based functionalities.",
   }
 ];
 
