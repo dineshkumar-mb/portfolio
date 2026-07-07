@@ -107,7 +107,7 @@ const GithubSection = () => {
 
         <div className="flex justify-center mt-12">
            <a 
-             href={`https://github/${githubUsername}`} 
+             href="https://github.com/dineshkumar-mb" 
              target="_blank" 
              rel="noreferrer"
              className="px-8 py-3 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold shadow-lg hover:scale-105 transition-transform flex items-center gap-2"
