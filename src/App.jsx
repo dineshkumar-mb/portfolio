@@ -73,7 +73,7 @@ const App = () => {
   return (
     <HelmetProvider>
       <Router>
-        <div className="bg-slate-50 dark:bg-[#030014] text-slate-800 dark:text-white bg-grid-pattern relative min-h-screen overflow-hidden transition-colors duration-500">
+        <div className="bg-slate-50 dark:bg-[#030014] text-slate-800 dark:text-white bg-grid-pattern relative min-h-screen overflow-x-hidden transition-colors duration-500">
           {!isMobile && <SplashCursor />}
           <Header theme={theme} toggleTheme={toggleTheme} />
           

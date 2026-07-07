@@ -235,7 +235,7 @@ const ProjectCaseStudy = () => {
   }
 
   return (
-    <div className="bg-slate-50 dark:bg-[#030014] text-slate-800 dark:text-white min-h-screen pt-24 pb-20 relative overflow-hidden">
+    <div className="bg-slate-50 dark:bg-[#030014] text-slate-800 dark:text-white min-h-screen pt-24 pb-20 relative overflow-x-hidden">
       <SEO
         title={`${project.title} | Case Study`}
         description={project.overview}
