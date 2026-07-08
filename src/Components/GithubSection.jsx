@@ -45,64 +45,94 @@ const GithubSection = () => {
           
           {/* Main Stats Card */}
           <motion.div
-            className="w-full lg:w-1/2 p-2 bg-white/50 dark:bg-gray-900/40 backdrop-blur-md rounded-3xl border border-slate-200 dark:border-white/10 shadow-lg hover:border-slate-300 dark:hover:border-white/20 transition-colors"
+            className="w-full lg:w-1/2 p-2 bg-white/50 dark:bg-gray-900/40 backdrop-blur-md rounded-3xl border border-slate-200 dark:border-white/10 shadow-lg cursor-pointer"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            whileHover={{ 
+              scale: 1.02,
+              boxShadow: "0 20px 40px -10px rgba(59, 130, 246, 0.3)",
+              borderColor: "rgba(59, 130, 246, 0.4)"
+            }}
           >
-            <img 
-              src={`https://github-readme-stats-eight-theta.vercel.app/api?username=${githubUsername}&show_icons=true&theme=transparent&hide_border=true&title_color=3b82f6&icon_color=8b5cf6&text_color=475569&bg_color=00000000`}
-              alt="GitHub Stats" 
-              className="w-full h-auto dark:hidden"
-            />
-            <img 
-              src={`https://github-readme-stats-eight-theta.vercel.app/api?username=${githubUsername}&show_icons=true&theme=transparent&hide_border=true&title_color=60a5fa&icon_color=a78bfa&text_color=cbd5e1&bg_color=00000000`}
-              alt="GitHub Stats Dark" 
-              className="w-full h-auto hidden dark:block"
-            />
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut" }}
+            >
+              <img 
+                src={`https://github-readme-stats-eight-theta.vercel.app/api?username=${githubUsername}&show_icons=true&theme=transparent&hide_border=true&title_color=3b82f6&icon_color=8b5cf6&text_color=475569&bg_color=00000000&hide=issues,prs,contribs&count_private=true&include_all_commits=true`}
+                alt="GitHub Stats" 
+                className="w-full h-auto dark:hidden drop-shadow-md"
+              />
+              <img 
+                src={`https://github-readme-stats-eight-theta.vercel.app/api?username=${githubUsername}&show_icons=true&theme=transparent&hide_border=true&title_color=60a5fa&icon_color=a78bfa&text_color=cbd5e1&bg_color=00000000&hide=issues,prs,contribs&count_private=true&include_all_commits=true`}
+                alt="GitHub Stats Dark" 
+                className="w-full h-auto hidden dark:block drop-shadow-lg"
+              />
+            </motion.div>
           </motion.div>
 
           {/* Top Languages Card */}
           <motion.div
-            className="w-full lg:w-1/2 p-2 bg-white/50 dark:bg-gray-900/40 backdrop-blur-md rounded-3xl border border-slate-200 dark:border-white/10 shadow-lg hover:border-slate-300 dark:hover:border-white/20 transition-colors"
+            className="w-full lg:w-1/2 p-2 bg-white/50 dark:bg-gray-900/40 backdrop-blur-md rounded-3xl border border-slate-200 dark:border-white/10 shadow-lg cursor-pointer"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            whileHover={{ 
+              scale: 1.02,
+              boxShadow: "0 20px 40px -10px rgba(139, 92, 246, 0.3)",
+              borderColor: "rgba(139, 92, 246, 0.4)"
+            }}
           >
-            <img 
-              src={`https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=${githubUsername}&layout=compact&theme=transparent&hide_border=true&title_color=3b82f6&text_color=475569&bg_color=00000000`}
-              alt="Top Languages" 
-              className="w-full h-auto dark:hidden"
-            />
-            <img 
-              src={`https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=${githubUsername}&layout=compact&theme=transparent&hide_border=true&title_color=60a5fa&text_color=cbd5e1&bg_color=00000000`}
-              alt="Top Languages Dark" 
-              className="w-full h-auto hidden dark:block"
-            />
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{ repeat: Infinity, duration: 4.2, ease: "easeInOut" }}
+            >
+              <img 
+                src={`https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=${githubUsername}&layout=compact&theme=transparent&hide_border=true&title_color=3b82f6&text_color=475569&bg_color=00000000`}
+                alt="Top Languages" 
+                className="w-full h-auto dark:hidden drop-shadow-md"
+              />
+              <img 
+                src={`https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=${githubUsername}&layout=compact&theme=transparent&hide_border=true&title_color=60a5fa&text_color=cbd5e1&bg_color=00000000`}
+                alt="Top Languages Dark" 
+                className="w-full h-auto hidden dark:block drop-shadow-lg"
+              />
+            </motion.div>
           </motion.div>
 
         </div>
 
         {/* Contribution Graph */}
         <motion.div
-          className="mt-8 w-full p-2 lg:p-6 bg-white/50 dark:bg-gray-900/40 backdrop-blur-md rounded-3xl border border-slate-200 dark:border-white/10 shadow-lg overflow-x-auto"
+          className="mt-8 w-full p-2 lg:p-6 bg-white/50 dark:bg-gray-900/40 backdrop-blur-md rounded-3xl border border-slate-200 dark:border-white/10 shadow-lg overflow-x-auto cursor-pointer"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
+          whileHover={{ 
+            scale: 1.02,
+            boxShadow: "0 20px 40px -10px rgba(59, 130, 246, 0.3)",
+            borderColor: "rgba(59, 130, 246, 0.4)"
+          }}
         >
+          <motion.div
+            animate={{ y: [0, -8, 0] }}
+            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+          >
             <img 
-              src={`https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&theme=react&hide_border=true&bg_color=00000000&color=475569&line=3b82f6&point=8b5cf6`}
+              src={`https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&theme=react&hide_border=true&bg_color=00000000&color=475569&line=3b82f6&point=8b5cf6&area=true`}
               alt="Contribution Graph" 
-              className="w-full h-auto dark:hidden min-w-[700px]"
+              className="w-full h-auto dark:hidden min-w-[700px] drop-shadow-md"
             />
             <img 
-              src={`https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&theme=react&hide_border=true&bg_color=00000000&color=cbd5e1&line=60a5fa&point=a78bfa`}
+              src={`https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&theme=react&hide_border=true&bg_color=00000000&color=cbd5e1&line=60a5fa&point=a78bfa&area=true`}
               alt="Contribution Graph Dark" 
-              className="w-full h-auto hidden dark:block min-w-[700px]"
+              className="w-full h-auto hidden dark:block min-w-[700px] drop-shadow-lg"
             />
+          </motion.div>
         </motion.div>
 
         <div className="flex justify-center mt-12">

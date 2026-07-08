@@ -20,6 +20,7 @@ const Project = lazy(() => import("./Components/Project.jsx"));
 const Certifications = lazy(() => import("./Components/Certifications.jsx"));
 const Contact = lazy(() => import("./Components/Contact.jsx"));
 const GithubSection = lazy(() => import("./Components/GithubSection.jsx"));
+const LighthouseMetrics = lazy(() => import("./Components/LighthouseMetrics.jsx"));
 const ProjectCaseStudy = lazy(() => import("./Pages/ProjectCaseStudy.jsx"));
 
 const Loader = () => (
@@ -39,6 +40,7 @@ const MainLanding = () => (
     <Project />
     <Certifications />
     <GithubSection />
+    <LighthouseMetrics />
     <Contact />
   </>
 );

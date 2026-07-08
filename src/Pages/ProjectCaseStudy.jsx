@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaCheckCircle, FaExclamationTriangle, FaReact, FaNodeJs, FaDatabase, FaStripe, FaRobot } from "react-icons/fa";
+import { SiMongodb, SiGoogle } from "react-icons/si";
 import SEO from "../Components/SEO";
+import ArchitectureDiagram from "../Components/ArchitectureDiagram";
 
 const caseStudies = {
   "emi-loan-intelligence": {
@@ -12,6 +14,20 @@ const caseStudies = {
     solution: "A RAG-enabled platform leveraging Gemini AI to instantly analyze loan documents and calculate complex EMIs. It acts as an intelligent assistant for loan agents.",
     architectureImg: "/Archietetural diagram forAI-Powered EMI Management & Loan Intelligence Platform.png",
     tech: ["React.js", "Node.js", "MongoDB", "Gemini AI", "ChromaDB"],
+    nodes: [
+      { id: '1', type: 'custom', position: { x: 250, y: 0 }, data: { label: 'User Interface', subtext: 'React + Tailwind', icon: <FaReact /> } },
+      { id: '2', type: 'custom', position: { x: 250, y: 150 }, data: { label: 'Node.js API', subtext: 'Microservice', icon: <FaNodeJs /> } },
+      { id: '3', type: 'custom', position: { x: 50, y: 300 }, data: { label: 'Gemini AI', subtext: 'LLM Engine', icon: <SiGoogle /> } },
+      { id: '4', type: 'custom', position: { x: 250, y: 300 }, data: { label: 'ChromaDB', subtext: 'Vector DB', icon: <FaDatabase /> } },
+      { id: '5', type: 'custom', position: { x: 450, y: 300 }, data: { label: 'MongoDB', subtext: 'Primary DB', icon: <SiMongodb /> } },
+    ],
+    edges: [
+      { id: 'e1-2', source: '1', target: '2', animated: true, style: { stroke: '#3b82f6' } },
+      { id: 'e2-3', source: '2', target: '3', animated: true, style: { stroke: '#3b82f6' } },
+      { id: 'e2-4', source: '2', target: '4', animated: true, style: { stroke: '#3b82f6' } },
+      { id: 'e2-5', source: '2', target: '5', animated: true, style: { stroke: '#3b82f6' } },
+      { id: 'e3-4', source: '3', target: '4', animated: true, style: { stroke: '#eab308' }, label: 'RAG Pipeline' },
+    ],
     implementation: [
       "Built a secure Node.js microservice for EMI calculations.",
       "Developed a LangChain pipeline to chunk and embed PDF policy documents into ChromaDB.",
@@ -33,6 +49,19 @@ const caseStudies = {
     solution: "A SaaS application with an AI chatbot that understands natural language to automatically create and organize tickets into Kanban boards.",
     architectureImg: "/Taskflow.png",
     tech: ["React.js", "Node.js", "OpenAI", "MongoDB", "Cashfree API"],
+    nodes: [
+      { id: '1', type: 'custom', position: { x: 250, y: 0 }, data: { label: 'TaskFlow Client', subtext: 'React Dashboard', icon: <FaReact /> } },
+      { id: '2', type: 'custom', position: { x: 250, y: 150 }, data: { label: 'Backend Server', subtext: 'Node.js + Express', icon: <FaNodeJs /> } },
+      { id: '3', type: 'custom', position: { x: 50, y: 300 }, data: { label: 'OpenAI Assistant', subtext: 'Chatbot & NLP', icon: <FaRobot /> } },
+      { id: '4', type: 'custom', position: { x: 250, y: 300 }, data: { label: 'MongoDB', subtext: 'Kanban States', icon: <SiMongodb /> } },
+      { id: '5', type: 'custom', position: { x: 450, y: 300 }, data: { label: 'Cashfree', subtext: 'Payment Gateway', icon: <FaStripe /> } },
+    ],
+    edges: [
+      { id: 'e1-2', source: '1', target: '2', animated: true, style: { stroke: '#8b5cf6' } },
+      { id: 'e2-3', source: '2', target: '3', animated: true, style: { stroke: '#10b981' }, label: 'Prompt -> JSON' },
+      { id: 'e2-4', source: '2', target: '4', animated: true, style: { stroke: '#3b82f6' } },
+      { id: 'e2-5', source: '2', target: '5', animated: true, style: { stroke: '#f59e0b' }, label: 'Billing' },
+    ],
     implementation: [
       "Developed role-based access control (RBAC) mapping directly to SaaS subscription tiers.",
       "Integrated Cashfree payment gateway for secure recurring billing.",
@@ -306,9 +335,27 @@ const ProjectCaseStudy = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold mb-6 text-slate-800 dark:text-white border-b-2 border-slate-200 dark:border-white/10 pb-2">Architecture</h2>
-              <div className="bg-slate-100 dark:bg-white/5 rounded-3xl p-2 border border-slate-200 dark:border-white/10 shadow-lg">
-                <img src={project.architectureImg} alt="Architecture Diagram" className="w-full rounded-2xl opacity-90" />
-                <p className="text-center text-sm text-slate-500 dark:text-gray-400 mt-3 mb-1">High-level system architecture overview.</p>
+              <div className="bg-slate-100 dark:bg-white/5 rounded-3xl p-2 border border-slate-200 dark:border-white/10 shadow-lg flex flex-col gap-6">
+
+                {project.nodes && project.edges && (
+                  <div className="p-2">
+                    <h3 className="text-xl font-bold text-center text-slate-700 dark:text-gray-300 mb-4 mt-2">Interactive Diagram</h3>
+                    <ArchitectureDiagram initialNodes={project.nodes} initialEdges={project.edges} />
+                    <p className="text-center text-sm text-slate-500 dark:text-gray-400 mt-3 mb-1">
+                      Drag to move, scroll to zoom.
+                    </p>
+                  </div>
+                )}
+
+                {project.architectureImg && (
+                  <div className="p-2">
+                    {project.nodes && project.edges && <hr className="border-slate-200 dark:border-white/10 mb-8 mx-10" />}
+                    {project.nodes && project.edges && <h3 className="text-xl font-bold text-center text-slate-700 dark:text-gray-300 mb-4">Static Architecture Overview</h3>}
+                    <img src={project.architectureImg} alt="Architecture Diagram" className="w-full rounded-2xl opacity-90" />
+                    <p className="text-center text-sm text-slate-500 dark:text-gray-400 mt-3 mb-1">High-level system architecture overview.</p>
+                  </div>
+                )}
+
               </div>
             </motion.section>
 
