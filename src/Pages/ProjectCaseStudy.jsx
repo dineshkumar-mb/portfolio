@@ -7,6 +7,44 @@ import SEO from "../Components/SEO";
 import ArchitectureDiagram from "../Components/ArchitectureDiagram";
 
 const caseStudies = {
+  "brand-os-multi-agent": {
+    title: "Personal Brand OS — Autonomous Multi-Agent AI Platform",
+    overview: "Project Status & Architecture Complete! All features, documentation, dynamic trend discovery, viral hook generators, multi-color animated architecture specs, and automated zero human intervention daily posting have been fully implemented, tested, and deployed!",
+    problem: "Manual content creation, technical research across GitHub & Reddit, crafting viral hooks, and daily posting to LinkedIn & Medium require 15+ hours per week with inconsistent quality and no feedback loops.",
+    solution: "An enterprise-grade autonomous 12-agent swarm platform that automatically discovers trending topics, verifies technical facts, synthesizes viral posts & Medium articles, and handles zero human intervention scheduled daily posting via resilient multi-provider AI cascade routing.",
+    architectureImg: "/brand-os.png",
+    tech: ["React 19", "Node.js", "TypeScript", "Prisma ORM", "PostgreSQL", "ChromaDB RAG", "BullMQ", "LinkedIn API", "Medium API"],
+    nodes: [
+      { id: '1', type: 'custom', position: { x: 250, y: 0 }, data: { label: 'React 19 Dashboard', subtext: 'Vite + Glassmorphism UI', icon: <FaReact /> } },
+      { id: '2', type: 'custom', position: { x: 250, y: 130 }, data: { label: 'API Gateway & Routes', subtext: 'Vercel Serverless / Express', icon: <FaNodeJs /> } },
+      { id: '3', type: 'custom', position: { x: 50, y: 260 }, data: { label: '12-Agent Swarm Engine', subtext: 'Orchestrator & Event Bus', icon: <FaRobot /> } },
+      { id: '4', type: 'custom', position: { x: 250, y: 260 }, data: { label: 'Multi-AI Provider Gateway', subtext: 'OpenRouter, Llama-3.1, Gemini', icon: <SiGoogle /> } },
+      { id: '5', type: 'custom', position: { x: 450, y: 260 }, data: { label: 'Data & RAG Vector Store', subtext: 'ChromaDB + PostgreSQL', icon: <FaDatabase /> } },
+      { id: '6', type: 'custom', position: { x: 250, y: 390 }, data: { label: 'Automated Publishers', subtext: 'LinkedIn & Medium APIs', icon: <FaCheckCircle /> } },
+    ],
+    edges: [
+      { id: 'e1-2', source: '1', target: '2', animated: true, style: { stroke: '#38bdf8' } },
+      { id: 'e2-3', source: '2', target: '3', animated: true, style: { stroke: '#818cf8' }, label: 'Trigger Swarm' },
+      { id: 'e3-4', source: '3', target: '4', animated: true, style: { stroke: '#fbbf24' }, label: 'Cascade Synthesis' },
+      { id: 'e3-5', source: '3', target: '5', animated: true, style: { stroke: '#fb7185' }, label: 'Style Memory RAG' },
+      { id: 'e3-6', source: '3', target: '6', animated: true, style: { stroke: '#34d399' }, label: 'Zero-Human Post' },
+    ],
+    implementation: [
+      "Architected an autonomous 12-agent swarm: Trend Discovery Agent, Deep Research Agent, Fact Verification Agent, Style RAG Agent, Content Strategy Agent, LinkedIn Generator, Medium Writer, Reviewer Agent, Critic Agent, SEO Agent, Publisher Agent, and Learning Feedback Loop Agent.",
+      "Engineered dynamic trend discovery scanning GitHub trending repos, Reddit technology subreddits, and RSS feeds in real-time with velocity scoring.",
+      "Integrated viral hook generators, multi-color animated architecture specs, and Markdown synthesis engines for LinkedIn carousel and Medium article drafts.",
+      "Configured automated zero human intervention daily posting scheduled via BullMQ queues and dispatched directly through LinkedIn REST API v2 & Medium APIs.",
+      "Designed a resilient Multi-Provider AI Gateway featuring automatic cascade failover across OpenRouter, NVIDIA NIM, OpenAI, and Ollama."
+    ],
+    challenges: [
+      "Ensuring factual accuracy across AI generated posts by enforcing a strict Fact Verification threshold (>=85% confidence score).",
+      "Handling dual production/local runtime environments smoothly between Vercel Serverless function routes and local Node.js Express server."
+    ],
+    results: "Project Status & Architecture Complete! All features, documentation, dynamic trend discovery, viral hook generators, multi-color animated architecture specs, and automated zero human intervention daily posting have been fully implemented, tested, and deployed to live production on Vercel!",
+    future: "Add multi-platform support for Dev.to, Hashnode, X (Twitter), and video script generators.",
+    github: "https://github.com/dineshkumar-mb/Brand-os-multi-agent",
+    live: "https://brand-os-multi-agent.vercel.app"
+  },
   "emi-loan-intelligence": {
     title: "AI-Powered EMI Management & Loan Intelligence Platform",
     overview: "Designed a comprehensive loan management platform featuring a retrieval-augmented generation (RAG) pipeline to analyze complex loan documents and dynamically calculate EMI/interest variations.",

@@ -6,6 +6,17 @@ import taskflowImg from "../assets/Taskflow.png";
 
 const featured = [
   {
+    title: "Personal Brand OS — Autonomous Multi-Agent AI Platform",
+    problem: "Manual content creation, technical research, dynamic trend discovery, and social media posting across LinkedIn & Medium require heavy manual effort and lack self-improving feedback loops.",
+    solution: "An enterprise-grade autonomous 12-agent swarm platform featuring dynamic trend discovery, viral hook generators, multi-color animated architecture specs, fact verification, and automated zero human intervention daily posting to LinkedIn & Medium.",
+    features: ["12-Agent Swarm", "Dynamic Trend Discovery", "Viral Hook Generators", "Multi-Color Animated Specs", "Zero-Human Posting", "Multi-AI Cascade Gateway"],
+    tech: ["React 19", "Node.js", "TypeScript", "Prisma", "ChromaDB RAG", "BullMQ"],
+    github: "https://github.com/dineshkumar-mb/Brand-os-multi-agent",
+    live: "https://brand-os-multi-agent.vercel.app",
+    route: "/projects/brand-os-multi-agent",
+    image: "/brand-os.png"
+  },
+  {
     title: "AI-Powered EMI Management & Loan Intelligence Platform",
     problem: "Traditional loan processing lacks intelligent document retrieval and real-time interest insights.",
     solution: "A RAG-enabled platform leveraging Gemini AI to instantly analyze loan documents and calculate complex EMIs.",

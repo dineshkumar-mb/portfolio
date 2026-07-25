@@ -11,6 +11,15 @@ import EmiPlatformImg from "../assets/emi-platform.png";
 
 const projects = [
   {
+    title: "Personal Brand OS — Autonomous Multi-Agent AI Platform",
+    category: "Autonomous Swarm",
+    tech: "React 19, Node.js, TypeScript, Prisma, ChromaDB RAG, BullMQ, Multi-AI Gateway",
+    image: "/brand-os.png",
+    link: "https://brand-os-multi-agent.vercel.app",
+    caseStudyRoute: "/projects/brand-os-multi-agent",
+    description: "Project Status & Architecture Complete! Enterprise-grade autonomous 12-agent swarm platform featuring dynamic trend discovery, viral hook generators, multi-color animated architecture specs, fact-verification, and automated zero human intervention daily posting to LinkedIn & Medium.",
+  },
+  {
     title: "AI-Powered EMI Management & Loan Intelligence Platform",
     category: "RAG",
     tech: "React.js, Node.js, MongoDB, Gemini AI",
@@ -104,7 +113,7 @@ const projects = [
 
 const Project = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const categories = ["All", "Full Stack", "Frontend", "AI & Tools", "RAG"];
+  const categories = ["All", "Autonomous Swarm", "AI & Tools", "RAG", "Full Stack", "Frontend"];
 
   const filteredProjects = activeCategory === "All"
     ? projects
