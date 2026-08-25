@@ -22,6 +22,8 @@ const Contact = lazy(() => import("./Components/Contact.jsx"));
 const GithubSection = lazy(() => import("./Components/GithubSection.jsx"));
 const LighthouseMetrics = lazy(() => import("./Components/LighthouseMetrics.jsx"));
 const ProjectCaseStudy = lazy(() => import("./Pages/ProjectCaseStudy.jsx"));
+const Blog = lazy(() => import("./Pages/Blog.jsx"));
+const BlogPost = lazy(() => import("./Pages/BlogPost.jsx"));
 
 const Loader = () => (
   <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-[#030014]">
@@ -95,6 +97,8 @@ const App = () => {
             <Routes>
               <Route path="/" element={<MainLanding />} />
               <Route path="/projects/:id" element={<ProjectCaseStudy />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
             </Routes>
           </Suspense>
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Developer Journal | Dinesh Kumar M B</title>
+    <link>https://portfolio-five-chi-11.vercel.app/blog</link>
+    <description>Engineering notes, architecture decisions, and lessons learned while building Full-Stack MERN and AI-powered applications.</description>
+    <language>en-us</language>
+    <item>
+      <title>Building an AI-Powered EMI Management &amp; Loan Intelligence Platform with RAG</title>
+      <link>https://portfolio-five-chi-11.vercel.app/blog/ai-emi-rag-platform</link>
+      <description>Deep dive into designing a retrieval-augmented generation (RAG) pipeline with Gemini AI, indexing loan policy documents into ChromaDB, and coupling precise financial calculation engines with LLM synthesis.</description>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>How I Built TaskFlow — An AI-Powered Sprint Management SaaS</title>
+      <link>https://portfolio-five-chi-11.vercel.app/blog/taskflow-ai-saas</link>
+      <description>Architecture breakdown of a Jira-inspired sprint management platform featuring role-based access control, Cashfree recurring billing integration, and natural-language-to-JSON AI ticketing.</description>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Building InnoIDE: Lessons From Creating a Visual Engineering Platform</title>
+      <link>https://portfolio-five-chi-11.vercel.app/blog/innoide-react-flow</link>
+      <description>Behind the scenes of building a web-based IDE featuring React Flow interactive canvas nodes, WebSockets state synchronization, and Dyte WebRTC video pair-programming.</description>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Building an AI Code Reviewer: Architecture, AI Integration and Engineering Lessons</title>
+      <link>https://portfolio-five-chi-11.vercel.app/blog/ai-code-reviewer</link>
+      <description>How I built an automated pair-programming code review assistant using Express.js, Google Gemini API, and React, focusing on prompt engineering for security vulnerabilities and syntax analysis.</description>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Building an AI Mock Interview Application: From User Flow to AI Feedback</title>
+      <link>https://portfolio-five-chi-11.vercel.app/blog/ai-mock-interview-app</link>
+      <description>Engineering an interactive interview practice platform featuring browser Web Speech API voice transcription, Clerk user management, and dynamic Gemini AI evaluation.</description>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Engineering Real-Time Peer-to-Peer Communication with Streamify</title>
+      <link>https://portfolio-five-chi-11.vercel.app/blog/streamify-realtime-architecture</link>
+      <description>Understanding WebRTC peer connection handshakes, STUN/TURN server signaling via Socket.IO, and end-to-end encrypted audio/video streaming in MERN applications.</description>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

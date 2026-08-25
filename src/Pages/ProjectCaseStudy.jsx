@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaCheckCircle, FaExclamationTriangle, FaReact, FaNodeJs, FaDatabase, FaStripe, FaRobot } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaCheckCircle, FaExclamationTriangle, FaReact, FaNodeJs, FaDatabase, FaStripe, FaRobot, FaBook } from "react-icons/fa";
 import { SiMongodb, SiGoogle } from "react-icons/si";
 import SEO from "../Components/SEO";
 import ArchitectureDiagram from "../Components/ArchitectureDiagram";
@@ -47,6 +47,7 @@ const caseStudies = {
   },
   "emi-loan-intelligence": {
     title: "AI-Powered EMI Management & Loan Intelligence Platform",
+    articleSlug: "ai-emi-rag-platform",
     overview: "Designed a comprehensive loan management platform featuring a retrieval-augmented generation (RAG) pipeline to analyze complex loan documents and dynamically calculate EMI/interest variations.",
     problem: "Traditional loan processing lacks intelligent document retrieval and real-time interest insights. Existing systems force agents to manually cross-reference policy PDFs to answer customer queries.",
     solution: "A RAG-enabled platform leveraging Gemini AI to instantly analyze loan documents and calculate complex EMIs. It acts as an intelligent assistant for loan agents.",
@@ -82,6 +83,7 @@ const caseStudies = {
   },
   "taskflow-ai": {
     title: "TaskFlow - AI-Powered Sprint Management SaaS",
+    articleSlug: "taskflow-ai-saas",
     overview: "Architected a Jira-inspired sprint management SaaS with role-based access control, subscription tiers, and an OpenAI-driven chatbot.",
     problem: "Existing sprint management tools require heavy manual input for task breakdown and ticketing, slowing down Agile planning.",
     solution: "A SaaS application with an AI chatbot that understands natural language to automatically create and organize tickets into Kanban boards.",
@@ -116,6 +118,7 @@ const caseStudies = {
   },
   "innoide": {
     title: "InnoIDE - Collaborative Low-Code Engineering Platform",
+    articleSlug: "innoide-react-flow",
     overview: "A robust web-based IDE designed for modern developer teams, featuring real-time collaboration, video streaming, and visual flowchart building.",
     problem: "Developers often juggle multiple tools for diagramming, coding, API testing, and video calls during pair programming sessions.",
     solution: "An all-in-one low-code platform combining React Flow diagrams, WebRTC video via Dyte SDK, and a custom code runner.",
@@ -137,6 +140,7 @@ const caseStudies = {
   },
   "ai-mock-interview": {
     title: "AI Mock Interview Application",
+    articleSlug: "ai-mock-interview-app",
     overview: "A comprehensive AI-driven mock interview platform that provides real-time feedback and role-specific questions to help users sharpen their interview skills.",
     problem: "Candidates struggle to find realistic, role-specific interview practice with instant actionable feedback, often relying on expensive human coaches.",
     solution: "An AI-driven platform that generates dynamic interview questions, records answers via speech-to-text, and evaluates responses using Gemini AI.",
@@ -179,6 +183,7 @@ const caseStudies = {
   },
   "streamify": {
     title: "Streamify - Real-time Video & Voice Chat",
+    articleSlug: "streamify-realtime-architecture",
     overview: "A comprehensive MERN stack application capable of real-time video and voice chat with robust end-to-end encryption for secure communication.",
     problem: "Many video conferencing tools lack simple, secure peer-to-peer communication integrated seamlessly into a web application without requiring heavy downloads.",
     solution: "Developed a WebRTC-based platform that allows users to instantly connect via video and voice directly from their browsers.",
@@ -200,6 +205,7 @@ const caseStudies = {
   },
   "code-reviewer": {
     title: "AI Code Reviewer App",
+    articleSlug: "ai-code-reviewer",
     overview: "An intelligent code review application that leverages the Google Gemini API to analyze, review, and suggest improvements for developers' code.",
     problem: "Manual code reviews are time-consuming and often miss subtle bugs, security vulnerabilities, or performance optimization opportunities.",
     solution: "An automated, AI-powered tool that acts as a pair-programmer, providing instant actionable feedback on code snippets.",
@@ -333,13 +339,18 @@ const ProjectCaseStudy = () => {
             {project.overview}
           </p>
 
-          <div className="flex gap-4 mt-8">
+          <div className="flex flex-wrap gap-4 mt-8">
             <a href={project.live} target="_blank" rel="noreferrer" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full shadow-lg shadow-blue-500/30 transition-transform hover:scale-105 flex items-center gap-2">
               <FaExternalLinkAlt /> Live Demo
             </a>
             <a href={project.github} target="_blank" rel="noreferrer" className="px-8 py-3 bg-slate-200 dark:bg-white/10 hover:bg-slate-300 dark:hover:bg-white/20 text-slate-800 dark:text-white font-bold rounded-full shadow-md transition-transform hover:scale-105 flex items-center gap-2 border border-slate-300 dark:border-white/10">
               <FaGithub /> Source Code
             </a>
+            {project.articleSlug && (
+              <Link to={`/blog/${project.articleSlug}`} className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-full shadow-lg shadow-purple-500/30 transition-transform hover:scale-105 flex items-center gap-2">
+                <FaBook /> Read Engineering Article
+              </Link>
+            )}
           </div>
         </motion.div>
 

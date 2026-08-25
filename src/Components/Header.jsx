@@ -24,6 +24,16 @@ const Header = ({ theme, toggleTheme }) => {
   const handleNavClick = (e, item) => {
     e.preventDefault();
     setMenuOpen(false);
+
+    if (item === "Blog") {
+      if (location.pathname === "/blog") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        navigate("/blog");
+      }
+      return;
+    }
+
     const targetId = item.toLowerCase();
 
     if (location.pathname !== "/") {
@@ -72,12 +82,16 @@ const Header = ({ theme, toggleTheme }) => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
           <ul className="flex gap-6">
-            {["Home", "About", "Skills", "Experience", "Projects", "Certifications", "Contact"].map((item) => (
+            {["Home", "About", "Skills", "Experience", "Projects", "Blog", "Certifications", "Contact"].map((item) => (
               <li key={item}>
                 <a
-                  href={`/#${item.toLowerCase()}`}
+                  href={item === "Blog" ? "/blog" : `/#${item.toLowerCase()}`}
                   onClick={(e) => handleNavClick(e, item)}
-                  className="text-slate-700 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 font-medium transition duration-300"
+                  className={`font-medium transition duration-300 ${
+                    item === "Blog" && location.pathname.startsWith("/blog")
+                      ? "text-blue-600 dark:text-blue-400 font-bold"
+                      : "text-slate-700 dark:text-white hover:text-blue-600 dark:hover:text-blue-400"
+                  }`}
                 >
                   {item}
                 </a>
@@ -111,11 +125,15 @@ const Header = ({ theme, toggleTheme }) => {
         <motion.div
           className={`fixed top-0 right-0 h-full w-2/3 bg-white/95 dark:bg-[#030014]/95 backdrop-blur-lg border-l border-slate-200 dark:border-white/10 shadow-2xl p-8 flex flex-col gap-6 transform ${menuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300`}
         >
-          {["Home", "About", "Skills", "Experience", "Projects", "Certifications", "Contact"].map((item) => (
+          {["Home", "About", "Skills", "Experience", "Projects", "Blog", "Certifications", "Contact"].map((item) => (
             <a
               key={item}
-              href={`/#${item.toLowerCase()}`}
-              className="text-slate-800 dark:text-white text-lg font-semibold hover:text-blue-600 dark:hover:text-blue-400"
+              href={item === "Blog" ? "/blog" : `/#${item.toLowerCase()}`}
+              className={`text-lg font-semibold ${
+                item === "Blog" && location.pathname.startsWith("/blog")
+                  ? "text-blue-600 dark:text-blue-400 font-bold"
+                  : "text-slate-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400"
+              }`}
               onClick={(e) => handleNavClick(e, item)}
             >
               {item}

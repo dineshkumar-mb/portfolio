@@ -6,6 +6,7 @@ const SEO = ({ title, description, name = 'Dinesh Kumar M B', type = 'website', 
       {/* Standard metadata tags */}
       <title>{title}</title>
       <meta name='description' content={description} />
+      <link rel="canonical" href={url} />
       
       {/* Open Graph tags for social media sharing */}
       <meta property="og:type" content={type} />
