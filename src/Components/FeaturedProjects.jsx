@@ -17,12 +17,23 @@ const featured = [
     image: "/brand-os.png"
   },
   {
+    title: "Carrier OS — Autonomous Career Execution Platform",
+    problem: "Job hunting across dozens of career boards and portals requires repetitive manual resume tweaking, ATS keyword matching, manual application tracking, and constant recruiter email monitoring, resulting in hundreds of wasted hours.",
+    solution: "An open-source Autonomous Career Execution Platform powered by a 17-agent OS runtime kernel. Features real-time Socket.io execution traces, AI job discovery, ATS re-validation, recruiter email sync, and human-in-the-loop assisted/automated submissions.",
+    features: ["17-Agent OS Kernel", "Real-Time Socket.io Trace", "Human Approval Center", "Gmail Recruiter Sync", "ATS Re-Validation Engine", "Privacy Mode Controls"],
+    tech: ["React 19", "TypeScript", "Vite", "Node.js", "Express", "Socket.io", "TanStack Query"],
+    github: "https://github.com/dineshkumar-mb/carrier-os-client",
+    live: "https://carrier-os-client.vercel.app",
+    route: "/projects/carrier-os",
+    image: "/brand-os.png"
+  },
+  {
     title: "AI-Powered EMI Management & Loan Intelligence Platform",
     problem: "Traditional loan processing lacks intelligent document retrieval and real-time interest insights.",
     solution: "A RAG-enabled platform leveraging Gemini AI to instantly analyze loan documents and calculate complex EMIs.",
     features: ["RAG Pipeline", "Gemini AI Integration", "Dynamic Interest Calculator", "Document Indexing"],
     tech: ["React.js", "Node.js", "MongoDB", "LangChain"],
-    github: "https://github.com/dineshkumar-mb",
+    github: "https://github.com/dineshkumar-mb/emi-frontend-platform",
     live: "https://emi-frontend-platform.vercel.app/",
     route: "/projects/emi-loan-intelligence",
     image: emiPlatformImg
@@ -33,7 +44,7 @@ const featured = [
     solution: "A Jira-inspired SaaS with an AI chatbot that understands natural language to create and manage tickets.",
     features: ["Role-Based Access", "AI Chatbot", "Cashfree Billing", "Kanban Boards"],
     tech: ["React.js", "Node.js", "OpenAI", "MongoDB"],
-    github: "https://github.com/dineshkumar-mb/taskflow-frontend.git",
+    github: "https://github.com/dineshkumar-mb/taskflow-frontend",
     live: "https://taskflow-frontend-self.vercel.app/login",
     route: "/projects/taskflow-ai",
     image: taskflowImg
@@ -44,7 +55,7 @@ const featured = [
     solution: "A robust web-based IDE featuring real-time WebRTC video calls, interactive flowcharts, and code execution.",
     features: ["React Flow Diagrams", "Dyte Video SDK", "Live Collaboration", "Code Runner"],
     tech: ["React.js", "Socket.IO", "Node.js", "Dyte"],
-    github: "https://github.com/dineshkumar-mb",
+    github: "https://github.com/dineshkumar-mb/ide-new",
     live: "https://ide.innotrat.in/",
     route: "/projects/innoide",
     image: "/IDE.png"
@@ -55,7 +66,7 @@ const featured = [
     solution: "An AI-driven platform that generates dynamic interview questions and evaluates user responses in real-time.",
     features: ["Real-time Feedback", "Role-specific Questions", "Speech-to-Text", "Performance Analytics"],
     tech: ["React.js", "Express", "Gemini API", "Clerk"],
-    github: "https://github.com/dineshkumar-mb",
+    github: "https://github.com/dineshkumar-mb/ai-mock-interview-app-F",
     live: "https://ai-mock-interview-app-f.vercel.app/",
     route: "/projects/ai-mock-interview",
     image: "/ai_mock_interview.png"

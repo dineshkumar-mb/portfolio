@@ -11,13 +11,22 @@ import EmiPlatformImg from "../assets/emi-platform.png";
 
 const projects = [
   {
-    title: "Personal Brand OS — Autonomous Multi-Agent AI Platform",
+    title: "Brand-os-multi-agent — Autonomous Agentic OS",
     category: "Autonomous Swarm",
     tech: "React 19, Node.js, TypeScript, Prisma, ChromaDB RAG, BullMQ, Multi-AI Gateway",
     image: "/brand-os.png",
     link: "https://brand-os-multi-agent.vercel.app",
     caseStudyRoute: "/projects/brand-os-multi-agent",
     description: "Project Status & Architecture Complete! Enterprise-grade autonomous 12-agent swarm platform featuring dynamic trend discovery, viral hook generators, multi-color animated architecture specs, fact-verification, and automated zero human intervention daily posting to LinkedIn & Medium.",
+  },
+  {
+    title: "Carrier OS — Autonomous Career Execution Platform",
+    category: "Autonomous Swarm",
+    tech: "React 19, TypeScript, Vite, Node.js, Express, Socket.io, TanStack Query",
+    image: "/brand-os.png",
+    link: "https://carrier-os-client.vercel.app",
+    caseStudyRoute: "/projects/carrier-os",
+    description: "An open-source Autonomous Career Execution Platform powered by a 17-agent OS runtime kernel. Features real-time Socket.io execution trace streaming, AI job discovery, ATS score re-validation, recruiter email sync via Gmail API, and human-in-the-loop assisted/automated submissions.",
   },
   {
     title: "AI-Powered EMI Management & Loan Intelligence Platform",

@@ -45,6 +45,42 @@ const caseStudies = {
     github: "https://github.com/dineshkumar-mb/Brand-os-multi-agent",
     live: "https://brand-os-multi-agent.vercel.app"
   },
+  "carrier-os": {
+    title: "Carrier OS — Autonomous Career Execution Platform",
+    overview: "An open-source, user-controlled Autonomous Career Execution Platform powered by a 17-agent OS runtime kernel. Includes live Socket.io execution trace streaming, ATS score re-validation, recruiter email sync via Gmail API, and human-in-the-loop assisted/automated submissions.",
+    problem: "Job hunting across dozens of career boards and portals requires repetitive manual resume tweaking, ATS keyword matching, manual application tracking, and constant recruiter email monitoring, resulting in hundreds of wasted hours.",
+    solution: "An enterprise 17-agent OS runtime kernel that scrapes global job portals, computes multidimensional ATS match fit, auto-tailors resumes with evidence-grounded history mapping, syncs real-time recruiter emails via Gmail API, and handles human-in-the-loop assisted or automated submissions.",
+    architectureImg: "/brand-os.png",
+    tech: ["React 19", "TypeScript", "Vite", "Node.js", "Express", "Socket.io", "TanStack Query", "Gmail API", "OpenAI / Gemini"],
+    nodes: [
+      { id: '1', type: 'custom', position: { x: 250, y: 0 }, data: { label: 'Carrier OS Control Plane', subtext: 'React 19 + Tailwind UI', icon: <FaReact /> } },
+      { id: '2', type: 'custom', position: { x: 250, y: 130 }, data: { label: '17-Agent OS Kernel', subtext: 'Orchestrator & Event Bus', icon: <FaRobot /> } },
+      { id: '3', type: 'custom', position: { x: 50, y: 260 }, data: { label: 'Human Approval Center', subtext: 'RiskGate & Sign-Off', icon: <FaCheckCircle /> } },
+      { id: '4', type: 'custom', position: { x: 250, y: 260 }, data: { label: 'ATS & Resume Engine', subtext: 'Evidence Mapping & Tailoring', icon: <FaDatabase /> } },
+      { id: '5', type: 'custom', position: { x: 450, y: 260 }, data: { label: 'Recruiter Email Sync', subtext: 'Gmail API Scanner', icon: <FaNodeJs /> } },
+    ],
+    edges: [
+      { id: 'e1-2', source: '1', target: '2', animated: true, style: { stroke: '#38bdf8' }, label: 'Socket.io Trace' },
+      { id: 'e2-3', source: '2', target: '3', animated: true, style: { stroke: '#818cf8' }, label: 'Assisted Mode' },
+      { id: 'e2-4', source: '2', target: '4', animated: true, style: { stroke: '#fbbf24' }, label: 'Tailor & Score' },
+      { id: 'e2-5', source: '2', target: '5', animated: true, style: { stroke: '#34d399' }, label: 'Recruiter Match' },
+    ],
+    implementation: [
+      "Architected a 17-agent OS runtime kernel managing automated job discovery, ATS match scoring, resume tailoring, and multi-channel notification dispatch.",
+      "Engineered real-time 17-Agent Execution Trace Stream via Socket.io websockets for transparent live progress monitoring.",
+      "Integrated Human Approval Center with RiskGate thresholds to allow candidate review of cover letters and tailored resumes before final submission.",
+      "Built Recruiter Communication Sync scanning live Gmail inbox messages to automatically classify interview invitations vs rejections and correlate application statuses.",
+      "Implemented strict privacy mode controls supporting standard cloud LLMs, fully private modes, or local-only execution via Ollama."
+    ],
+    challenges: [
+      "Balancing multi-agent concurrency with rate limits across multiple LLM providers and Gmail API endpoints.",
+      "Ensuring zero hallucination in resume tailoring by enforcing strict work history evidence mapping (SUPPORTED, REPHRASED, INFERRED)."
+    ],
+    results: "Empowered job seekers to automate up to 80% of repetitive application tasks while retaining full human control over high-risk submissions.",
+    future: "Add browser extension for one-click portal auto-fill and direct ATS auto-submission.",
+    github: "https://github.com/dineshkumar-mb/carrier-os-client",
+    live: "https://carrier-os-client.vercel.app"
+  },
   "emi-loan-intelligence": {
     title: "AI-Powered EMI Management & Loan Intelligence Platform",
     articleSlug: "ai-emi-rag-platform",
@@ -78,7 +114,7 @@ const caseStudies = {
     ],
     results: "Reduced average query resolution time by 70%. Platform adopted by a test cohort with high praise for accuracy.",
     future: "Integrate multi-lingual support and predictive default modeling.",
-    github: "https://github.com/dineshkumar-mb/emi-frontend-platform.git",
+    github: "https://github.com/dineshkumar-mb/emi-frontend-platform",
     live: "https://emi-frontend-platform.vercel.app/"
   },
   "taskflow-ai": {
@@ -113,7 +149,7 @@ const caseStudies = {
     ],
     results: "Streamlined ticket creation, reducing planning overhead by an estimated 40%.",
     future: "Add team velocity analytics and automated sprint retrospectives.",
-    github: "https://github.com/dineshkumar-mb/taskflow-frontend.git",
+    github: "https://github.com/dineshkumar-mb/taskflow-frontend",
     live: "https://taskflow-frontend-self.vercel.app/login"
   },
   "innoide": {
@@ -135,7 +171,7 @@ const caseStudies = {
     ],
     results: "Created a highly praised unified developer workspace currently utilized in internal team workflows.",
     future: "Implement sandboxed code execution environments using Docker containers.",
-    github: "https://github.com/Dineshkumar-1393-innotrat/InnoViewIDE_New/tree/InnoIDE_V1.5_09-06-2026",
+    github: "https://github.com/dineshkumar-mb/ide-new",
     live: "https://ide.innotrat.in/"
   },
   "ai-mock-interview": {
@@ -149,7 +185,7 @@ const caseStudies = {
     implementation: [
       "Integrated Clerk for seamless, secure user authentication and profile management.",
       "Utilized Web Speech API for real-time transcription of user answers.",
-      "Engineered prompts for Gemini AI to strictly grade answers based on technical accuracy and communication clarity."
+      "Engineered prompts for Gemini API to strictly grade answers based on technical accuracy and communication clarity."
     ],
     challenges: [
       "Handling browser inconsistencies with the Web Speech API.",
@@ -157,7 +193,7 @@ const caseStudies = {
     ],
     results: "Delivered a highly interactive application that significantly boosts candidate confidence.",
     future: "Add video emotion analysis and multi-turn conversational interviews.",
-    github: "https://github.com/dineshkumar-mb/ai-mock-interview-app-F.git",
+    github: "https://github.com/dineshkumar-mb/ai-mock-interview-app-F",
     live: "https://ai-mock-interview-app-f.vercel.app/"
   },
   "hrms-application": {
@@ -178,7 +214,7 @@ const caseStudies = {
     ],
     results: "Modernized attendance tracking, completely eliminating buddy punching and reducing administrative workload.",
     future: "Add geofencing for remote work check-ins and automated payroll integration.",
-    github: "https://github.com/dineshkumar-mb/HRMS.git",
+    github: "https://github.com/dineshkumar-mb/HRMS",
     live: "https://hrms-ecru-three.vercel.app/"
   },
   "streamify": {
@@ -200,7 +236,7 @@ const caseStudies = {
     ],
     results: "Delivered a highly responsive, secure communication tool with near-zero latency for peer-to-peer connections.",
     future: "Add screen sharing capabilities and meeting recording features.",
-    github: "https://github.com/dineshkumar-mb/Streamify-frontend.git",
+    github: "https://github.com/dineshkumar-mb/Streamify-frontend",
     live: "https://streamify-inky-one.vercel.app/login"
   },
   "code-reviewer": {
@@ -222,7 +258,7 @@ const caseStudies = {
     ],
     results: "Significantly accelerated the code review process, serving as a reliable first-pass check before human review.",
     future: "Integrate directly into GitHub Actions for automated PR reviews.",
-    github: "https://github.com/dineshkumar-mb/code-ReviewFrontend.git",
+    github: "https://github.com/dineshkumar-mb/code-ReviewFrontend",
     live: "https://codereviewer2.netlify.app/"
   },
   "zoomcar-clone": {
@@ -243,7 +279,7 @@ const caseStudies = {
     ],
     results: "Successfully replicated the core functionality of a major car rental platform with a highly performant interface.",
     future: "Add a payment gateway and real-time location tracking for vehicles.",
-    github: "https://github.com/dineshkumar-mb/Capstonezoomcar-Frnd.git",
+    github: "https://github.com/dineshkumar-mb/Capstonezoomcar-Frnd",
     live: "https://capstonezoomcarclone-frnd.vercel.app/"
   },
   "food-ordering-app": {
@@ -264,7 +300,7 @@ const caseStudies = {
     ],
     results: "Delivered a production-ready template for food delivery with a frictionless checkout experience.",
     future: "Implement real-time delivery tracking with map integration.",
-    github: "https://github.com/dineshkumar-mb/food-del-frontend.git",
+    github: "https://github.com/dineshkumar-mb/food-del-frontend",
     live: "https://food-del-frontend-bqm2.vercel.app"
   },
   "gemini-clone": {
@@ -285,7 +321,7 @@ const caseStudies = {
     ],
     results: "Created a visually stunning and highly functional AI assistant clone that serves as a powerful standalone tool.",
     future: "Add multimodal support for image uploads and analysis.",
-    github: "https://github.com/dineshkumar-mb/gemini-clone.git",
+    github: "https://github.com/dineshkumar-mb/gemini-clone",
     live: "https://gemini-clone-jet-eight.vercel.app/"
   }
 };
