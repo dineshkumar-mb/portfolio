@@ -48,21 +48,23 @@ const BlogHeader = ({
         transition={{ delay: 0.3, duration: 0.8 }}
       >
         <div className="relative flex items-center group">
-          <FaSearch className="absolute left-5 text-slate-400 dark:text-gray-400 text-lg pointer-events-none group-focus-within:text-blue-500 transition-colors" />
+          <FaSearch aria-hidden="true" className="absolute left-5 text-slate-400 dark:text-gray-400 text-lg pointer-events-none group-focus-within:text-blue-500 transition-colors" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            aria-label="Search articles by topic, tech stack, or title"
             placeholder="Search by topic, tech stack (#RAG, #React, #Node.js), or title..."
             className="w-full pl-14 pr-12 py-4 rounded-2xl bg-white/80 dark:bg-gray-900/60 border border-slate-200/80 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all shadow-lg backdrop-blur-xl text-sm md:text-base font-medium"
           />
           {searchQuery && (
             <button
+              type="button"
               onClick={() => setSearchQuery("")}
-              className="absolute right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
-              aria-label="Clear search"
+              className="absolute right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
+              aria-label="Clear search input"
             >
-              <FaTimes />
+              <FaTimes aria-hidden="true" />
             </button>
           )}
         </div>
@@ -71,12 +73,14 @@ const BlogHeader = ({
       {/* Category Pills Bar */}
       <motion.div
         className="flex flex-wrap justify-center items-center gap-3"
+        role="group"
+        aria-label="Filter blog posts by category"
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.8 }}
       >
         <span className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-gray-500 flex items-center gap-1 mr-1 hidden sm:flex">
-          <FaLayerGroup /> Filter:
+          <FaLayerGroup aria-hidden="true" /> Filter:
         </span>
 
         {categories.map((cat) => {
@@ -84,8 +88,10 @@ const BlogHeader = ({
           return (
             <button
               key={cat}
+              type="button"
               onClick={() => setSelectedCategory(cat)}
-              className={`px-5 py-2.5 rounded-xl text-xs md:text-sm font-extrabold tracking-wide transition-all duration-300 border cursor-pointer ${
+              aria-pressed={isSelected}
+              className={`px-5 py-2.5 rounded-xl text-xs md:text-sm font-extrabold tracking-wide transition-all duration-300 border cursor-pointer focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none ${
                 isSelected
                   ? "bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-600 text-white border-transparent shadow-lg shadow-blue-500/25 scale-105"
                   : "bg-white/70 dark:bg-white/5 text-slate-700 dark:text-gray-300 border-slate-200/80 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/10 hover:text-slate-900 dark:hover:text-white"

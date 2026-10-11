@@ -89,9 +89,9 @@ const BlogPost = () => {
         {/* Navigation back button */}
         <Link
           to="/blog"
-          className="inline-flex items-center gap-2 text-slate-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 font-semibold mb-8 text-sm transition-colors"
+          className="inline-flex items-center gap-2 text-slate-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 font-semibold mb-8 text-sm transition-colors focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded"
         >
-          <FaArrowLeft /> Back to Developer Journal
+          <FaArrowLeft aria-hidden="true" /> Back to Developer Journal
         </Link>
 
         {/* Article Header */}
@@ -101,7 +101,7 @@ const BlogPost = () => {
               {post.category}
             </span>
             <span className="text-xs text-slate-500 dark:text-gray-400 flex items-center gap-1">
-              <FaCalendarAlt className="text-blue-500" />
+              <FaCalendarAlt aria-hidden="true" className="text-blue-500" />
               {new Date(post.date).toLocaleDateString("en-US", {
                 month: "long",
                 day: "numeric",
@@ -109,7 +109,7 @@ const BlogPost = () => {
               })}
             </span>
             <span className="text-xs text-slate-500 dark:text-gray-400 flex items-center gap-1">
-              <FaClock className="text-purple-500" />
+              <FaClock aria-hidden="true" className="text-purple-500" />
               {post.readTime}
             </span>
           </div>
@@ -127,6 +127,9 @@ const BlogPost = () => {
             <img
               src={post.author.avatar}
               alt={post.author.name}
+              width="48"
+              height="48"
+              loading="lazy"
               className="w-12 h-12 rounded-full object-cover border-2 border-blue-500/40"
               onError={(e) => {
                 e.target.style.display = "none";

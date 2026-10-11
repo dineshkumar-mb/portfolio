@@ -39,7 +39,7 @@ const BlogCard = ({ post }) => {
 
           <div className="flex items-center gap-3 text-xs font-semibold text-slate-500 dark:text-gray-400">
             <span className="flex items-center gap-1.5">
-              <FaCalendarAlt className="text-blue-500/80 text-[10px]" />
+              <FaCalendarAlt aria-hidden="true" className="text-blue-500/80 text-[10px]" />
               {new Date(post.date).toLocaleDateString("en-US", {
                 month: "short",
                 day: "numeric",
@@ -47,14 +47,17 @@ const BlogCard = ({ post }) => {
               })}
             </span>
             <span className="flex items-center gap-1.5">
-              <FaClock className="text-purple-500/80 text-[10px]" />
+              <FaClock aria-hidden="true" className="text-purple-500/80 text-[10px]" />
               {post.readTime}
             </span>
           </div>
         </div>
 
         {/* Article Title */}
-        <Link to={`/blog/${post.slug}`} className="block group/title">
+        <Link
+          to={`/blog/${post.slug}`}
+          className="block group/title focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded-xl"
+        >
           <h3 className="text-lg md:text-xl font-black text-slate-900 dark:text-white mb-3 leading-snug group-hover/title:text-blue-600 dark:group-hover/title:text-blue-400 transition-colors line-clamp-2 min-h-[3.25rem]">
             {post.title}
           </h3>
@@ -88,7 +91,7 @@ const BlogCard = ({ post }) => {
         <div className="pt-4 border-t border-slate-200/70 dark:border-white/10 flex items-center justify-between relative z-10">
           {post.projectTitle ? (
             <span className="text-[11px] font-semibold text-slate-500 dark:text-gray-400 flex items-center gap-1.5 truncate max-w-[55%]" title={post.projectTitle}>
-              <FaCode className="text-blue-500 flex-shrink-0 text-xs" />
+              <FaCode aria-hidden="true" className="text-blue-500 flex-shrink-0 text-xs" />
               <span className="truncate">{post.projectTitle}</span>
             </span>
           ) : (
@@ -97,10 +100,11 @@ const BlogCard = ({ post }) => {
 
           <Link
             to={`/blog/${post.slug}`}
-            className="inline-flex items-center gap-1.5 text-xs font-black text-blue-600 dark:text-blue-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors group/btn ml-auto"
+            aria-label={`Read article: ${post.title}`}
+            className="inline-flex items-center gap-1.5 text-xs font-black text-blue-600 dark:text-blue-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors group/btn ml-auto focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded px-1"
           >
             Read Article
-            <FaArrowRight className="text-[10px] transform group-hover/btn:translate-x-1 transition-transform" />
+            <FaArrowRight aria-hidden="true" className="text-[10px] transform group-hover/btn:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>

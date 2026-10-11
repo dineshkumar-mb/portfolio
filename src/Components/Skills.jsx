@@ -186,7 +186,7 @@ const Skills = () => {
             Core Technical Skills
           </motion.h2>
           <motion.p
-            className="text-slate-650 dark:text-gray-300 max-w-2xl text-base md:text-lg leading-relaxed mt-2"
+            className="text-slate-600 dark:text-gray-300 max-w-2xl text-base md:text-lg leading-relaxed mt-2"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -215,7 +215,7 @@ const Skills = () => {
             <motion.div
               key={categoryIndex}
               variants={cardVariants}
-              className={`bg-white/80 dark:bg-gray-900/40 backdrop-blur-xl border border-slate-200/80 dark:border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col transition-all duration-500 hover:shadow-xl dark:hover:shadow-[0_20px_50px_rgba(59,130,246,0.12)] hover:border-slate-350 dark:hover:border-blue-500/40 group relative overflow-hidden ${
+              className={`bg-white/80 dark:bg-gray-900/40 backdrop-blur-xl border border-slate-200/80 dark:border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col transition-all duration-500 hover:shadow-xl dark:hover:shadow-[0_20px_50px_rgba(59,130,246,0.12)] hover:border-slate-300 dark:hover:border-blue-500/40 group relative overflow-hidden ${
                 categoryIndex === 4 ? "lg:col-span-2" : ""
               }`}
             >
@@ -224,10 +224,10 @@ const Skills = () => {
               
               <div className="flex items-center gap-4 mb-6 relative z-10">
                 <div className={`p-3.5 rounded-2xl ${category.themeClass.bg} ${category.themeClass.text} group-hover:scale-110 transition-transform duration-300 shadow-sm`}>
-                  <category.icon className="text-2xl" />
+                  <category.icon aria-hidden="true" className="text-2xl" />
                 </div>
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-slate-850 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {category.title}
                   </h3>
                   <span className="text-xs text-slate-500 dark:text-gray-400 font-medium">
@@ -244,8 +244,8 @@ const Skills = () => {
                     className={`flex flex-col gap-0.5 px-3.5 py-2.5 bg-slate-50/80 dark:bg-white/[0.03] border border-slate-200/70 dark:border-white/10 rounded-2xl text-slate-800 dark:text-gray-200 text-sm font-semibold hover:border-slate-300 dark:hover:border-white/20 transition-all duration-200 cursor-default`}
                   >
                     <div className="flex items-center gap-2">
-                      <FaCheckCircle className={`${category.themeClass.text} text-xs flex-shrink-0`} />
-                      <span className="font-bold text-slate-850 dark:text-white text-xs sm:text-sm">
+                      <FaCheckCircle aria-hidden="true" className={`${category.themeClass.text} text-xs flex-shrink-0`} />
+                      <span className="font-bold text-slate-800 dark:text-white text-xs sm:text-sm">
                         {skill.name}
                       </span>
                     </div>
@@ -268,7 +268,7 @@ const Skills = () => {
           className="bg-white/70 dark:bg-gray-900/40 backdrop-blur-xl rounded-3xl p-8 sm:p-10 border border-slate-200/80 dark:border-white/10 shadow-lg text-center"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 text-xs font-bold uppercase tracking-wider mb-3">
-            <FaCompass className="text-xs" />
+            <FaCompass aria-hidden="true" className="text-xs" />
             <span>Active Growth & Research</span>
           </div>
 
@@ -283,7 +283,7 @@ const Skills = () => {
             {exploringTopics.map((topic, i) => (
               <span
                 key={i}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 text-slate-750 dark:text-gray-300 text-xs sm:text-sm font-bold shadow-sm hover:scale-105 transition-transform"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 text-slate-700 dark:text-gray-300 text-xs sm:text-sm font-bold shadow-sm hover:scale-105 transition-transform"
               >
                 <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
                 <span>{topic}</span>

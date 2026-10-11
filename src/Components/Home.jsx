@@ -22,17 +22,20 @@ import {
 
 const socialLinks = [
   {
-    icon: <FaGithub />,
+    name: "GitHub Profile",
+    icon: <FaGithub aria-hidden="true" />,
     url: "https://github.com/dineshkumar-mb",
     hoverClass: "hover:bg-slate-700 hover:text-white hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
   },
   {
-    icon: <FaLinkedin />,
+    name: "LinkedIn Profile",
+    icon: <FaLinkedin aria-hidden="true" />,
     url: "https://www.linkedin.com/in/dinesh-kumar-mannibrundha13393/",
     hoverClass: "hover:bg-blue-600 hover:text-white hover:shadow-[0_0_20px_rgba(37,99,235,0.6)]"
   },
   {
-    icon: <FaEnvelope />,
+    name: "Email Dinesh Kumar",
+    icon: <FaEnvelope aria-hidden="true" />,
     url: "mailto:dineshkumarmannibrundha@gmail.com",
     hoverClass: "hover:bg-rose-600 hover:text-white hover:shadow-[0_0_20px_rgba(225,29,72,0.6)]"
   }
@@ -260,7 +263,7 @@ const Home = () => (
         </p>
 
         {/* Value Proposition Description */}
-        <p className="text-slate-650 dark:text-gray-300 text-sm sm:text-base md:text-lg text-center max-w-2xl leading-relaxed mb-8">
+        <p className="text-slate-600 dark:text-gray-300 text-sm sm:text-base md:text-lg text-center max-w-2xl leading-relaxed mb-8">
           Building scalable web applications, workflow automation platforms, SaaS products, and AI-powered systems with modern JavaScript technologies.
         </p>
 
@@ -307,7 +310,7 @@ const Home = () => (
         <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 w-full mb-6">
           <motion.a
             href="#projects"
-            className="px-7 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full font-bold text-white text-sm sm:text-base shadow-lg shadow-blue-500/25 hover:shadow-purple-500/30 transition-all duration-300"
+            className="px-7 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full font-bold text-white text-sm sm:text-base shadow-lg shadow-blue-500/25 hover:shadow-purple-500/30 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
           >
@@ -317,23 +320,23 @@ const Home = () => (
           <motion.a
             href="/Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
             download="Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
-            className="px-7 py-3.5 bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 rounded-full font-bold text-sm sm:text-base shadow-md transition-all duration-300 flex items-center gap-2"
+            className="px-7 py-3.5 bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 rounded-full font-bold text-sm sm:text-base shadow-md transition-all duration-300 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
           >
             <span>Download Resume</span>
-            <span className="text-xs">↓</span>
+            <span className="text-xs" aria-hidden="true">↓</span>
           </motion.a>
 
           <motion.a
             href="https://github.com/dineshkumar-mb"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-3.5 bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 rounded-full font-bold text-slate-800 dark:text-white text-sm sm:text-base border border-slate-200 dark:border-white/10 transition-all duration-300 flex items-center gap-2"
+            className="px-5 py-3.5 bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 rounded-full font-bold text-slate-800 dark:text-white text-sm sm:text-base border border-slate-200 dark:border-white/10 transition-all duration-300 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
           >
-            <FaGithub className="text-lg" />
+            <FaGithub className="text-lg" aria-hidden="true" />
             <span>GitHub</span>
           </motion.a>
         </div>
@@ -346,8 +349,8 @@ const Home = () => (
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-xl text-slate-650 dark:text-gray-300 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full p-2.5 shadow-sm transition-all duration-300 hover:scale-110 hover:-translate-y-0.5 ${item.hoverClass}`}
-              aria-label="social-link"
+              className={`text-xl text-slate-600 dark:text-gray-300 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full p-2.5 shadow-sm transition-all duration-300 hover:scale-110 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${item.hoverClass}`}
+              aria-label={item.name}
             >
               {item.icon}
             </a>

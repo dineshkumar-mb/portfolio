@@ -9,12 +9,30 @@
     transition: background-color 0.5s ease, color 0.5s ease;
   }
 
+  /* Section anchor scroll margin so fixed header never covers titles */
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
   html.dark {
     background-color: #030014;
   }
 
   html.light {
     background-color: #f8fafc;
+  }
+
+  /* Accessibility: Respect user motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 

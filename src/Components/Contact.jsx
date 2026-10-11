@@ -335,12 +335,16 @@ const Contact = () => {
                     id="contact-name"
                     type="text"
                     name="name"
+                    autoComplete="name"
+                    required
+                    aria-required="true"
+                    aria-invalid={!!fieldErrors.name}
                     placeholder="e.g. Sarah Jenkins"
                     value={formData.name}
                     onChange={handleChange}
                     className={`w-full p-3.5 rounded-xl bg-slate-50 dark:bg-white/[0.04] border ${
-                      fieldErrors.name ? "border-rose-500 focus:ring-rose-500/40" : "border-slate-200 dark:border-white/10 focus:ring-blue-500/40"
-                    } focus:outline-none focus:ring-2 text-slate-900 dark:text-white transition placeholder:text-slate-400 dark:placeholder:text-gray-500 text-sm`}
+                      fieldErrors.name ? "border-rose-500 focus-visible:ring-rose-500/40" : "border-slate-200 dark:border-white/10 focus-visible:ring-blue-500/40"
+                    } focus-visible:outline-none focus-visible:ring-2 text-slate-900 dark:text-white transition placeholder:text-slate-400 dark:placeholder:text-gray-500 text-sm`}
                   />
                   {fieldErrors.name && (
                     <p className="text-rose-500 text-xs mt-1 font-medium">{fieldErrors.name}</p>
@@ -356,12 +360,17 @@ const Contact = () => {
                     id="contact-email"
                     type="email"
                     name="email"
+                    autoComplete="email"
+                    spellCheck={false}
+                    required
+                    aria-required="true"
+                    aria-invalid={!!fieldErrors.email}
                     placeholder="e.g. sarah@company.com"
                     value={formData.email}
                     onChange={handleChange}
                     className={`w-full p-3.5 rounded-xl bg-slate-50 dark:bg-white/[0.04] border ${
-                      fieldErrors.email ? "border-rose-500 focus:ring-rose-500/40" : "border-slate-200 dark:border-white/10 focus:ring-blue-500/40"
-                    } focus:outline-none focus:ring-2 text-slate-900 dark:text-white transition placeholder:text-slate-400 dark:placeholder:text-gray-500 text-sm`}
+                      fieldErrors.email ? "border-rose-500 focus-visible:ring-rose-500/40" : "border-slate-200 dark:border-white/10 focus-visible:ring-blue-500/40"
+                    } focus-visible:outline-none focus-visible:ring-2 text-slate-900 dark:text-white transition placeholder:text-slate-400 dark:placeholder:text-gray-500 text-sm`}
                   />
                   {fieldErrors.email && (
                     <p className="text-rose-500 text-xs mt-1 font-medium">{fieldErrors.email}</p>
@@ -376,13 +385,16 @@ const Contact = () => {
                   <textarea
                     id="contact-message"
                     name="message"
+                    required
+                    aria-required="true"
+                    aria-invalid={!!fieldErrors.message}
                     placeholder="Tell me about the role, technical requirements, or project..."
                     value={formData.message}
                     onChange={handleChange}
                     rows="4"
                     className={`w-full p-3.5 rounded-xl bg-slate-50 dark:bg-white/[0.04] border ${
-                      fieldErrors.message ? "border-rose-500 focus:ring-rose-500/40" : "border-slate-200 dark:border-white/10 focus:ring-blue-500/40"
-                    } focus:outline-none focus:ring-2 text-slate-900 dark:text-white transition placeholder:text-slate-400 dark:placeholder:text-gray-500 text-sm resize-none`}
+                      fieldErrors.message ? "border-rose-500 focus-visible:ring-rose-500/40" : "border-slate-200 dark:border-white/10 focus-visible:ring-blue-500/40"
+                    } focus-visible:outline-none focus-visible:ring-2 text-slate-900 dark:text-white transition placeholder:text-slate-400 dark:placeholder:text-gray-500 text-sm resize-none`}
                   ></textarea>
                   {fieldErrors.message && (
                     <p className="text-rose-500 text-xs mt-1 font-medium">{fieldErrors.message}</p>
@@ -390,7 +402,7 @@ const Contact = () => {
                 </div>
 
                 {error && (
-                  <div className="p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-400 text-xs font-medium text-center">
+                  <div className="p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-400 text-xs font-medium text-center" role="alert">
                     {error}
                   </div>
                 )}
@@ -398,7 +410,8 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`w-full py-4 px-6 rounded-xl font-bold text-sm text-white shadow-lg bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2 ${
+                  aria-busy={loading}
+                  className={`w-full py-4 px-6 rounded-xl font-bold text-sm text-white shadow-lg bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${
                     loading ? "opacity-60 cursor-not-allowed" : "hover:shadow-blue-500/25 hover:-translate-y-0.5"
                   }`}
                 >

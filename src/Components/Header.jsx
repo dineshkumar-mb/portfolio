@@ -68,19 +68,21 @@ const Header = ({ theme, toggleTheme }) => {
     <header className={`fixed w-full top-0 z-20 transition duration-300 ${scrolled ? "bg-white/70 dark:bg-[#030014]/60 backdrop-blur-md border-b border-slate-200/50 dark:border-white/5 shadow-md dark:shadow-lg dark:shadow-purple-500/5 text-slate-800 dark:text-white" : "bg-transparent text-slate-800 dark:text-white"}`}>
       <nav className="container mx-auto px-6 md:px-20 flex justify-between items-center py-4">
 
-        {/* Logo */}
-        <motion.h1
-          className="text-xl md:text-2xl font-black cursor-pointer text-slate-800 dark:text-white tracking-tight flex items-center gap-2"
+        {/* Logo / Brand */}
+        <motion.button
+          type="button"
+          className="text-xl md:text-2xl font-black cursor-pointer text-slate-800 dark:text-white tracking-tight flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-xl px-1 py-0.5"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           onClick={handleLogoClick}
+          aria-label="Dinesh Kumar M B - Home"
         >
           <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-white text-sm font-black shadow-md">
             D
           </span>
           <span>Dinesh Kumar M B</span>
-        </motion.h1>
+        </motion.button>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
@@ -90,10 +92,10 @@ const Header = ({ theme, toggleTheme }) => {
                 <a
                   href={item === "Blog" ? "/blog" : `/#${item.toLowerCase()}`}
                   onClick={(e) => handleNavClick(e, item)}
-                  className={`text-sm font-semibold transition duration-300 ${
+                  className={`text-sm font-semibold transition duration-300 rounded-md px-1.5 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
                     item === "Blog" && location.pathname.startsWith("/blog")
                       ? "text-blue-600 dark:text-blue-400 font-bold"
-                      : "text-slate-650 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                      : "text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                   }`}
                 >
                   {item}
@@ -106,16 +108,16 @@ const Header = ({ theme, toggleTheme }) => {
           <a
             href="/Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
             download="Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
-            className="px-4 py-2 rounded-full text-xs font-bold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-md shadow-blue-500/20 hover:scale-105 transition-all duration-300 flex items-center gap-1.5"
+            className="px-4 py-2 rounded-full text-xs font-bold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-md shadow-blue-500/20 hover:scale-105 transition-all duration-300 flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
           >
             <span>Resume</span>
-            <span className="text-[10px]">↓</span>
+            <span className="text-[10px]" aria-hidden="true">↓</span>
           </a>
 
           {/* Theme Toggle Button */}
           <motion.button
             onClick={toggleTheme}
-            className="p-2 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-yellow-400 hover:bg-slate-200 dark:hover:bg-white/10 shadow-sm transition-all duration-300 cursor-pointer"
+            className="p-2 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-yellow-400 hover:bg-slate-200 dark:hover:bg-white/10 shadow-sm transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Toggle Theme"
@@ -131,9 +133,15 @@ const Header = ({ theme, toggleTheme }) => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden text-2xl cursor-pointer text-slate-800 dark:text-white relative z-50" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </div>
+        <button
+          type="button"
+          className="md:hidden text-2xl cursor-pointer text-slate-800 dark:text-white relative z-50 p-1.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
+        </button>
 
         {/* Mobile Menu */}
         <motion.div

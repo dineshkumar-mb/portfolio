@@ -322,9 +322,9 @@ const Project = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 rounded-full text-xs sm:text-sm font-bold tracking-wide transition-all duration-300 border ${activeCategory === cat
+              className={`px-5 py-2 rounded-full text-xs sm:text-sm font-bold tracking-wide transition-all duration-300 border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${activeCategory === cat
                   ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white border-transparent shadow-md shadow-blue-500/20 scale-105"
-                  : "bg-white/70 dark:bg-white/5 text-slate-650 dark:text-gray-300 border-slate-200/80 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/10 hover:text-slate-900 dark:hover:text-white"
+                  : "bg-white/70 dark:bg-white/5 text-slate-600 dark:text-gray-300 border-slate-200/80 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/10 hover:text-slate-900 dark:hover:text-white"
                 }`}
             >
               {cat}
@@ -377,6 +377,9 @@ const Project = () => {
                     <img
                       src={proj.image}
                       alt={proj.title}
+                      loading="lazy"
+                      width="600"
+                      height="340"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
 
@@ -391,10 +394,11 @@ const Project = () => {
                         href={proj.link}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`Visit live demo for ${proj.title} (opens in new tab)`}
                         title="Visit Live Application"
-                        className="w-9 h-9 rounded-full flex justify-center items-center bg-black/70 backdrop-blur-md border border-white/20 hover:bg-blue-600 text-white transition-colors cursor-pointer"
+                        className="w-9 h-9 rounded-full flex justify-center items-center bg-black/70 backdrop-blur-md border border-white/20 hover:bg-blue-600 text-white transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:outline-none"
                       >
-                        <FaExternalLinkAlt className="text-xs" />
+                        <FaExternalLinkAlt aria-hidden="true" className="text-xs" />
                       </a>
                     </div>
                   </div>
@@ -408,7 +412,7 @@ const Project = () => {
                       <p className="text-xs font-semibold text-blue-600 dark:text-cyan-400 mb-3">
                         {proj.subtitle}
                       </p>
-                      <p className="text-slate-650 dark:text-gray-300 text-xs sm:text-sm leading-relaxed line-clamp-3 mb-4">
+                      <p className="text-slate-600 dark:text-gray-300 text-xs sm:text-sm leading-relaxed line-clamp-3 mb-4">
                         {proj.description}
                       </p>
                     </div>
@@ -416,10 +420,10 @@ const Project = () => {
                     {/* My Contribution Highlight Box */}
                     <div className="bg-slate-50/80 dark:bg-white/5 rounded-2xl p-3.5 border border-slate-200/60 dark:border-white/5 mb-4">
                       <div className="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-slate-800 dark:text-white mb-1">
-                        <FaCheckCircle className="text-emerald-500 text-xs" />
+                        <FaCheckCircle aria-hidden="true" className="text-emerald-500 text-xs" />
                         My Contribution
                       </div>
-                      <p className="text-[12px] text-slate-650 dark:text-gray-300 leading-snug line-clamp-3">
+                      <p className="text-[12px] text-slate-600 dark:text-gray-300 leading-snug line-clamp-3">
                         {proj.contribution}
                       </p>
                     </div>
@@ -449,10 +453,10 @@ const Project = () => {
                     <div className="flex items-center justify-between w-full pt-1">
                       <Link
                         to={proj.caseStudyRoute}
-                        className="px-4 py-2 rounded-xl bg-blue-600/10 hover:bg-blue-600 text-blue-600 hover:text-white dark:text-blue-400 dark:hover:text-white font-bold text-xs transition-all flex items-center gap-1.5 shadow-sm"
+                        className="px-4 py-2 rounded-xl bg-blue-600/10 hover:bg-blue-600 text-blue-600 hover:text-white dark:text-blue-400 dark:hover:text-white font-bold text-xs transition-all flex items-center gap-1.5 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                       >
                         <span>Case Study</span>
-                        <FaArrowRight className="text-[10px]" />
+                        <FaArrowRight className="text-[10px]" aria-hidden="true" />
                       </Link>
 
                       <div className="flex items-center gap-2">
@@ -461,7 +465,7 @@ const Project = () => {
                             title="Private Enterprise Repository (Innotrat Labs)"
                             className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-gray-400 text-xs font-semibold border border-slate-200 dark:border-white/5"
                           >
-                            <FaLock className="text-[10px]" />
+                            <FaLock className="text-[10px]" aria-hidden="true" />
                             <span>Private Code</span>
                           </span>
                         ) : proj.github ? (
@@ -469,10 +473,11 @@ const Project = () => {
                             href={proj.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="p-2 rounded-xl bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/10 transition-colors"
+                            aria-label={`View ${proj.title} source code on GitHub`}
+                            className="p-2 rounded-xl bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                             title="View Source on GitHub"
                           >
-                            <FaGithub className="text-base" />
+                            <FaGithub className="text-base" aria-hidden="true" />
                           </a>
                         ) : null}
 
@@ -480,10 +485,11 @@ const Project = () => {
                           href={proj.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="px-3.5 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-bold text-xs hover:scale-105 transition-transform flex items-center gap-1.5"
+                          aria-label={`View live demo of ${proj.title}`}
+                          className="px-3.5 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-bold text-xs hover:scale-105 transition-transform flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                         >
                           <span>Live</span>
-                          <span className="text-[10px]">→</span>
+                          <span className="text-[10px]" aria-hidden="true">→</span>
                         </a>
                       </div>
                     </div>

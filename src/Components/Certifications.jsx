@@ -143,16 +143,17 @@ const Certifications = () => {
 
               <div className="pt-3 border-t border-slate-200/60 dark:border-white/5 flex items-center justify-between">
                 <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
-                  <FaShieldAlt className="text-[11px]" /> Verified Credential
+                  <FaShieldAlt aria-hidden="true" className="text-[11px]" /> Verified Credential
                 </span>
                 
                 <a
                   href={cert.verifyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300 text-xs font-bold hover:bg-amber-100 dark:hover:bg-amber-500/20 transition-colors border border-amber-200/60 dark:border-amber-500/30 group/link"
+                  aria-label={`Verify ${cert.title} credential on Skilljar (opens in new tab)`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300 text-xs font-bold hover:bg-amber-100 dark:hover:bg-amber-500/20 transition-colors border border-amber-200/60 dark:border-amber-500/30 group/link focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:outline-none"
                 >
-                  Verify <FaExternalLinkAlt className="text-[9px] group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                  Verify <FaExternalLinkAlt aria-hidden="true" className="text-[9px] group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
             </motion.div>
@@ -162,7 +163,7 @@ const Certifications = () => {
         {/* Verification Summary Banner */}
         <div className="mt-12 max-w-3xl mx-auto p-5 rounded-2xl bg-slate-100/70 dark:bg-white/[0.03] border border-slate-200/70 dark:border-white/10 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-left">
-            <FaCheckCircle className="text-emerald-500 text-2xl flex-shrink-0" />
+            <FaCheckCircle aria-hidden="true" className="text-emerald-500 text-2xl flex-shrink-0" />
             <div>
               <p className="text-sm font-bold text-slate-800 dark:text-white">
                 All 7 Credentials Issued Under Dinesh Kumar M B
@@ -176,7 +177,8 @@ const Certifications = () => {
             href="https://verify.skilljar.com/c/gumbuyac4j6k"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold hover:opacity-90 transition whitespace-nowrap shadow-sm"
+            aria-label="View sample certificate record for Model Context Protocol on Skilljar (opens in new tab)"
+            className="px-4 py-2 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold hover:opacity-90 transition whitespace-nowrap shadow-sm focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:outline-none"
           >
             Sample Certificate Record ↗
           </a>

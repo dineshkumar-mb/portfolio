@@ -20,27 +20,27 @@ const Footer = () => {
           {/* Developer Blog Topics */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-gray-400 flex items-center justify-center md:justify-start gap-1.5">
-              <FaBook className="text-blue-500" /> Developer Journal
+              <FaBook aria-hidden="true" className="text-blue-500" /> Developer Journal
             </h4>
             <ul className="flex flex-wrap justify-center md:justify-start gap-2 text-xs font-medium text-slate-600 dark:text-gray-300">
               <li>
-                <Link to="/blog" className="hover:text-blue-500 transition">AI Engineering</Link>
+                <Link to="/blog" className="hover:text-blue-500 transition focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded">AI Engineering</Link>
               </li>
               <li>•</li>
               <li>
-                <Link to="/blog" className="hover:text-blue-500 transition">Full Stack</Link>
+                <Link to="/blog" className="hover:text-blue-500 transition focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded">Full Stack</Link>
               </li>
               <li>•</li>
               <li>
-                <Link to="/blog" className="hover:text-blue-500 transition">React</Link>
+                <Link to="/blog" className="hover:text-blue-500 transition focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded">React</Link>
               </li>
               <li>•</li>
               <li>
-                <Link to="/blog" className="hover:text-blue-500 transition">Node.js</Link>
+                <Link to="/blog" className="hover:text-blue-500 transition focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded">Node.js</Link>
               </li>
               <li>•</li>
               <li>
-                <Link to="/blog" className="hover:text-blue-500 transition">Architecture</Link>
+                <Link to="/blog" className="hover:text-blue-500 transition focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded">Architecture</Link>
               </li>
             </ul>
           </div>
@@ -52,36 +52,36 @@ const Footer = () => {
                 href="https://github.com/dineshkumar-mb"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white transition"
-                aria-label="GitHub Profile"
+                className="text-slate-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded-lg p-1"
+                aria-label="GitHub Profile (opens in new tab)"
               >
-                <FaGithub size={20} />
+                <FaGithub aria-hidden="true" size={20} />
               </a>
               <a
                 href="https://www.linkedin.com/in/dinesh-kumar-mannibrundha13393/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white transition"
-                aria-label="LinkedIn Profile"
+                className="text-slate-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded-lg p-1"
+                aria-label="LinkedIn Profile (opens in new tab)"
               >
-                <FaLinkedin size={20} />
+                <FaLinkedin aria-hidden="true" size={20} />
               </a>
               <a
                 href="mailto:dineshkumarmannibrundha@gmail.com"
-                className="text-slate-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white transition"
-                aria-label="Email Contact"
+                className="text-slate-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded-lg p-1"
+                aria-label="Email Dinesh Kumar"
               >
-                <FaEnvelope size={20} />
+                <FaEnvelope aria-hidden="true" size={20} />
               </a>
               <a
                 href="/rss.xml"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-500 hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400 transition"
-                aria-label="RSS Feed"
+                className="text-slate-500 hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400 transition focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:outline-none rounded-lg p-1"
+                aria-label="RSS Feed (opens in new tab)"
                 title="RSS Feed"
               >
-                <FaRss size={18} />
+                <FaRss aria-hidden="true" size={18} />
               </a>
             </div>
           </div>

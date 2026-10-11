@@ -139,14 +139,14 @@ const WhyHireMe = () => {
                 <div className="relative z-10 flex-1 flex flex-col">
                   <div className="flex items-center justify-between mb-5">
                     <div className={`w-13 h-13 rounded-2xl flex items-center justify-center p-3.5 ${item.iconBg} group-hover:scale-110 transition-transform duration-500 shadow-sm`}>
-                      <Icon className={`w-6 h-6 ${item.iconColor}`} />
+                      <Icon aria-hidden="true" className={`w-6 h-6 ${item.iconColor}`} />
                     </div>
                     <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-gray-400 bg-slate-100 dark:bg-white/5 px-2.5 py-1 rounded-full border border-slate-200 dark:border-white/5">
                       {item.badge}
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-slate-850 dark:text-white mb-1.5 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1.5 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {item.title}
                   </h3>
 
@@ -182,7 +182,7 @@ const WhyHireMe = () => {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-slate-200 dark:border-white/10">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider mb-2">
-                <Cpu size={14} />
+                <Cpu aria-hidden="true" size={14} />
                 <span>Engineering Philosophy</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
@@ -190,7 +190,7 @@ const WhyHireMe = () => {
               </h3>
             </div>
 
-            <p className="text-slate-650 dark:text-gray-300 text-sm sm:text-base max-w-xl leading-relaxed">
+            <p className="text-slate-600 dark:text-gray-300 text-sm sm:text-base max-w-xl leading-relaxed">
               "I focus on maintainable components, predictable state management, clear API boundaries, asynchronous processing for heavy workloads, and measurable product outcomes."
             </p>
           </div>

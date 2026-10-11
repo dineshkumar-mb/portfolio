@@ -171,13 +171,13 @@ const Experience = () => {
                         </p>
                       </div>
                       <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-gray-400 font-semibold bg-slate-100 dark:bg-white/5 px-3 py-1.5 rounded-full border border-slate-200 dark:border-white/5 w-fit self-start">
-                        <FaCalendarAlt className="text-cyan-500 dark:text-cyan-400" />
+                        <FaCalendarAlt aria-hidden="true" className="text-cyan-500 dark:text-cyan-400" />
                         <span>{exp.duration}</span>
                       </div>
                     </div>
 
                     {/* Experience Details */}
-                    <div className="space-y-4 mb-6 flex-1 text-slate-650 dark:text-gray-300 text-sm leading-relaxed">
+                    <div className="space-y-4 mb-6 flex-1 text-slate-600 dark:text-gray-300 text-sm leading-relaxed">
                       {Object.entries(exp.sections).map(([title, content], sIdx) => (
                         <div key={sIdx}>
                           <span className="font-bold text-slate-800 dark:text-white mr-1 block sm:inline">{title}:</span>

@@ -72,18 +72,20 @@ const EngineeringJournal = () => {
         </div>
 
         {/* Category Filter Pills (Item 56: Architecture, AI Engineering, Full Stack, Developer Tools) */}
-        <div className="flex flex-wrap justify-center gap-2.5 mb-12">
+        <div className="flex flex-wrap justify-center gap-2.5 mb-12" role="group" aria-label="Filter engineering journal articles by category">
           {categories.map((cat) => (
             <button
               key={cat}
+              type="button"
               onClick={() => setActiveCategory(cat)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 ${
+              aria-pressed={activeCategory === cat}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none ${
                 activeCategory === cat
                   ? "bg-blue-600 text-white shadow-md shadow-blue-500/20 scale-105"
                   : "bg-white/60 dark:bg-gray-900/40 text-slate-700 dark:text-gray-300 border border-slate-200/80 dark:border-white/10 hover:border-blue-500/40"
               }`}
             >
-              <span>{categoryIcons[cat]}</span>
+              <span aria-hidden="true">{categoryIcons[cat]}</span>
               <span>{cat}</span>
             </button>
           ))}
@@ -112,7 +114,10 @@ const EngineeringJournal = () => {
                     </span>
                   </div>
 
-                  <Link to={`/blog/${post.slug}`}>
+                  <Link
+                    to={`/blog/${post.slug}`}
+                    className="focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded-lg inline-block"
+                  >
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-snug mb-2.5">
                       {post.title}
                     </h3>
@@ -142,9 +147,10 @@ const EngineeringJournal = () => {
                     </span>
                     <Link
                       to={`/blog/${post.slug}`}
-                      className="text-xs font-bold text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform flex items-center gap-1.5"
+                      aria-label={`Read architectural breakdown: ${post.title}`}
+                      className="text-xs font-bold text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform flex items-center gap-1.5 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded px-1"
                     >
-                      Read Breakdown <FaArrowRight className="text-[10px]" />
+                      Read Breakdown <FaArrowRight aria-hidden="true" className="text-[10px]" />
                     </Link>
                   </div>
                 </div>
@@ -157,9 +163,9 @@ const EngineeringJournal = () => {
         <div className="flex justify-center">
           <Link
             to="/blog"
-            className="px-8 py-3.5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-sm shadow-md hover:opacity-90 hover:scale-105 transition-all flex items-center gap-2"
+            className="px-8 py-3.5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-sm shadow-md hover:opacity-90 hover:scale-105 transition-all flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900 focus-visible:outline-none"
           >
-            Explore All Engineering Articles <FaArrowRight className="text-xs" />
+            Explore All Engineering Articles <FaArrowRight aria-hidden="true" className="text-xs" />
           </Link>
         </div>
 

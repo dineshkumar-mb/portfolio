@@ -334,8 +334,11 @@ const ProjectCaseStudy = () => {
       <div className="container mx-auto px-6 lg:px-20 relative z-10 max-w-7xl">
 
         {/* Back navigation */}
-        <Link to="/#projects" className="inline-flex items-center gap-2 text-slate-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 font-bold mb-8 transition-colors text-sm">
-          <FaArrowLeft /> Back to Projects
+        <Link
+          to="/#projects"
+          className="inline-flex items-center gap-2 text-slate-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 font-bold mb-8 transition-colors text-sm focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded"
+        >
+          <FaArrowLeft aria-hidden="true" /> Back to Projects
         </Link>
 
         {/* Header Section */}
@@ -349,19 +352,19 @@ const ProjectCaseStudy = () => {
           <div className="flex flex-wrap items-center gap-3 mb-4">
             {project.isProfessional ? (
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-300 border border-cyan-500/30 text-xs font-black tracking-wide uppercase">
-                <FaBriefcase className="text-xs" />
+                <FaBriefcase aria-hidden="true" className="text-xs" />
                 Professional Experience • Innotrat Labs
               </span>
             ) : (
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-300 border border-purple-500/30 text-xs font-black tracking-wide uppercase">
-                <FaLayerGroup className="text-xs" />
+                <FaLayerGroup aria-hidden="true" className="text-xs" />
                 Independent Engineering
               </span>
             )}
 
             {project.impact && (
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 text-xs font-bold tracking-wide">
-                <FaChartLine className="text-xs" />
+                <FaChartLine aria-hidden="true" className="text-xs" />
                 {project.impact}
               </span>
             )}
@@ -371,29 +374,44 @@ const ProjectCaseStudy = () => {
             {project.title}
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-slate-650 dark:text-gray-300 max-w-4xl leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-gray-300 max-w-4xl leading-relaxed">
             {project.overview}
           </p>
 
           {/* Action CTAs */}
           <div className="flex flex-wrap items-center gap-3.5 mt-8">
-            <a href={project.live} target="_blank" rel="noreferrer" className="px-7 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full shadow-lg shadow-blue-500/25 transition-transform hover:scale-105 flex items-center gap-2 text-sm">
-              <FaExternalLinkAlt /> Live Demo
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Open live demo for ${project.title} in a new tab`}
+              className="px-7 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full shadow-lg shadow-blue-500/25 transition-transform hover:scale-105 flex items-center gap-2 text-sm focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
+            >
+              <FaExternalLinkAlt aria-hidden="true" /> Live Demo
             </a>
 
             {project.isPrivate ? (
               <span className="px-6 py-3 bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-gray-300 font-bold rounded-full border border-slate-200 dark:border-white/10 flex items-center gap-2 text-sm">
-                <FaLock className="text-xs" /> Private Enterprise Project (Innotrat Labs)
+                <FaLock aria-hidden="true" className="text-xs" /> Private Enterprise Project (Innotrat Labs)
               </span>
             ) : project.github ? (
-              <a href={project.github} target="_blank" rel="noreferrer" className="px-7 py-3 bg-slate-100 dark:bg-white/10 hover:bg-slate-200 dark:hover:bg-white/20 text-slate-800 dark:text-white font-bold rounded-full shadow-md transition-transform hover:scale-105 flex items-center gap-2 border border-slate-300 dark:border-white/10 text-sm">
-                <FaGithub /> Source Code
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`View source code for ${project.title} on GitHub in a new tab`}
+                className="px-7 py-3 bg-slate-100 dark:bg-white/10 hover:bg-slate-200 dark:hover:bg-white/20 text-slate-800 dark:text-white font-bold rounded-full shadow-md transition-transform hover:scale-105 flex items-center gap-2 border border-slate-300 dark:border-white/10 text-sm focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
+              >
+                <FaGithub aria-hidden="true" /> Source Code
               </a>
             ) : null}
 
             {project.articleSlug && (
-              <Link to={`/blog/${project.articleSlug}`} className="px-7 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-full shadow-lg shadow-purple-500/25 transition-transform hover:scale-105 flex items-center gap-2 text-sm">
-                <FaBook /> Read Architecture Article
+              <Link
+                to={`/blog/${project.articleSlug}`}
+                className="px-7 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-full shadow-lg shadow-purple-500/25 transition-transform hover:scale-105 flex items-center gap-2 text-sm focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:outline-none"
+              >
+                <FaBook aria-hidden="true" /> Read Architecture Article
               </Link>
             )}
           </div>
@@ -485,10 +503,10 @@ const ProjectCaseStudy = () => {
                   {project.engineeringDecisions.map((item, idx) => (
                     <div key={idx} className="bg-white/80 dark:bg-gray-900/40 p-5 rounded-2xl border border-slate-200/80 dark:border-white/10">
                       <h3 className="text-base font-bold text-blue-600 dark:text-cyan-400 mb-1.5 flex items-center gap-2">
-                        <FaLightbulb className="text-amber-500 text-sm" />
+                        <FaLightbulb aria-hidden="true" className="text-amber-500 text-sm" />
                         {item.decision}
                       </h3>
-                      <p className="text-slate-650 dark:text-gray-300 text-sm leading-relaxed">
+                      <p className="text-slate-600 dark:text-gray-300 text-sm leading-relaxed">
                         {item.reason}
                       </p>
                     </div>
@@ -549,12 +567,12 @@ const ProjectCaseStudy = () => {
               <div className="space-y-6">
                 {project.challenges && (
                   <div className="bg-white/80 dark:bg-gray-900/40 p-6 rounded-2xl border border-slate-200/80 dark:border-white/10">
-                    <h3 className="text-lg font-bold text-slate-850 dark:text-white mb-3 flex items-center gap-2">
-                      <span className="text-amber-500">⚡</span> 06 — Engineering Challenges
+                    <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-3 flex items-center gap-2">
+                      <span aria-hidden="true" className="text-amber-500">⚡</span> 06 — Engineering Challenges
                     </h3>
                     <ul className="space-y-2.5">
                       {project.challenges.map((c, i) => (
-                        <li key={i} className="text-sm text-slate-650 dark:text-gray-300 leading-relaxed pl-3 border-l-2 border-amber-500/40">
+                        <li key={i} className="text-sm text-slate-600 dark:text-gray-300 leading-relaxed pl-3 border-l-2 border-amber-500/40">
                           {c}
                         </li>
                       ))}
@@ -564,12 +582,12 @@ const ProjectCaseStudy = () => {
 
                 {project.tradeoffs && (
                   <div className="bg-white/80 dark:bg-gray-900/40 p-6 rounded-2xl border border-slate-200/80 dark:border-white/10">
-                    <h3 className="text-lg font-bold text-slate-850 dark:text-white mb-3 flex items-center gap-2">
-                      <FaBalanceScale className="text-purple-500 text-sm" /> 07 — Architectural Trade-offs
+                    <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-3 flex items-center gap-2">
+                      <FaBalanceScale aria-hidden="true" className="text-purple-500 text-sm" /> 07 — Architectural Trade-offs
                     </h3>
                     <ul className="space-y-2.5">
                       {project.tradeoffs.map((t, i) => (
-                        <li key={i} className="text-sm text-slate-650 dark:text-gray-300 leading-relaxed pl-3 border-l-2 border-purple-500/40">
+                        <li key={i} className="text-sm text-slate-600 dark:text-gray-300 leading-relaxed pl-3 border-l-2 border-purple-500/40">
                           {t}
                         </li>
                       ))}
@@ -629,7 +647,7 @@ const ProjectCaseStudy = () => {
               </h3>
               <div className="flex flex-wrap gap-2 mb-8">
                 {project.tech.map((t, idx) => (
-                  <span key={idx} className="px-3 py-1.5 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-750 dark:text-gray-300 font-semibold rounded-xl shadow-sm text-xs">
+                  <span key={idx} className="px-3 py-1.5 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-gray-300 font-semibold rounded-xl shadow-sm text-xs">
                     #{t}
                   </span>
                 ))}
@@ -649,7 +667,7 @@ const ProjectCaseStudy = () => {
                 {project.isPrivate ? (
                   <div className="p-4 rounded-2xl bg-amber-50/80 dark:bg-amber-500/10 border border-amber-200/80 dark:border-amber-500/20 text-xs text-amber-800 dark:text-amber-300 leading-relaxed">
                     <p className="font-bold flex items-center gap-1.5 mb-1">
-                      <FaLock className="text-xs" /> Private Enterprise Repository
+                      <FaLock aria-hidden="true" className="text-xs" /> Private Enterprise Repository
                     </p>
                     This product was engineered for Innotrat Labs. The source repository is proprietary company property. The live web application is hosted and accessible.
                   </div>
@@ -658,9 +676,10 @@ const ProjectCaseStudy = () => {
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full py-3 px-4 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-xs flex items-center justify-center gap-2 shadow-md hover:scale-102 transition-transform"
+                    aria-label={`View GitHub repository for ${project.title} (opens in new tab)`}
+                    className="w-full py-3 px-4 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-xs flex items-center justify-center gap-2 shadow-md hover:scale-102 transition-transform focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
                   >
-                    <FaGithub className="text-sm" />
+                    <FaGithub aria-hidden="true" className="text-sm" />
                     <span>View GitHub Repository</span>
                   </a>
                 ) : null}
@@ -669,9 +688,10 @@ const ProjectCaseStudy = () => {
                   href={project.live}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full py-3 px-4 rounded-xl bg-blue-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md hover:bg-blue-700 transition-colors"
+                  aria-label={`Visit live application for ${project.title} (opens in new tab)`}
+                  className="w-full py-3 px-4 rounded-xl bg-blue-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md hover:bg-blue-700 transition-colors focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
                 >
-                  <FaExternalLinkAlt className="text-xs" />
+                  <FaExternalLinkAlt aria-hidden="true" className="text-xs" />
                   <span>Visit Live Application</span>
                 </a>
               </div>

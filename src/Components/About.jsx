@@ -69,6 +69,9 @@ const About = () => {
                 <img
                   src={Image}
                   alt="Dinesh Kumar M B - Full-Stack & AI Engineer"
+                  loading="lazy"
+                  width="448"
+                  height="448"
                   className="w-full h-auto object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 
@@ -123,15 +126,15 @@ const About = () => {
               I'm a <strong className="text-slate-900 dark:text-white font-extrabold">Full Stack Developer with 4+ years of experience</strong> building business applications, SaaS platforms, workflow systems, and AI-powered products.
             </p>
 
-            <p className="text-slate-650 dark:text-gray-300 text-sm md:text-base leading-relaxed font-normal">
+            <p className="text-slate-600 dark:text-gray-300 text-sm md:text-base leading-relaxed font-normal">
               My strongest engineering experience is in <strong className="text-blue-600 dark:text-blue-400 font-bold">React.js</strong> and <strong className="text-blue-600 dark:text-blue-400 font-bold">TypeScript</strong>, with hands-on experience building complex interfaces, reusable component systems, state management architectures, workflow visualization, REST API integrations, and interactive applications.
             </p>
 
-            <p className="text-slate-650 dark:text-gray-300 text-sm md:text-base leading-relaxed font-normal">
+            <p className="text-slate-600 dark:text-gray-300 text-sm md:text-base leading-relaxed font-normal">
               At <strong className="text-slate-900 dark:text-white font-bold">Innotrat Labs</strong>, I own frontend development for <strong className="text-cyan-600 dark:text-cyan-400 font-bold">InnoIDE</strong>, a MERN-based industrial automation platform used by <strong className="text-emerald-600 dark:text-emerald-400 font-bold">50+ internal engineers</strong>. I work on workflow visualization, simulation, reusable React components, Redux Toolkit state management, and API integration. A key contribution is virtual sensor simulation, which allows engineers to validate workflows without physical hardware and helped <strong className="text-slate-900 dark:text-white font-bold">reduce validation cycles from hours to minutes</strong>.
             </p>
 
-            <p className="text-slate-650 dark:text-gray-300 text-sm md:text-base leading-relaxed font-normal">
+            <p className="text-slate-600 dark:text-gray-300 text-sm md:text-base leading-relaxed font-normal">
               Alongside my professional work, I build AI-powered applications using <strong className="text-purple-600 dark:text-purple-400 font-bold">RAG, vector databases, embeddings, OCR, LLM function calling, Gemini, OpenRouter, Redis, BullMQ</strong>, and multi-agent workflows. I focus on turning complex technical requirements into reliable, usable products across frontend, backend, and AI layers.
             </p>
 
@@ -159,11 +162,11 @@ const About = () => {
                 href="/Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 rounded-full bg-white dark:bg-white/5 text-slate-800 dark:text-white text-sm font-bold border border-slate-300 dark:border-white/15 hover:bg-slate-100 dark:hover:bg-white/10 hover:border-blue-500/40 transition-all duration-300 flex items-center gap-2 shadow-sm cursor-pointer"
+                className="px-6 py-3 rounded-full bg-white dark:bg-white/5 text-slate-800 dark:text-white text-sm font-bold border border-slate-300 dark:border-white/15 hover:bg-slate-100 dark:hover:bg-white/10 hover:border-blue-500/40 transition-all duration-300 flex items-center gap-2 shadow-sm cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <FaEye className="text-blue-500 text-sm" />
+                <FaEye className="text-blue-500 text-sm" aria-hidden="true" />
                 View Resume
               </motion.a>
 
@@ -171,11 +174,11 @@ const About = () => {
               <motion.a
                 href="/Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
                 download="Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
-                className="px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 text-white text-sm font-bold shadow-lg shadow-blue-500/20 hover:shadow-purple-500/30 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+                className="px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 text-white text-sm font-bold shadow-lg shadow-blue-500/20 hover:shadow-purple-500/30 transition-all duration-300 flex items-center gap-2 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <FaDownload className="text-xs text-white" />
+                <FaDownload className="text-xs text-white" aria-hidden="true" />
                 Download Resume
               </motion.a>
             </div>
