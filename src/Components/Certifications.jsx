@@ -1,149 +1,185 @@
 import { motion } from "framer-motion";
-import { FaCertificate, FaCheckCircle } from "react-icons/fa";
+import { FaCertificate, FaExternalLinkAlt, FaCheckCircle, FaAward, FaShieldAlt } from "react-icons/fa";
 
 const Certifications = () => {
   const certifications = [
     {
-      title: "Anthropic Academy Certifications",
-      year: "2026",
-      issuer: "Anthropic",
-      link: "#",
-      topics: [
-        { name: "Model Context Protocol: Advanced Topics", link: "https://verify.skilljar.com/c/gumbuyac4j6k" },
-        { name: "Introduction to Model Context Protocol", link: "https://verify.skilljar.com/c/pti3qzqdh5ro" },
-        { name: "Introduction to Agent Skills", link: "https://verify.skilljar.com/c/kxz8ub5fjiqp" },
-        { name: "AI Fluency Framework & Foundations", link: "https://verify.skilljar.com/c/gxmwzaofbhk9" },
-        { name: "Claude Platform 101", link: "https://verify.skilljar.com/c/wa6r26veeq8h" },
-        { name: "Claude Code in Action", link: "https://verify.skilljar.com/c/kei5y6m8xuws" },
-        { name: "Claude Code 101", link: "https://verify.skilljar.com/c/mqngonj3o3fi" }
-      ]
+      title: "Model Context Protocol: Advanced Topics",
+      issuer: "Anthropic Academy",
+      date: "2026",
+      credentialId: "gumbuyac4j6k",
+      skills: ["MCP Server Architecture", "Custom Tool Development", "Protocol Spec"],
+      verifyUrl: "https://verify.skilljar.com/c/gumbuyac4j6k"
+    },
+    {
+      title: "Introduction to Model Context Protocol",
+      issuer: "Anthropic Academy",
+      date: "2026",
+      credentialId: "pti3qzqdh5ro",
+      skills: ["Client-Host-Server Topology", "JSON-RPC 2.0", "Context Grounding"],
+      verifyUrl: "https://verify.skilljar.com/c/pti3qzqdh5ro"
+    },
+    {
+      title: "Introduction to Agent Skills",
+      issuer: "Anthropic Academy",
+      date: "2026",
+      credentialId: "kxz8ub5fjiqp",
+      skills: ["Autonomous Workflows", "Tool Orchestration", "Agent Decision Loops"],
+      verifyUrl: "https://verify.skilljar.com/c/kxz8ub5fjiqp"
+    },
+    {
+      title: "AI Fluency Framework & Foundations",
+      issuer: "Anthropic Academy",
+      date: "2026",
+      credentialId: "gxmwzaofbhk9",
+      skills: ["Prompt Architecture", "LLM Evaluation", "Safety & Alignment"],
+      verifyUrl: "https://verify.skilljar.com/c/gxmwzaofbhk9"
+    },
+    {
+      title: "Claude Platform 101",
+      issuer: "Anthropic Academy",
+      date: "2026",
+      credentialId: "wa6r26veeq8h",
+      skills: ["Anthropic API", "Streaming Responses", "System Prompts"],
+      verifyUrl: "https://verify.skilljar.com/c/wa6r26veeq8h"
+    },
+    {
+      title: "Claude Code in Action",
+      issuer: "Anthropic Academy",
+      date: "2026",
+      credentialId: "kei5y6m8xuws",
+      skills: ["CLI Workflows", "Automated Refactoring", "Agentic Pair Programming"],
+      verifyUrl: "https://verify.skilljar.com/c/kei5y6m8xuws"
+    },
+    {
+      title: "Claude Code 101",
+      issuer: "Anthropic Academy",
+      date: "2026",
+      credentialId: "mqngonj3o3fi",
+      skills: ["Terminal AI Tools", "Codebase Navigation", "Task Execution"],
+      verifyUrl: "https://verify.skilljar.com/c/mqngonj3o3fi"
     }
   ];
 
   return (
     <section id="certifications" className="py-24 bg-transparent text-slate-800 dark:text-white relative overflow-hidden">
       {/* Background Ambient Glows */}
-      <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-amber-500/5 rounded-full blur-[140px] -z-10 pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-orange-500/10 rounded-full blur-[140px] -z-10 pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-amber-500/5 dark:bg-amber-500/10 rounded-full blur-[140px] -z-10 pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-orange-500/5 dark:bg-orange-500/10 rounded-full blur-[140px] -z-10 pointer-events-none" />
 
-      <div className="container mx-auto px-6 md:px-20 relative z-10">
+      <div className="container mx-auto px-6 md:px-20 relative z-10 max-w-6xl">
 
-        {/* Section Title */}
-        <div className="flex flex-col items-center mb-16">
-          <motion.p
-            className="text-slate-500 dark:text-[#aaa6c3] uppercase tracking-wider text-sm mb-2"
-            initial={{ opacity: 0, y: 10 }}
+        {/* Section Header */}
+        <div className="flex flex-col items-center mb-16 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-500/10 dark:text-amber-300 border border-amber-200 dark:border-amber-500/20 text-xs font-bold uppercase tracking-wider mb-4">
+            <FaAward className="text-sm" /> Verified Technical Proof
+          </div>
+          <motion.h2
+            className="text-4xl md:text-5xl font-black bg-gradient-to-r from-slate-900 via-amber-600 to-orange-600 dark:from-white dark:via-amber-400 dark:to-orange-400 text-transparent bg-clip-text mb-3"
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            My Achievements
-          </motion.p>
-          <motion.h2
-            className="text-5xl md:text-6xl font-black text-center bg-gradient-to-r from-slate-900 via-amber-600 to-orange-600 dark:from-white dark:via-amber-400 dark:to-orange-500 text-transparent bg-clip-text"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            Certifications
+            Engineering Certifications
           </motion.h2>
-          <motion.div
-            className="w-24 h-1.5 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full mt-4"
-            initial={{ width: 0 }}
-            whileInView={{ width: 96 }}
+          <motion.p
+            className="text-slate-600 dark:text-gray-300 max-w-2xl text-base leading-relaxed"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            Official credentials verified through Skilljar and Anthropic Academy, demonstrating deep expertise in Model Context Protocol (MCP), Agentic Workflows, and Claude AI integrations.
+          </motion.p>
+          <motion.div
+            className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full mt-4"
+            initial={{ width: 0 }}
+            whileInView={{ width: 80 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.6 }}
           />
         </div>
 
-        {/* Certifications Grid */}
-        <div className="max-w-4xl mx-auto">
+        {/* Certifications Grid (Item 32: Issuer, Date, Credential, Verification Link) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-5xl mx-auto">
           {certifications.map((cert, index) => (
             <motion.div
               key={index}
-              className="bg-white/70 dark:bg-gray-900/30 backdrop-blur-md border border-slate-200/60 dark:border-white/10 rounded-3xl p-8 transition-all duration-500 hover:border-amber-500/40 hover:shadow-md dark:hover:shadow-[0_15px_30px_rgba(245,158,11,0.12)] group relative overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
+              className="bg-white/70 dark:bg-gray-900/40 backdrop-blur-md border border-slate-200/80 dark:border-white/10 rounded-2xl p-6 transition-all duration-300 hover:border-amber-500/40 hover:shadow-lg dark:hover:shadow-[0_10px_25px_rgba(245,158,11,0.08)] flex flex-col justify-between group"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
             >
-              {/* Glowing effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/0 via-transparent to-orange-500/0 group-hover:from-amber-500/5 group-hover:to-orange-500/5 transition-all duration-500 pointer-events-none" />
-
-              <div className="flex flex-col md:flex-row gap-6 items-start md:items-center border-b border-slate-200 dark:border-white/5 pb-6 mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center text-white text-3xl shadow-lg flex-shrink-0">
-                  <FaCertificate />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-extrabold text-slate-800 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-300">
-                    {cert.title}
-                  </h3>
-                  <div className="flex items-center justify-between mt-2">
-                    <p className="text-amber-600 dark:text-amber-300 font-semibold text-sm">
-                      {cert.issuer} &bull; {cert.year}
-                    </p>
-                    <span className="text-xs text-slate-500 dark:text-gray-400 font-medium italic">
-                      (Click a topic below to verify)
-                    </span>
+              <div>
+                <div className="flex items-start justify-between gap-3 mb-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white text-base shadow-md flex-shrink-0 group-hover:scale-105 transition-transform">
+                      <FaCertificate />
+                    </div>
+                    <div>
+                      <span className="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
+                        {cert.issuer} &bull; {cert.date}
+                      </span>
+                      <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors leading-snug">
+                        {cert.title}
+                      </h3>
+                    </div>
                   </div>
+                </div>
+
+                <div className="flex flex-wrap gap-1.5 mt-3 mb-4">
+                  {cert.skills.map((skill, sIdx) => (
+                    <span
+                      key={sIdx}
+                      className="text-[11px] font-medium px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-gray-300 border border-slate-200/60 dark:border-white/5"
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                {cert.topics.map((topic, i) => (
-                  <a 
-                    key={i} 
-                    href={topic.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-slate-650 dark:text-gray-300 font-medium hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-300 group/link"
-                  >
-                    <FaCheckCircle className="text-amber-500 flex-shrink-0 text-sm group-hover/link:scale-110 transition-transform" />
-                    <span>{topic.name}</span>
-                  </a>
-                ))}
+              <div className="pt-3 border-t border-slate-200/60 dark:border-white/5 flex items-center justify-between">
+                <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+                  <FaShieldAlt className="text-[11px]" /> Verified Credential
+                </span>
+                
+                <a
+                  href={cert.verifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300 text-xs font-bold hover:bg-amber-100 dark:hover:bg-amber-500/20 transition-colors border border-amber-200/60 dark:border-amber-500/30 group/link"
+                >
+                  Verify <FaExternalLinkAlt className="text-[9px] group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                </a>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Currently Learning Section */}
-        <div className="flex flex-col items-center mt-24 mb-10">
-          <motion.h2
-            className="text-4xl md:text-5xl font-black text-center bg-gradient-to-r from-slate-900 via-amber-600 to-orange-600 dark:from-white dark:via-amber-400 dark:to-orange-500 text-transparent bg-clip-text"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+        {/* Verification Summary Banner */}
+        <div className="mt-12 max-w-3xl mx-auto p-5 rounded-2xl bg-slate-100/70 dark:bg-white/[0.03] border border-slate-200/70 dark:border-white/10 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3 text-left">
+            <FaCheckCircle className="text-emerald-500 text-2xl flex-shrink-0" />
+            <div>
+              <p className="text-sm font-bold text-slate-800 dark:text-white">
+                All 7 Credentials Issued Under Dinesh Kumar M B
+              </p>
+              <p className="text-xs text-slate-500 dark:text-gray-400">
+                Official accreditation through Skilljar certification validation engine.
+              </p>
+            </div>
+          </div>
+          <a
+            href="https://verify.skilljar.com/c/gumbuyac4j6k"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold hover:opacity-90 transition whitespace-nowrap shadow-sm"
           >
-            Currently Learning
-          </motion.h2>
-          <motion.div
-            className="w-16 h-1.5 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full mt-4 mb-10"
-            initial={{ width: 0 }}
-            whileInView={{ width: 64 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-          />
-          
-          <motion.div 
-            className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            {["TypeScript", "System Design", "CI/CD", "Advanced AI Engineering", "LLM Fine-Tuning", "Agentic Workflows", "Vector Databases"].map((skill, index) => (
-              <div 
-                key={index}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-50/70 dark:bg-amber-500/10 border border-amber-200/50 dark:border-amber-500/20 text-amber-700 dark:text-amber-300 font-bold shadow-sm hover:scale-105 hover:bg-amber-100 dark:hover:bg-amber-500/20 transition-all duration-300 cursor-default"
-              >
-                <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></div>
-                {skill}
-              </div>
-            ))}
-          </motion.div>
+            Sample Certificate Record ↗
+          </a>
         </div>
 
       </div>

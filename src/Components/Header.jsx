@@ -70,27 +70,30 @@ const Header = ({ theme, toggleTheme }) => {
 
         {/* Logo */}
         <motion.h1
-          className="text-2xl font-bold cursor-pointer text-slate-800 dark:text-white"
+          className="text-xl md:text-2xl font-black cursor-pointer text-slate-800 dark:text-white tracking-tight flex items-center gap-2"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           onClick={handleLogoClick}
         >
-          My Portfolio
+          <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-white text-sm font-black shadow-md">
+            D
+          </span>
+          <span>Dinesh Kumar M B</span>
         </motion.h1>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
-          <ul className="flex gap-6">
-            {["Home", "About", "Skills", "Experience", "Projects", "Blog", "Certifications", "Contact"].map((item) => (
+          <ul className="flex items-center gap-6">
+            {["Home", "About", "Experience", "Projects", "Skills", "Blog", "Contact"].map((item) => (
               <li key={item}>
                 <a
                   href={item === "Blog" ? "/blog" : `/#${item.toLowerCase()}`}
                   onClick={(e) => handleNavClick(e, item)}
-                  className={`font-medium transition duration-300 ${
+                  className={`text-sm font-semibold transition duration-300 ${
                     item === "Blog" && location.pathname.startsWith("/blog")
                       ? "text-blue-600 dark:text-blue-400 font-bold"
-                      : "text-slate-700 dark:text-white hover:text-blue-600 dark:hover:text-blue-400"
+                      : "text-slate-650 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                   }`}
                 >
                   {item}
@@ -98,6 +101,17 @@ const Header = ({ theme, toggleTheme }) => {
               </li>
             ))}
           </ul>
+
+          {/* Desktop Resume CTA Button */}
+          <a
+            href="/Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
+            download="Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
+            className="px-4 py-2 rounded-full text-xs font-bold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-md shadow-blue-500/20 hover:scale-105 transition-all duration-300 flex items-center gap-1.5"
+          >
+            <span>Resume</span>
+            <span className="text-[10px]">↓</span>
+          </a>
+
           {/* Theme Toggle Button */}
           <motion.button
             onClick={toggleTheme}
@@ -111,7 +125,7 @@ const Header = ({ theme, toggleTheme }) => {
               animate={{ rotate: theme === "dark" ? 180 : 0 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
             >
-              {theme === "dark" ? <FaSun className="text-lg text-yellow-400" /> : <FaMoon className="text-lg text-slate-700" />}
+              {theme === "dark" ? <FaSun className="text-base text-yellow-400" /> : <FaMoon className="text-base text-slate-700" />}
             </motion.div>
           </motion.button>
         </div>
@@ -123,13 +137,17 @@ const Header = ({ theme, toggleTheme }) => {
 
         {/* Mobile Menu */}
         <motion.div
-          className={`fixed top-0 right-0 h-full w-2/3 bg-white/95 dark:bg-[#030014]/95 backdrop-blur-lg border-l border-slate-200 dark:border-white/10 shadow-2xl p-8 flex flex-col gap-6 transform ${menuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300`}
+          className={`fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white/95 dark:bg-[#030014]/95 backdrop-blur-xl border-l border-slate-200 dark:border-white/10 shadow-2xl p-8 flex flex-col gap-5 transform ${menuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 z-40`}
         >
-          {["Home", "About", "Skills", "Experience", "Projects", "Blog", "Certifications", "Contact"].map((item) => (
+          <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-white/10">
+            <span className="font-extrabold text-base text-slate-800 dark:text-white">Navigation</span>
+          </div>
+
+          {["Home", "About", "Experience", "Projects", "Skills", "Blog", "Contact"].map((item) => (
             <a
               key={item}
               href={item === "Blog" ? "/blog" : `/#${item.toLowerCase()}`}
-              className={`text-lg font-semibold ${
+              className={`text-base font-semibold ${
                 item === "Blog" && location.pathname.startsWith("/blog")
                   ? "text-blue-600 dark:text-blue-400 font-bold"
                   : "text-slate-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400"
@@ -139,8 +157,19 @@ const Header = ({ theme, toggleTheme }) => {
               {item}
             </a>
           ))}
+
+          {/* Mobile Resume CTA */}
+          <a
+            href="/Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
+            download="Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
+            className="w-full mt-2 py-3 rounded-xl text-center text-sm font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md flex items-center justify-center gap-2"
+          >
+            <span>Download Resume</span>
+            <span>↓</span>
+          </a>
+
           {/* Mobile Theme Toggle */}
-          <div className="h-px bg-slate-200 dark:bg-white/10 my-2" />
+          <div className="h-px bg-slate-200 dark:bg-white/10 my-1" />
           <div className="flex items-center justify-between">
             <span className="text-slate-600 dark:text-gray-400 text-sm font-medium">Switch Theme</span>
             <motion.button

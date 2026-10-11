@@ -24,7 +24,7 @@ const SEO = ({ title, description, name = 'Dinesh Kumar M B', type = 'website', 
       <meta name="twitter:image" content={image} />
 
       {/* Keywords */}
-      <meta name="keywords" content="Full Stack Developer Chennai, MERN Stack Developer, React Developer, Node.js Developer, AI Application Developer, LangChain Developer, Software Engineer" />
+      <meta name="keywords" content="Full Stack Developer, React.js, TypeScript, Node.js, MERN Stack, GenAI, RAG, InnoIDE, Software Engineer, Chennai" />
 
       {/* Schema.org markup for Google */}
       <script type="application/ld+json">
@@ -32,11 +32,25 @@ const SEO = ({ title, description, name = 'Dinesh Kumar M B', type = 'website', 
           "@context": "https://schema.org",
           "@type": "Person",
           "name": name,
-          "jobTitle": "Full-Stack MERN Developer | AI Application Builder",
+          "jobTitle": "Full Stack Developer",
+          "description": "Full Stack Developer with 4+ years of experience specializing in React.js, TypeScript, Node.js, MERN, GenAI, and RAG.",
           "url": url,
           "sameAs": [
             "https://www.linkedin.com/in/dinesh-kumar-mannibrundha13393/",
             "https://github.com/dineshkumar-mb"
+          ],
+          "knowsAbout": [
+            "React.js",
+            "TypeScript",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "MERN Stack",
+            "GenAI",
+            "RAG",
+            "Redux Toolkit",
+            "React Flow",
+            "ChromaDB"
           ]
         })}
       </script>

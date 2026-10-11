@@ -4,9 +4,9 @@ import { FaEye, FaDownload, FaCode, FaRobot, FaRocket, FaUserCheck } from "react
 
 const About = () => {
   const stats = [
-    { label: "Years Experience", value: "3+", color: "from-blue-500 to-cyan-400" },
-    { label: "Production Projects", value: "15+", color: "from-purple-500 to-pink-500" },
-    { label: "Core Technologies", value: "12+", color: "from-amber-400 to-orange-500" }
+    { label: "Years Experience", value: "4+", color: "from-blue-500 to-cyan-400" },
+    { label: "Projects Built", value: "15+", color: "from-purple-500 to-pink-500" },
+    { label: "Internal Engineers", value: "50+", color: "from-emerald-400 to-teal-500" }
   ];
 
   return (
@@ -112,23 +112,31 @@ const About = () => {
 
           {/* Right Column: Bio Details, Stats & CTAs */}
           <motion.div
-            className="lg:col-span-7 flex flex-col items-start text-left space-y-6"
+            className="lg:col-span-7 flex flex-col items-start text-left space-y-5"
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {/* Lead Bio Paragraph */}
+            {/* Structured Engineering Bio */}
             <p className="text-slate-700 dark:text-gray-200 text-base md:text-lg leading-relaxed font-normal">
-              I am a <strong className="text-slate-900 dark:text-white font-extrabold">Full-Stack MERN Developer</strong> and <strong className="text-slate-900 dark:text-white font-extrabold">AI Application Builder</strong> with 3+ years of specialized experience in React.js and Node.js. My engineering focus lies in architecting scalable SaaS platforms, real-time microservices, and workflow automation tools that deliver measurable business impact.
+              I'm a <strong className="text-slate-900 dark:text-white font-extrabold">Full Stack Developer with 4+ years of experience</strong> building business applications, SaaS platforms, workflow systems, and AI-powered products.
             </p>
 
-            <p className="text-slate-650 dark:text-gray-300 text-base md:text-lg leading-relaxed font-normal">
-              Recently, I have been deeply focused on building AI-powered products—integrating Large Language Models (<strong className="text-blue-600 dark:text-blue-400 font-bold">LLMs</strong>) via <strong className="text-purple-600 dark:text-purple-400 font-bold">LangChain</strong> and engineering <strong className="text-cyan-600 dark:text-cyan-400 font-bold">Retrieval-Augmented Generation (RAG)</strong> pipelines with ChromaDB to combine deterministic financial math engines with intelligent semantic search.
+            <p className="text-slate-650 dark:text-gray-300 text-sm md:text-base leading-relaxed font-normal">
+              My strongest engineering experience is in <strong className="text-blue-600 dark:text-blue-400 font-bold">React.js</strong> and <strong className="text-blue-600 dark:text-blue-400 font-bold">TypeScript</strong>, with hands-on experience building complex interfaces, reusable component systems, state management architectures, workflow visualization, REST API integrations, and interactive applications.
+            </p>
+
+            <p className="text-slate-650 dark:text-gray-300 text-sm md:text-base leading-relaxed font-normal">
+              At <strong className="text-slate-900 dark:text-white font-bold">Innotrat Labs</strong>, I own frontend development for <strong className="text-cyan-600 dark:text-cyan-400 font-bold">InnoIDE</strong>, a MERN-based industrial automation platform used by <strong className="text-emerald-600 dark:text-emerald-400 font-bold">50+ internal engineers</strong>. I work on workflow visualization, simulation, reusable React components, Redux Toolkit state management, and API integration. A key contribution is virtual sensor simulation, which allows engineers to validate workflows without physical hardware and helped <strong className="text-slate-900 dark:text-white font-bold">reduce validation cycles from hours to minutes</strong>.
+            </p>
+
+            <p className="text-slate-650 dark:text-gray-300 text-sm md:text-base leading-relaxed font-normal">
+              Alongside my professional work, I build AI-powered applications using <strong className="text-purple-600 dark:text-purple-400 font-bold">RAG, vector databases, embeddings, OCR, LLM function calling, Gemini, OpenRouter, Redis, BullMQ</strong>, and multi-agent workflows. I focus on turning complex technical requirements into reliable, usable products across frontend, backend, and AI layers.
             </p>
 
             {/* Stats Cards Grid */}
-            <div className="grid grid-cols-3 gap-4 w-full pt-3 pb-2">
+            <div className="grid grid-cols-3 gap-4 w-full pt-2 pb-1">
               {stats.map((stat, idx) => (
                 <div
                   key={idx}
@@ -145,10 +153,10 @@ const About = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-4">
+            <div className="flex flex-wrap items-center gap-4 pt-3">
               {/* View Resume Button */}
               <motion.a
-                href="/new_resume.pdf"
+                href="/Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-full bg-white dark:bg-white/5 text-slate-800 dark:text-white text-sm font-bold border border-slate-300 dark:border-white/15 hover:bg-slate-100 dark:hover:bg-white/10 hover:border-blue-500/40 transition-all duration-300 flex items-center gap-2 shadow-sm cursor-pointer"
@@ -161,8 +169,8 @@ const About = () => {
 
               {/* Download Resume Button */}
               <motion.a
-                href="/new_resume.pdf"
-                download="Dinesh_Kumar_MB_Resume.pdf"
+                href="/Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
+                download="Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
                 className="px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 text-white text-sm font-bold shadow-lg shadow-blue-500/20 hover:shadow-purple-500/30 transition-all duration-300 flex items-center gap-2 cursor-pointer"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}

@@ -17,6 +17,7 @@ const Expertise = lazy(() => import("./Components/Expertise.jsx"));
 const Skills = lazy(() => import("./Components/Skills.jsx"));
 const Experience = lazy(() => import("./Components/Experience.jsx"));
 const Project = lazy(() => import("./Components/Project.jsx"));
+const EngineeringJournal = lazy(() => import("./Components/EngineeringJournal.jsx"));
 const Certifications = lazy(() => import("./Components/Certifications.jsx"));
 const Contact = lazy(() => import("./Components/Contact.jsx"));
 const GithubSection = lazy(() => import("./Components/GithubSection.jsx"));
@@ -35,11 +36,11 @@ const MainLanding = () => (
   <>
     <Home />
     <WhyHireMe />
-    <Expertise />
     <About />
-    <Skills />
     <Experience />
     <Project />
+    <Skills />
+    <EngineeringJournal />
     <Certifications />
     <GithubSection />
     <LighthouseMetrics />
@@ -91,8 +92,8 @@ const App = () => {
           
           <Suspense fallback={<Loader />}>
             <SEO 
-              title="Dinesh Kumar M B - Full-Stack MERN & AI Developer"
-              description="Portfolio of Dinesh Kumar M B, a Full-Stack MERN Developer & AI Application Builder."
+              title="Dinesh Kumar M B | Full Stack Developer | React, Node.js & AI"
+              description="Full Stack Developer specializing in React.js, TypeScript, Node.js, MERN, GenAI, RAG and AI-powered applications."
             />
             <Routes>
               <Route path="/" element={<MainLanding />} />

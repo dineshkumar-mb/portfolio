@@ -1,7 +1,6 @@
 
 
 import { motion } from "framer-motion";
-import { Typewriter } from "react-simple-typewriter";
 import {
   FaGithub,
   FaLinkedin,
@@ -11,9 +10,7 @@ import {
   FaJsSquare,
   FaHtml5,
   FaCss3Alt,
-  FaGitAlt,
-  FaLaptopCode,
-  FaLightbulb
+  FaGitAlt
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -223,105 +220,138 @@ const Home = () => (
 
       {/* Glassmorphic Card */}
       <motion.div
-        className="relative bg-white/70 dark:bg-gray-900/30 hover:bg-white/90 dark:hover:bg-white/5 backdrop-blur-md border border-slate-200/50 dark:border-white/10 w-full max-w-xl px-8 py-10 md:px-12 rounded-3xl shadow-lg dark:shadow-2xl hover:shadow-xl dark:hover:shadow-[0_20px_50px_rgba(167,139,250,0.2)] hover:border-slate-300 dark:hover:border-purple-400/50 flex flex-col items-center transition-all duration-500 group"
+        className="relative bg-white/75 dark:bg-gray-900/40 hover:bg-white/90 dark:hover:bg-gray-900/50 backdrop-blur-xl border border-slate-200/70 dark:border-white/10 w-full max-w-3xl px-6 py-10 sm:px-10 md:py-12 rounded-3xl shadow-xl dark:shadow-2xl hover:border-slate-300 dark:hover:border-purple-400/40 flex flex-col items-center transition-all duration-500 group"
         initial={{ opacity: 0, scale: 0.97 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.6, duration: 0.8 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
       >
         {/* Soft backglow inside the card */}
-        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/0 via-transparent to-purple-500/0 group-hover:from-blue-400/10 group-hover:to-purple-400/10 transition-all duration-500 pointer-events-none" />
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-500 pointer-events-none" />
 
-        {/* Typewriter Name Heading with Animated Underline */}
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-3 text-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 text-transparent bg-clip-text leading-tight">
-          Hi, I'm{" "}
-          <span className="block text-slate-800 dark:text-white drop-shadow-sm dark:drop-shadow-md font-black tracking-tight mt-1 h-[2.5rem] md:h-[3.2rem]">
-            <Typewriter
-              words={[
-                "Dinesh Kumar M B",
-                "Full-Stack MERN Developer",
-                "AI Application Builder"
-              ]}
-              loop={0}
-              cursor
-              cursorStyle="|"
-              typeSpeed={105}
-              deleteSpeed={70}
-              delaySpeed={1200}
-            />
+        {/* Availability Badge */}
+        <div className="mb-6 relative z-10">
+          <span className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 text-xs sm:text-sm font-bold tracking-wide shadow-sm">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            Open to Full Stack & AI Engineering Opportunities
           </span>
+        </div>
+
+        {/* Line 1: Name */}
+        <motion.p
+          className="text-xs sm:text-sm md:text-base font-extrabold uppercase tracking-widest text-slate-500 dark:text-gray-400 mb-2"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+        >
+          DINESH KUMAR M B
+        </motion.p>
+
+        {/* Main Title: Full Stack Developer */}
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-3 text-center tracking-tight bg-gradient-to-r from-slate-900 via-blue-600 to-purple-600 dark:from-white dark:via-blue-400 dark:to-purple-400 text-transparent bg-clip-text leading-tight">
+          Full Stack Developer
         </h1>
-        <span className="block h-1 w-24 mt-8 mb-5 bg-gradient-to-r from-blue-550 via-purple-550 to-pink-550 dark:from-blue-400 dark:via-purple-500 dark:to-pink-400 rounded-full animate-pulse"></span>
 
-        {/* Subtitle Badges & Metrics */}
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 relative z-10 w-full max-w-lg">
-          {/* Availability Badge */}
-          <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-50/80 dark:bg-green-500/15 text-green-700 dark:text-green-300 border border-green-200 dark:border-green-500/30 text-xs sm:text-sm font-bold tracking-wide shadow-sm w-full sm:w-auto justify-center mb-2">
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+        {/* Technology line */}
+        <p className="text-sm sm:text-base font-bold text-blue-600 dark:text-cyan-400 tracking-wide mb-4 text-center">
+          React.js • TypeScript • Node.js • MERN • GenAI • RAG
+        </p>
+
+        {/* Value Proposition Description */}
+        <p className="text-slate-650 dark:text-gray-300 text-sm sm:text-base md:text-lg text-center max-w-2xl leading-relaxed mb-8">
+          Building scalable web applications, workflow automation platforms, SaaS products, and AI-powered systems with modern JavaScript technologies.
+        </p>
+
+        {/* Measurable Engineering Signals Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 w-full mb-8 relative z-10">
+          <div className="bg-slate-50/80 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 rounded-2xl p-3 sm:p-4 text-center">
+            <span className="block text-2xl sm:text-3xl font-black bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300 text-transparent bg-clip-text">
+              4+
             </span>
-            Open to Full-Stack Opportunities
-          </span>
+            <span className="text-[11px] sm:text-xs font-bold text-slate-600 dark:text-gray-400 tracking-tight">
+              Years Experience
+            </span>
+          </div>
+
+          <div className="bg-slate-50/80 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 rounded-2xl p-3 sm:p-4 text-center">
+            <span className="block text-2xl sm:text-3xl font-black bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-400 dark:to-pink-400 text-transparent bg-clip-text">
+              15+
+            </span>
+            <span className="text-[11px] sm:text-xs font-bold text-slate-600 dark:text-gray-400 tracking-tight">
+              Projects Built
+            </span>
+          </div>
+
+          <div className="bg-slate-50/80 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 rounded-2xl p-3 sm:p-4 text-center">
+            <span className="block text-2xl sm:text-3xl font-black bg-gradient-to-r from-emerald-600 to-teal-500 dark:from-emerald-400 dark:to-teal-300 text-transparent bg-clip-text">
+              50+
+            </span>
+            <span className="text-[11px] sm:text-xs font-bold text-slate-600 dark:text-gray-400 tracking-tight">
+              Internal Engineers
+            </span>
+          </div>
+
+          <div className="bg-slate-50/80 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 rounded-2xl p-3 sm:p-4 text-center">
+            <span className="block text-base sm:text-lg font-black bg-gradient-to-r from-amber-500 to-orange-500 dark:from-amber-400 dark:to-orange-400 text-transparent bg-clip-text pt-1.5">
+              React+Node+AI
+            </span>
+            <span className="text-[11px] sm:text-xs font-bold text-slate-600 dark:text-gray-400 tracking-tight block mt-0.5">
+              Core Focus
+            </span>
+          </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 relative z-10 w-full">
-          {[
-            "3+ Years Experience",
-            "10+ Projects Built",
-            "MERN Stack Developer",
-            "AI Application Builder"
-          ].map((badge, i) => (
-            <span key={i} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100/70 dark:bg-white/5 text-slate-700 dark:text-gray-300 border border-slate-200 dark:border-white/10 text-[11px] sm:text-xs font-semibold tracking-wide hover:bg-blue-50 dark:hover:bg-blue-500/10 hover:text-blue-600 dark:hover:text-blue-300 hover:border-blue-200 dark:hover:border-blue-500/20 transition-all duration-300 cursor-default shadow-sm">
-              {badge}
-            </span>
-          ))}
+        {/* CTA Buttons Hierarchy */}
+        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 w-full mb-6">
+          <motion.a
+            href="#projects"
+            className="px-7 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full font-bold text-white text-sm sm:text-base shadow-lg shadow-blue-500/25 hover:shadow-purple-500/30 transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            View My Work
+          </motion.a>
+
+          <motion.a
+            href="/Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
+            download="Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
+            className="px-7 py-3.5 bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 rounded-full font-bold text-sm sm:text-base shadow-md transition-all duration-300 flex items-center gap-2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <span>Download Resume</span>
+            <span className="text-xs">↓</span>
+          </motion.a>
+
+          <motion.a
+            href="https://github.com/dineshkumar-mb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-3.5 bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 rounded-full font-bold text-slate-800 dark:text-white text-sm sm:text-base border border-slate-200 dark:border-white/10 transition-all duration-300 flex items-center gap-2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <FaGithub className="text-lg" />
+            <span>GitHub</span>
+          </motion.a>
         </div>
 
-        {/* Social Media Icons */}
-        <div className="flex gap-5 mb-8">
+        {/* Social Media Links */}
+        <div className="flex items-center gap-4 pt-2">
           {socialLinks.map((item, idx) => (
             <a
               key={idx}
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-2xl text-blue-600 dark:text-blue-400 bg-slate-100 dark:bg-gray-900 border border-slate-200 dark:border-white/5 rounded-full p-3.5 shadow-sm dark:shadow-md transition-all duration-300 hover:scale-115 hover:-translate-y-1 ${item.hoverClass}`}
+              className={`text-xl text-slate-650 dark:text-gray-300 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full p-2.5 shadow-sm transition-all duration-300 hover:scale-110 hover:-translate-y-0.5 ${item.hoverClass}`}
               aria-label="social-link"
             >
               {item.icon}
             </a>
           ))}
-        </div>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mt-2">
-          <motion.a
-            href="#projects"
-            className="px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-bold text-white text-sm sm:text-base shadow-md dark:shadow-lg shadow-blue-500/10 dark:shadow-blue-500/20 hover:shadow-purple-500/20 dark:hover:shadow-purple-500/30 border border-slate-200/20 dark:border-white/10 transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
-          >
-            View Projects
-          </motion.a>
-
-          <motion.a
-            href="/new_resume.pdf"
-            download="Dineshfullstackresume.pdf"
-            className="px-6 sm:px-8 py-3 bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 rounded-full font-bold text-slate-800 dark:text-white text-sm sm:text-base shadow-sm border border-slate-200 dark:border-white/15 transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
-          >
-            Download Resume
-          </motion.a>
-
-          <motion.a
-            href="#contact"
-            className="px-6 sm:px-8 py-3 bg-transparent hover:bg-slate-50 dark:hover:bg-white/5 rounded-full font-bold text-blue-600 dark:text-blue-400 text-sm sm:text-base border border-blue-600 dark:border-blue-500/50 transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
-          >
-            Contact Me
-          </motion.a>
         </div>
       </motion.div>
     </motion.div>

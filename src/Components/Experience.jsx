@@ -4,28 +4,28 @@ import { FaBriefcase, FaCalendarAlt } from "react-icons/fa";
 const Experience = () => {
   const experiences = [
     {
-      role: "Full-Stack Developer",
+      role: "Full Stack Developer",
       company: "Innotrat Labs",
       duration: "June 2025 - Present",
       sections: {
-        Responsibilities: "Leading the development of complex frontend architectures and custom IDE integrations. Collaborating with cross-functional teams to build premium glassmorphic UI components.",
-        Achievements: "Successfully integrated real-time video calling features utilizing the Dyte SDK, enabling seamless collaboration.",
-        "Engineering Contributions": "Developed interactive flowcharts, block diagrams, and advanced node-based systems using React Flow. Built custom Postman-style API testers.",
-        "Business Impact": "Enhanced user engagement and platform capabilities, positioning the product as a competitive solution in the low-code space."
+        "Platform & Scale": "Owned frontend development and architecture for InnoIDE, a MERN-based industrial automation platform actively used by 50+ internal engineers.",
+        "Virtual Sensor Simulation": "Architected virtual sensor simulation allowing automation engineers to test and validate workflows without physical hardware, slashing validation cycles from hours to minutes.",
+        "Workflow Visualization": "Developed interactive canvas flowcharts, block diagrams, and node-based systems using React Flow with custom edge logic and state synchronization.",
+        "State & Real-Time Collaboration": "Designed Redux Toolkit state architecture for complex canvas state and integrated Dyte SDK for low-latency peer-to-peer video collaboration."
       },
-      tech: ["React.js", "Node.js", "React Flow", "Dyte SDK", "Tailwind CSS", "Framer Motion"]
+      tech: ["React.js", "TypeScript", "Redux Toolkit", "Node.js", "REST APIs", "React Flow", "Dyte SDK", "Tailwind CSS"]
     },
     {
       role: "Frontend Developer",
       company: "Neelan Oxysoft Pvt Ltd",
       duration: "Jul 2022 - Jun 2025",
       sections: {
-        Responsibilities: "Architected and built responsive, dynamic web interfaces. Integrated complex Node.js/Express backend APIs and structured secure JWT authentication flows.",
-        Achievements: "Successfully migrated legacy CSS components into modular Tailwind CSS architectures.",
-        "Engineering Contributions": "Implemented state management using Redux Toolkit, drastically reducing unnecessary re-renders across the application.",
-        "Business Impact": "Improved overall application loading speed by 20% and significantly elevated the user experience."
+        Responsibilities: "Architected responsive, modular web interfaces in React.js and TypeScript, integrating Node.js/Express REST APIs and secure JWT authentication flows.",
+        "Engineering Contributions": "Standardized Redux Toolkit state management and reusable component libraries, reducing component re-renders by 35% and improving initial load speed by 20%.",
+        "API Integration & RBAC": "Integrated role-based access control (RBAC) across client dashboards and optimized REST endpoints for enterprise client workflows.",
+        "Business Impact": "Delivered 10+ production modules on schedule, elevating application performance, reliability, and cross-browser consistency."
       },
-      tech: ["React.js", "Redux Toolkit", "Tailwind CSS", "REST APIs", "Node.js"]
+      tech: ["React.js", "TypeScript", "Redux Toolkit", "Node.js", "Express.js", "REST APIs", "Tailwind CSS"]
     },
     {
       role: "Web Development Training",
