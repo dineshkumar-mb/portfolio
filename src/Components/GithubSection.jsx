@@ -21,8 +21,8 @@ const pinnedPrivateRepos = [
     name: "InnoIDE",
     repo: "innotrat-labs/inno-ide",
     isPrivate: true,
-    language: "TypeScript",
-    langColor: "bg-blue-500",
+    language: "React.js",
+    langColor: "bg-cyan-400",
     description: "Industrial Automation Workflow & Virtual Sensor Simulation Platform used by 50+ internal engineers.",
     link: "https://ide.innotrat.in/",
     badge: "Enterprise Repository (Private)",
@@ -125,6 +125,9 @@ const getLanguageColor = (lang) => {
   const map = {
     JavaScript: "bg-amber-400",
     TypeScript: "bg-blue-500",
+    "React.js": "bg-cyan-400",
+    "React JS": "bg-cyan-400",
+    React: "bg-cyan-400",
     Python: "bg-emerald-500",
     HTML: "bg-orange-500",
     CSS: "bg-purple-500",
@@ -133,7 +136,7 @@ const getLanguageColor = (lang) => {
     Shell: "bg-emerald-400",
     PowerShell: "bg-blue-600",
   };
-  return map[lang] || "bg-slate-400";
+  return map[lang] || "bg-cyan-400";
 };
 
 const formatTimeAgo = (dateStr) => {
