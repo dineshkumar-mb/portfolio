@@ -37,7 +37,7 @@ const BlogPost = () => {
     );
   }
 
-  const currentUrl = `https://portfolio-five-chi-11.vercel.app/blog/${post.slug}`;
+  const currentUrl = `https://dineshkumar-mb-devportfolio.vercel.app/blog/${post.slug}`;
 
   // Article JSON-LD Structured Data for Google
   const articleSchema = {

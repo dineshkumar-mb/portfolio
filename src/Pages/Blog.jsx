@@ -42,7 +42,7 @@ const Blog = () => {
       <SEO
         title="Developer Blog | Dinesh Kumar M B"
         description="Engineering notes, architecture decisions, and lessons learned while building Full-Stack MERN and AI-powered applications."
-        url="https://portfolio-five-chi-11.vercel.app/blog"
+        url="https://dineshkumar-mb-devportfolio.vercel.app/blog"
       />
 
       {/* Ambient background glows */}

@@ -26,7 +26,7 @@ export const blogPosts = [
     author: {
       name: "Dinesh Kumar M B",
       role: "Full-Stack MERN & AI Developer",
-      avatar: "https://portfolio-five-chi-11.vercel.app/profile.jpeg"
+      avatar: "https://dineshkumar-mb-devportfolio.vercel.app/profile.jpeg"
     },
     sections: [
       {
@@ -186,7 +186,7 @@ Processing multi-megabyte PDF files on serverless execution environments trigger
     author: {
       name: "Dinesh Kumar M B",
       role: "Full-Stack MERN & AI Developer",
-      avatar: "https://portfolio-five-chi-11.vercel.app/profile.jpeg"
+      avatar: "https://dineshkumar-mb-devportfolio.vercel.app/profile.jpeg"
     },
     sections: [
       {
@@ -299,7 +299,7 @@ Enforced tier-specific API rate limits (e.g., Free Tier: 15 AI ticket breakdown 
     author: {
       name: "Dinesh Kumar M B",
       role: "Full-Stack MERN & AI Developer",
-      avatar: "https://portfolio-five-chi-11.vercel.app/profile.jpeg"
+      avatar: "https://dineshkumar-mb-devportfolio.vercel.app/profile.jpeg"
     },
     sections: [
       {
@@ -417,7 +417,7 @@ Decoupled node rendering logic from WebSocket listeners through custom React hoo
     author: {
       name: "Dinesh Kumar M B",
       role: "Full-Stack MERN & AI Developer",
-      avatar: "https://portfolio-five-chi-11.vercel.app/profile.jpeg"
+      avatar: "https://dineshkumar-mb-devportfolio.vercel.app/profile.jpeg"
     },
     sections: [
       {
@@ -516,7 +516,7 @@ Since Gemini returns Markdown content rendered on the frontend, using sanitized 
     author: {
       name: "Dinesh Kumar M B",
       role: "Full-Stack MERN & AI Developer",
-      avatar: "https://portfolio-five-chi-11.vercel.app/profile.jpeg"
+      avatar: "https://dineshkumar-mb-devportfolio.vercel.app/profile.jpeg"
     },
     sections: [
       {
@@ -607,7 +607,7 @@ export const useSpeechToText = () => {
     author: {
       name: "Dinesh Kumar M B",
       role: "Full-Stack MERN & AI Developer",
-      avatar: "https://portfolio-five-chi-11.vercel.app/profile.jpeg"
+      avatar: "https://dineshkumar-mb-devportfolio.vercel.app/profile.jpeg"
     },
     sections: [
       {

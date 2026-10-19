@@ -5,7 +5,7 @@ A modern, highly interactive, and SEO-optimized developer portfolio built with R
 This portfolio showcases my expertise as a Full-Stack MERN & AI Developer, featuring detailed project case studies, dynamic GitHub activity statistics, and an engaging UI with dark/light mode support.
 
 ## 🚀 Live Preview
-**[View Portfolio Here](https://portfolio-five-chi-11.vercel.app/)**
+**[View Portfolio Here](https://dineshkumar-mb-devportfolio.vercel.app/)**
 
 ## ✨ Features
 

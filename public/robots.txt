@@ -3,4 +3,4 @@ Allow: /
 Allow: /blog
 Allow: /blog/*
 
-Sitemap: https://portfolio-five-chi-11.vercel.app/sitemap.xml
+Sitemap: https://dineshkumar-mb-devportfolio.vercel.app/sitemap.xml
