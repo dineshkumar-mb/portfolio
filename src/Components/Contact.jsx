@@ -151,8 +151,8 @@ const Contact = () => {
               <FaEnvelope /> Email Me Directly
             </a>
             <a
-              href="/Dinesh-Resume-fsd.pdf"
-              download="Dinesh-Resume-fsd.pdf"
+              href="/DineshKumar-FSD-Resume.pdf"
+              download="DineshKumar-FSD-Resume.pdf"
               className="px-6 py-3 rounded-full bg-white dark:bg-white/10 hover:bg-slate-100 dark:hover:bg-white/20 text-slate-800 dark:text-white font-bold text-sm border border-slate-300 dark:border-white/20 transition-all flex items-center gap-2"
             >
               <FaFileAlt className="text-blue-500 dark:text-blue-400" /> Resume
@@ -253,8 +253,8 @@ const Contact = () => {
                   icon: <FaFileAlt />, 
                   label: "Resume (PDF)", 
                   detail: "Latest 2026 Edition", 
-                  url: "/Dinesh-Resume-fsd.pdf", 
-                  download: "Dinesh-Resume-fsd.pdf",
+                  url: "/DineshKumar-FSD-Resume.pdf", 
+                  download: "DineshKumar-FSD-Resume.pdf",
                   color: "text-amber-500" 
                 }
               ].map((link, idx) => (
