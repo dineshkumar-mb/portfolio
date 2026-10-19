@@ -38,9 +38,9 @@ const MainLanding = () => (
     <WhyHireMe />
     <About />
     <Experience />
-    <Project />
-    <Skills />
     <EngineeringJournal />
+    <Skills />
+    <Project />
     <Certifications />
     <GithubSection />
     <LighthouseMetrics />

@@ -28,9 +28,16 @@ const Header = ({ theme, toggleTheme }) => {
     if (item === "Blog") {
       if (location.pathname === "/blog") {
         window.scrollTo({ top: 0, behavior: "smooth" });
-      } else {
-        navigate("/blog");
+        return;
       }
+      if (location.pathname === "/") {
+        const element = document.getElementById("blog");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+          return;
+        }
+      }
+      navigate("/blog");
       return;
     }
 
@@ -87,7 +94,7 @@ const Header = ({ theme, toggleTheme }) => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
           <ul className="flex items-center gap-6">
-            {["Home", "About", "Experience", "Projects", "Skills", "Blog", "Contact"].map((item) => (
+            {["Home", "About", "Experience", "Blog", "Skills", "Projects", "Contact"].map((item) => (
               <li key={item}>
                 <a
                   href={item === "Blog" ? "/blog" : `/#${item.toLowerCase()}`}
@@ -151,7 +158,7 @@ const Header = ({ theme, toggleTheme }) => {
             <span className="font-extrabold text-base text-slate-800 dark:text-white">Navigation</span>
           </div>
 
-          {["Home", "About", "Experience", "Projects", "Skills", "Blog", "Contact"].map((item) => (
+          {["Home", "About", "Experience", "Blog", "Skills", "Projects", "Contact"].map((item) => (
             <a
               key={item}
               href={item === "Blog" ? "/blog" : `/#${item.toLowerCase()}`}
