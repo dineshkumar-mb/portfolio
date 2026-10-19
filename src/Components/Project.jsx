@@ -323,8 +323,8 @@ const Project = () => {
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`px-5 py-2 rounded-full text-xs sm:text-sm font-bold tracking-wide transition-all duration-300 border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${activeCategory === cat
-                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white border-transparent shadow-md shadow-blue-500/20 scale-105"
-                  : "bg-white/70 dark:bg-white/5 text-slate-600 dark:text-gray-300 border-slate-200/80 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/10 hover:text-slate-900 dark:hover:text-white"
+                ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white border-transparent shadow-md shadow-blue-500/20 scale-105"
+                : "bg-white/70 dark:bg-white/5 text-slate-600 dark:text-gray-300 border-slate-200/80 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/10 hover:text-slate-900 dark:hover:text-white"
                 }`}
             >
               {cat}
@@ -508,7 +508,7 @@ const Project = () => {
               onClick={() => setActiveCategory("All Projects (12)")}
               className="px-8 py-3.5 rounded-full bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 font-bold text-sm shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >
-              <span>View All 12+ Projects</span>
+              <span>View All  Projects</span>
               <span>↓</span>
             </button>
           </div>
