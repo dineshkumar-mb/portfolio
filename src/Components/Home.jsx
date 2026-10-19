@@ -318,8 +318,8 @@ const Home = () => (
           </motion.a>
 
           <motion.a
-            href="/Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
-            download="Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
+            href="/Dinesh-Resume-fsd.pdf"
+            download="Dinesh-Resume-fsd.pdf"
             className="px-7 py-3.5 bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 rounded-full font-bold text-sm sm:text-base shadow-md transition-all duration-300 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}

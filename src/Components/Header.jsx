@@ -113,8 +113,8 @@ const Header = ({ theme, toggleTheme }) => {
 
           {/* Desktop Resume CTA Button */}
           <a
-            href="/Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
-            download="Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
+            href="/Dinesh-Resume-fsd.pdf"
+            download="Dinesh-Resume-fsd.pdf"
             className="px-4 py-2 rounded-full text-xs font-bold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-md shadow-blue-500/20 hover:scale-105 transition-all duration-300 flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
           >
             <span>Resume</span>
@@ -175,8 +175,8 @@ const Header = ({ theme, toggleTheme }) => {
 
           {/* Mobile Resume CTA */}
           <a
-            href="/Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
-            download="Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
+            href="/Dinesh-Resume-fsd.pdf"
+            download="Dinesh-Resume-fsd.pdf"
             className="w-full mt-2 py-3 rounded-xl text-center text-sm font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md flex items-center justify-center gap-2"
           >
             <span>Download Resume</span>

@@ -159,7 +159,7 @@ const About = () => {
             <div className="flex flex-wrap items-center gap-4 pt-3">
               {/* View Resume Button */}
               <motion.a
-                href="/Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
+                href="/Dinesh-Resume-fsd.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-full bg-white dark:bg-white/5 text-slate-800 dark:text-white text-sm font-bold border border-slate-300 dark:border-white/15 hover:bg-slate-100 dark:hover:bg-white/10 hover:border-blue-500/40 transition-all duration-300 flex items-center gap-2 shadow-sm cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
@@ -172,8 +172,8 @@ const About = () => {
 
               {/* Download Resume Button */}
               <motion.a
-                href="/Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
-                download="Dinesh_Kumar_M_B_Full_Stack_Developer_Resume.pdf"
+                href="/Dinesh-Resume-fsd.pdf"
+                download="Dinesh-Resume-fsd.pdf"
                 className="px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 text-white text-sm font-bold shadow-lg shadow-blue-500/20 hover:shadow-purple-500/30 transition-all duration-300 flex items-center gap-2 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
