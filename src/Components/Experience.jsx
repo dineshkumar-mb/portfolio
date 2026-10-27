@@ -55,12 +55,14 @@ const Experience = () => {
       role: "Assistant",
       company: "Sodexo",
       duration: "Dec 2017 - Jan 2018",
-      Responsibilities: [
-        "Assisted the Senior Chef with food preparation and cooking",
-        "Maintained kitchen cleanliness and food safety standards",
-        "Managed ingredient preparation, storage, and stock",
-        "Supported daily kitchen operations and food service"
-      ],
+      sections: {
+        Responsibilities: [
+          "Assisted the Senior Chef with food preparation and cooking",
+          "Maintained kitchen cleanliness and food safety standards",
+          "Managed ingredient preparation, storage, and stock",
+          "Supported daily kitchen operations and food service"
+        ]
+      },
       tech: [
         "Food Preparation",
         "Kitchen Operations",
@@ -197,7 +199,27 @@ const Experience = () => {
 
                     {/* Experience Details */}
                     <div className="space-y-4 mb-6 flex-1 text-slate-600 dark:text-gray-300 text-sm leading-relaxed">
-                      {exp.bullets ? (
+                      {/* Top-level Responsibilities support */}
+                      {exp.Responsibilities && (
+                        <div>
+                          <span className="font-bold text-slate-800 dark:text-white mr-1 block sm:inline">Responsibilities:</span>
+                          {Array.isArray(exp.Responsibilities) ? (
+                            <ul className="space-y-2 mt-2">
+                              {exp.Responsibilities.map((item, rIdx) => (
+                                <li key={rIdx} className="flex items-start gap-2.5">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2 shrink-0 shadow-sm shadow-cyan-500/50" />
+                                  <span className="flex-1">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : (
+                            <span>{exp.Responsibilities}</span>
+                          )}
+                        </div>
+                      )}
+
+                      {/* Top-level bullets support */}
+                      {exp.bullets && (
                         <ul className="space-y-2">
                           {exp.bullets.map((bullet, bIdx) => (
                             <li key={bIdx} className="flex items-start gap-2.5">
@@ -206,15 +228,27 @@ const Experience = () => {
                             </li>
                           ))}
                         </ul>
-                      ) : (
-                        exp.sections &&
+                      )}
+
+                      {/* Standard sections support (strings or array of items) */}
+                      {exp.sections &&
                         Object.entries(exp.sections).map(([title, content], sIdx) => (
                           <div key={sIdx}>
                             <span className="font-bold text-slate-800 dark:text-white mr-1 block sm:inline">{title}:</span>
-                            <span>{content}</span>
+                            {Array.isArray(content) ? (
+                              <ul className="space-y-2 mt-2">
+                                {content.map((item, cIdx) => (
+                                  <li key={cIdx} className="flex items-start gap-2.5">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2 shrink-0 shadow-sm shadow-cyan-500/50" />
+                                    <span className="flex-1">{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            ) : (
+                              <span>{content}</span>
+                            )}
                           </div>
-                        ))
-                      )}
+                        ))}
                     </div>
 
                     {/* Tech Badges */}
